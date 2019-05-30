@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   ControladorUsuario.h
+ * Author: vanessa
+ *
+ * Created on 30 de mayo de 2019, 01:33 AM
+ */
+
+#ifndef CONTROLADORUSUARIO_H
+#define CONTROLADORUSUARIO_H
+#include "ICUsuario.h"
+
+class ControladorUsuario : public ICUsuario {
+public:
+    ingresar();
+    ingresarContrasenia();
+    iniciarSesion();
+};
+
+
+#endif /* CONTROLADORUSUARIO_H */
+
