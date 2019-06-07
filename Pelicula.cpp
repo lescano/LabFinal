@@ -6,6 +6,8 @@
 
 #include "Pelicula.h"
 
+pelicula::pelicula(){}
+
 pelicula::pelicula(string tit, string poster, string sinopsis, float puntos){
     this->titulo = tit;
     this->poster_url = poster;

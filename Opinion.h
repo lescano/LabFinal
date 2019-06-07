@@ -10,9 +10,12 @@
  *
  * Created on 25 de abril de 2019, 12:30 PM
  */
-
 #ifndef OPINION_H
 #define OPINION_H
+
+#include <iostream>
+
+using namespace std;
 
 class opinion {
 private:

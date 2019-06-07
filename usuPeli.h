@@ -14,11 +14,12 @@
 #ifndef USUPELI_H
 #define USUPELI_H
 #include "Pelicula.h"
+#include "IDictionary.h"
 
 class usuPeli{
 private:
     int puntos;
-    pelicula peliculaPuntuada;
+    pelicula* peliculaPuntuada;
 public:
     usuPeli(int);
     ~usuPeli();

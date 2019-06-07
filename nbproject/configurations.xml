@@ -1,38 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
+    <logicalFolder name="ColeccionesG"
+                   displayName="ColeccionesG"
                    projectFiles="true">
+      <itemPath>../../../ColeccionesG/ICollectible.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/ICollectible.h</itemPath>
+      <itemPath>../../../ColeccionesG/ICollection.h</itemPath>
+      <itemPath>../../../ColeccionesG/IDictionary.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/IDictionary.h</itemPath>
+      <itemPath>../../../ColeccionesG/IIterator.h</itemPath>
+      <itemPath>../../../ColeccionesG/IKey.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/IKey.h</itemPath>
+      <itemPath>../../../ColeccionesG/ListDiccIterator.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/ListDiccIterator.h</itemPath>
+      <itemPath>../../../ColeccionesG/ListDiccIteratorKey.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/ListDiccIteratorKey.h</itemPath>
+      <itemPath>../../../ColeccionesG/ListDiccIteratorObj.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/ListDiccIteratorObj.h</itemPath>
+      <itemPath>../../../ColeccionesG/Lista.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/Lista.h</itemPath>
+      <itemPath>../../../ColeccionesG/ListaDicc.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/ListaDicc.h</itemPath>
+      <itemPath>../../../ColeccionesG/ListaIterator.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/ListaIterator.h</itemPath>
+      <itemPath>../../../ColeccionesG/Nodo.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/Nodo.h</itemPath>
+      <itemPath>../../../ColeccionesG/NodoDicc.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/NodoDicc.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f2"
+                   displayName="Controladores"
+                   projectFiles="true"
+                   kind="ROOT">
       <itemPath>CPelicula.h</itemPath>
-      <itemPath>Cine.h</itemPath>
       <itemPath>ControladorCine.h</itemPath>
       <itemPath>ControladorFunciones.h</itemPath>
       <itemPath>ControladorPelicula.h</itemPath>
       <itemPath>ControladorUsuario.h</itemPath>
-      <itemPath>Credito.h</itemPath>
-      <itemPath>Debito.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f3" displayName="DataType" projectFiles="true" kind="ROOT">
       <itemPath>DtCine.h</itemPath>
       <itemPath>DtCom_Puntaje.h</itemPath>
       <itemPath>DtComentario.h</itemPath>
+      <itemPath>DtFecha.cpp</itemPath>
       <itemPath>DtFecha.h</itemPath>
       <itemPath>DtFuncion.h</itemPath>
       <itemPath>DtInfoPeli.h</itemPath>
       <itemPath>DtSala.h</itemPath>
-      <itemPath>Fabrica.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Cine.h</itemPath>
+      <itemPath>Credito.h</itemPath>
+      <itemPath>Debito.h</itemPath>
       <itemPath>Funcion.h</itemPath>
-      <itemPath>ICCines.h</itemPath>
-      <itemPath>ICFuncion.h</itemPath>
-      <itemPath>ICPelicula.h</itemPath>
-      <itemPath>ICUsuario.h</itemPath>
       <itemPath>Opinion.h</itemPath>
       <itemPath>Pago.h</itemPath>
+      <itemPath>../../../ColeccionesG/Par.h</itemPath>
       <itemPath>Pelicula.h</itemPath>
       <itemPath>Reserva.h</itemPath>
       <itemPath>Sala.h</itemPath>
       <itemPath>Usuario.h</itemPath>
       <itemPath>sistema.h</itemPath>
       <itemPath>usuPeli.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1"
+                   displayName="Interfaces"
+                   projectFiles="true"
+                   kind="ROOT">
+      <itemPath>Fabrica.cpp</itemPath>
+      <itemPath>Fabrica.h</itemPath>
+      <itemPath>ICCines.h</itemPath>
+      <itemPath>ICFuncion.h</itemPath>
+      <itemPath>ICPelicula.h</itemPath>
+      <itemPath>ICUsuario.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -44,11 +87,10 @@
       <itemPath>Cine.cpp</itemPath>
       <itemPath>Credito.cpp</itemPath>
       <itemPath>Debito.cpp</itemPath>
-      <itemPath>DtFecha.cpp</itemPath>
-      <itemPath>Fabrica.cpp</itemPath>
       <itemPath>Funcion.cpp</itemPath>
       <itemPath>Opinion.cpp</itemPath>
       <itemPath>Pago.cpp</itemPath>
+      <itemPath>../../../ColeccionesG/Par.cpp</itemPath>
       <itemPath>Pelicula.cpp</itemPath>
       <itemPath>Reserva.cpp</itemPath>
       <itemPath>Sala.cpp</itemPath>
@@ -69,6 +111,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../ColeccionesG</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -79,6 +124,100 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="../../../ColeccionesG/ICollectible.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ICollectible.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ICollection.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IDictionary.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IDictionary.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIterator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIterator.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorKey.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorKey.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorObj.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorObj.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Lista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Lista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaDicc.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaIterator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaIterator.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Nodo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Nodo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/NodoDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/NodoDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Par.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CPelicula.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Cine.cpp" ex="false" tool="1" flavor2="0">
@@ -188,6 +327,100 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="../../../ColeccionesG/ICollectible.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ICollectible.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ICollection.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IDictionary.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IDictionary.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IIterator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IKey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIterator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIterator.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorKey.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorKey.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorObj.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListDiccIteratorObj.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Lista.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Lista.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaDicc.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaIterator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/ListaIterator.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Nodo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Nodo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/NodoDicc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/NodoDicc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Par.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../../ColeccionesG/Par.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="CPelicula.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Cine.cpp" ex="false" tool="1" flavor2="0">

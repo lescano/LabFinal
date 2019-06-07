@@ -20,17 +20,17 @@ private:
     int numero;//identificador de la funcion
     int cantAsientos;
     float costo;
-    DtFecha fecha;
+    DtFecha* fecha;
 public:
-    funcion(int, int, float, DtFecha);
+    funcion(int, int, float, DtFecha*);
     int getNumero();
     void setNumero(int);
     int getCantAsientos();
     void setCantAsientos(int);
     float getCosto();
     void setCosto(float);
-    DtFecha getFecha();
-    void setFecha(DtFecha);
+    DtFecha* getFecha();
+    void setFecha(DtFecha*);
     ~funcion();
 };
 

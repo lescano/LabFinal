@@ -13,8 +13,11 @@
 
 #ifndef CREDITO_H
 #define CREDITO_H
+
 #include "Pago.h"
+
 #include <string>
+
 using namespace std;
 
 class credito : public pago {

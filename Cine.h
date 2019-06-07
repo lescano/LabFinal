@@ -14,7 +14,10 @@
 #ifndef CINE_H
 #define CINE_H
 #include <string>
+
 #include "Sala.h"
+#include "IDictionary.h"
+
 using namespace std;
 
 class cine {

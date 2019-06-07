@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 
+#include <iostream>
 #include "usuPeli.h"
+
+using namespace std;
 
 usuPeli::usuPeli(int p){
     this->puntos = p;

@@ -5,3 +5,7 @@
  */
 
 #include "Pago.h"
+
+pago::pago(){ }
+
+pago::~pago(){}

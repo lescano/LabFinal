@@ -3,11 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+#include <iostream>
 
 #include "Funcion.h"
 #include "DtFecha.h"
 
-funcion::funcion(int id, int cantA, float costo, DtFecha f){
+using namespace std;
+
+funcion::funcion(int id, int cantA, float costo, DtFecha* f){
     this->numero = id;
     this->cantAsientos = cantA;
     this->costo = costo;
@@ -32,9 +35,9 @@ float funcion::getCosto(){
 void funcion::setCosto(float costo){
     this->costo = costo;
 }
-DtFecha funcion::getFecha(){
+DtFecha* funcion::getFecha(){
     return this->fecha;
 }
-void funcion::setFecha(DtFecha f){
+void funcion::setFecha(DtFecha* f){
     this->fecha = f;
 }

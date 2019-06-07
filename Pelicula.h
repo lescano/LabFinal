@@ -27,6 +27,7 @@ private:
     //coleccion de las opiniones de esa pelicula
     //coleccion de los cines de esa pelicula
 public:
+    pelicula();
     pelicula(string, string, string, float);
     string getTitulo();
     void setTitulo(string);

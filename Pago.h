@@ -11,10 +11,13 @@
  * Created on 25 de abril de 2019, 12:31 PM
  */
 
+
 #ifndef PAGO_H
 #define PAGO_H
 
-class pago{
+
+
+class pago {
 public:
     pago();
     ~pago();
