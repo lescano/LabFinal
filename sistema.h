@@ -47,7 +47,7 @@ public:
     
     //****************************************************
     //dss alta funcion
-    setstring listarPeliculas();
+    //setstring listarPeliculas();
     DtCine** listarCines();
     DtSala** listarSalas();
     //dss comentar pelicula

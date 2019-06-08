@@ -36,13 +36,30 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Cine.o \
+	${OBJECTDIR}/ControladorCine.o \
+	${OBJECTDIR}/ControladorFunciones.o \
+	${OBJECTDIR}/ControladorPelicula.o \
+	${OBJECTDIR}/ControladorUsuario.o \
 	${OBJECTDIR}/Credito.o \
 	${OBJECTDIR}/Debito.o \
+	${OBJECTDIR}/DtCine.o \
 	${OBJECTDIR}/DtFecha.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
+	${OBJECTDIR}/ICollectible.o \
+	${OBJECTDIR}/IDictionary.o \
+	${OBJECTDIR}/IKey.o \
+	${OBJECTDIR}/ListDiccIterator.o \
+	${OBJECTDIR}/ListDiccIteratorKey.o \
+	${OBJECTDIR}/ListDiccIteratorObj.o \
+	${OBJECTDIR}/Lista.o \
+	${OBJECTDIR}/ListaDicc.o \
+	${OBJECTDIR}/ListaIterator.o \
+	${OBJECTDIR}/Nodo.o \
+	${OBJECTDIR}/NodoDicc.o \
 	${OBJECTDIR}/Opinion.o \
 	${OBJECTDIR}/Pago.o \
+	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/Pelicula.o \
 	${OBJECTDIR}/Reserva.o \
 	${OBJECTDIR}/Sala.o \
@@ -81,6 +98,26 @@ ${OBJECTDIR}/Cine.o: Cine.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cine.o Cine.cpp
 
+${OBJECTDIR}/ControladorCine.o: ControladorCine.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorCine.o ControladorCine.cpp
+
+${OBJECTDIR}/ControladorFunciones.o: ControladorFunciones.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorFunciones.o ControladorFunciones.cpp
+
+${OBJECTDIR}/ControladorPelicula.o: ControladorPelicula.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorPelicula.o ControladorPelicula.cpp
+
+${OBJECTDIR}/ControladorUsuario.o: ControladorUsuario.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorUsuario.o ControladorUsuario.cpp
+
 ${OBJECTDIR}/Credito.o: Credito.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -90,6 +127,11 @@ ${OBJECTDIR}/Debito.o: Debito.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Debito.o Debito.cpp
+
+${OBJECTDIR}/DtCine.o: DtCine.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCine.o DtCine.cpp
 
 ${OBJECTDIR}/DtFecha.o: DtFecha.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -106,6 +148,61 @@ ${OBJECTDIR}/Funcion.o: Funcion.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Funcion.o Funcion.cpp
 
+${OBJECTDIR}/ICollectible.o: ICollectible.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ICollectible.o ICollectible.cpp
+
+${OBJECTDIR}/IDictionary.o: IDictionary.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IDictionary.o IDictionary.cpp
+
+${OBJECTDIR}/IKey.o: IKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IKey.o IKey.cpp
+
+${OBJECTDIR}/ListDiccIterator.o: ListDiccIterator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIterator.o ListDiccIterator.cpp
+
+${OBJECTDIR}/ListDiccIteratorKey.o: ListDiccIteratorKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIteratorKey.o ListDiccIteratorKey.cpp
+
+${OBJECTDIR}/ListDiccIteratorObj.o: ListDiccIteratorObj.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIteratorObj.o ListDiccIteratorObj.cpp
+
+${OBJECTDIR}/Lista.o: Lista.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Lista.o Lista.cpp
+
+${OBJECTDIR}/ListaDicc.o: ListaDicc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaDicc.o ListaDicc.cpp
+
+${OBJECTDIR}/ListaIterator.o: ListaIterator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaIterator.o ListaIterator.cpp
+
+${OBJECTDIR}/Nodo.o: Nodo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo.o Nodo.cpp
+
+${OBJECTDIR}/NodoDicc.o: NodoDicc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NodoDicc.o NodoDicc.cpp
+
 ${OBJECTDIR}/Opinion.o: Opinion.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -115,6 +212,11 @@ ${OBJECTDIR}/Pago.o: Pago.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pago.o Pago.cpp
+
+${OBJECTDIR}/Par.o: Par.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Par.o Par.cpp
 
 ${OBJECTDIR}/Pelicula.o: Pelicula.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=Cygwin-Windows
-CND_DLIB_EXT=dll
+CND_PLATFORM=GNU-Linux
+CND_DLIB_EXT=so
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -35,18 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/dfef8105/ICollectible.o \
-	${OBJECTDIR}/_ext/dfef8105/IDictionary.o \
-	${OBJECTDIR}/_ext/dfef8105/IKey.o \
-	${OBJECTDIR}/_ext/dfef8105/ListDiccIterator.o \
-	${OBJECTDIR}/_ext/dfef8105/ListDiccIteratorKey.o \
-	${OBJECTDIR}/_ext/dfef8105/ListDiccIteratorObj.o \
-	${OBJECTDIR}/_ext/dfef8105/Lista.o \
-	${OBJECTDIR}/_ext/dfef8105/ListaDicc.o \
-	${OBJECTDIR}/_ext/dfef8105/ListaIterator.o \
-	${OBJECTDIR}/_ext/dfef8105/Nodo.o \
-	${OBJECTDIR}/_ext/dfef8105/NodoDicc.o \
-	${OBJECTDIR}/_ext/dfef8105/Par.o \
 	${OBJECTDIR}/Cine.o \
 	${OBJECTDIR}/ControladorCine.o \
 	${OBJECTDIR}/ControladorFunciones.o \
@@ -58,8 +46,20 @@ OBJECTFILES= \
 	${OBJECTDIR}/DtFecha.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
+	${OBJECTDIR}/ICollectible.o \
+	${OBJECTDIR}/IDictionary.o \
+	${OBJECTDIR}/IKey.o \
+	${OBJECTDIR}/ListDiccIterator.o \
+	${OBJECTDIR}/ListDiccIteratorKey.o \
+	${OBJECTDIR}/ListDiccIteratorObj.o \
+	${OBJECTDIR}/Lista.o \
+	${OBJECTDIR}/ListaDicc.o \
+	${OBJECTDIR}/ListaIterator.o \
+	${OBJECTDIR}/Nodo.o \
+	${OBJECTDIR}/NodoDicc.o \
 	${OBJECTDIR}/Opinion.o \
 	${OBJECTDIR}/Pago.o \
+	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/Pelicula.o \
 	${OBJECTDIR}/Reserva.o \
 	${OBJECTDIR}/Sala.o \
@@ -87,71 +87,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/_ext/dfef8105/ICollectible.o: ../../../ColeccionesG/ICollectible.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/ICollectible.o ../../../ColeccionesG/ICollectible.cpp
-
-${OBJECTDIR}/_ext/dfef8105/IDictionary.o: ../../../ColeccionesG/IDictionary.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/IDictionary.o ../../../ColeccionesG/IDictionary.cpp
-
-${OBJECTDIR}/_ext/dfef8105/IKey.o: ../../../ColeccionesG/IKey.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/IKey.o ../../../ColeccionesG/IKey.cpp
-
-${OBJECTDIR}/_ext/dfef8105/ListDiccIterator.o: ../../../ColeccionesG/ListDiccIterator.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/ListDiccIterator.o ../../../ColeccionesG/ListDiccIterator.cpp
-
-${OBJECTDIR}/_ext/dfef8105/ListDiccIteratorKey.o: ../../../ColeccionesG/ListDiccIteratorKey.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/ListDiccIteratorKey.o ../../../ColeccionesG/ListDiccIteratorKey.cpp
-
-${OBJECTDIR}/_ext/dfef8105/ListDiccIteratorObj.o: ../../../ColeccionesG/ListDiccIteratorObj.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/ListDiccIteratorObj.o ../../../ColeccionesG/ListDiccIteratorObj.cpp
-
-${OBJECTDIR}/_ext/dfef8105/Lista.o: ../../../ColeccionesG/Lista.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/Lista.o ../../../ColeccionesG/Lista.cpp
-
-${OBJECTDIR}/_ext/dfef8105/ListaDicc.o: ../../../ColeccionesG/ListaDicc.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/ListaDicc.o ../../../ColeccionesG/ListaDicc.cpp
-
-${OBJECTDIR}/_ext/dfef8105/ListaIterator.o: ../../../ColeccionesG/ListaIterator.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/ListaIterator.o ../../../ColeccionesG/ListaIterator.cpp
-
-${OBJECTDIR}/_ext/dfef8105/Nodo.o: ../../../ColeccionesG/Nodo.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/Nodo.o ../../../ColeccionesG/Nodo.cpp
-
-${OBJECTDIR}/_ext/dfef8105/NodoDicc.o: ../../../ColeccionesG/NodoDicc.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/NodoDicc.o ../../../ColeccionesG/NodoDicc.cpp
-
-${OBJECTDIR}/_ext/dfef8105/Par.o: ../../../ColeccionesG/Par.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/dfef8105
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/dfef8105/Par.o ../../../ColeccionesG/Par.cpp
 
 ${OBJECTDIR}/Cine.o: Cine.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -208,6 +148,61 @@ ${OBJECTDIR}/Funcion.o: Funcion.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Funcion.o Funcion.cpp
 
+${OBJECTDIR}/ICollectible.o: ICollectible.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ICollectible.o ICollectible.cpp
+
+${OBJECTDIR}/IDictionary.o: IDictionary.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IDictionary.o IDictionary.cpp
+
+${OBJECTDIR}/IKey.o: IKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IKey.o IKey.cpp
+
+${OBJECTDIR}/ListDiccIterator.o: ListDiccIterator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIterator.o ListDiccIterator.cpp
+
+${OBJECTDIR}/ListDiccIteratorKey.o: ListDiccIteratorKey.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIteratorKey.o ListDiccIteratorKey.cpp
+
+${OBJECTDIR}/ListDiccIteratorObj.o: ListDiccIteratorObj.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListDiccIteratorObj.o ListDiccIteratorObj.cpp
+
+${OBJECTDIR}/Lista.o: Lista.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Lista.o Lista.cpp
+
+${OBJECTDIR}/ListaDicc.o: ListaDicc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaDicc.o ListaDicc.cpp
+
+${OBJECTDIR}/ListaIterator.o: ListaIterator.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaIterator.o ListaIterator.cpp
+
+${OBJECTDIR}/Nodo.o: Nodo.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nodo.o Nodo.cpp
+
+${OBJECTDIR}/NodoDicc.o: NodoDicc.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/NodoDicc.o NodoDicc.cpp
+
 ${OBJECTDIR}/Opinion.o: Opinion.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -217,6 +212,11 @@ ${OBJECTDIR}/Pago.o: Pago.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pago.o Pago.cpp
+
+${OBJECTDIR}/Par.o: Par.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Par.o Par.cpp
 
 ${OBJECTDIR}/Pelicula.o: Pelicula.cpp
 	${MKDIR} -p ${OBJECTDIR}
