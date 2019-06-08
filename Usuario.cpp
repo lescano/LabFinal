@@ -6,34 +6,35 @@
 
 #include "Usuario.h"
 #include <string>
+
 using namespace std;
 
-usuario::usuario(string nickname, string imagen, string contra){
+Usuario::usuario(string nickname, string imagen, string contra){
     this->nickname = nickname;
     this->img_perfil = imagen;
     this->contrasenia = contra;
 }
 
-string usuario::getNickname(){
+string Usuario::getNickname(){
     return this->nickname;
 }
 
-string usuario::getImg_perfil(){
+string Usuario::getImg_perfil(){
     return this->img_perfil;
 }
 
-string usuario::getContrasenia(){
+string Usuario::getContrasenia(){
     return this->contrasenia;
 }
 
-void usuario::setNickname(string nickname){
+void Usuario::setNickname(string nickname){
     this->nickname = nickname;
 }
 
-void usuario::setImg_perfil(string imagen){
+void Usuario::setImg_perfil(string imagen){
     this->img_perfil = imagen;
 }
 
-void usuario::setContrasenia(string contra){
+void Usuario::setContrasenia(string contra){
     this->contrasenia = contra;
 }

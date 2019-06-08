@@ -15,28 +15,46 @@
 #define CONTROLADORFUNCIONES_H
 
 #include "ICFuncion.h"
+#include "Cine.h"
+#include "Pelicula.h"
+#include "ControladorUsuario.h"
+#include "ControladorPelicula.h"
+#include "Usuario.h"
+#include "ICollection.h"
+#include "DtInfoPeli.h"
+#include "DtFuncion.h"
+#include "DtCine.h"
 
 #include <string.h>
 
 class ControladorFuncion : public ICFuncion {
-    private:   
+    private:
+        ControladorUsuario* controladorUsuario;
+        ControladorPelicula* controladorPelicula;
+        Pelicula* peliculaRecordada;
+        Usuario* usuarioRecordado;
+        ICollection* coleccionReservas;
+        
+        
         ControladorFuncion();
         static ControladorFuncion* instancia;
     
     public:
         static ControladorFuncion* getInstancia();
         
-//    fechaFuncion();
-//    altaFuncion();
-//    listarFunciones();
-//    seleccionarFunciones();
-//    cantAsientos();
-//    reservaCredito();
-//    reservaDebito();
-//    precioTotal();
-//    crearReserva();
-//    cancelar();
-//    cancelarSeleccion();
+
+        Cine* seleccionarCine(int);
+        Pelicula* seleccionarPelicula(string);
+        string** listarPeliculas();
+        DtInfoPeli* VerInfoPeli();
+        DtCine* listarCine();
+        DtFuncion* listarFunciones();
+        Funcion* seleccionarFunciones(int);
+        void cantAsientos(int);
+        float reservaCredito(int);
+        void reservaDebito(string);
+        int precioTotal();
+        void crearReserva();
 };
 
 

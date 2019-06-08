@@ -13,6 +13,7 @@
 
 #ifndef DTCINE_H
 #define DTCINE_H
+
 #include <string>
 using namespace std;
 
@@ -24,7 +25,8 @@ public:
     DtCine(int,string);
     int getNro_cine();
     string getDireccion();
-    ~DtCine();
+    virtual ~DtCine();
+};
 
 #endif /* DTCINE_H */
 

@@ -26,19 +26,19 @@ class ControladorPelicula : public ICPelicula {
     public:
         static ControladorPelicula* getInstancia();
         
-    listarPeliculas();
-    seleccionarPeliculas();
-    tienePuntaje();
-    mostrarPuntaje();
-    ingresarNuevoPuntaje();
-    ingresarPuntaje();
-    listarComentarios();
-    crearComentarios();
-    seleccionarComentarios();
-    crearRespuesta();
-    borrarPelicula();
-    verInfoPeli();
-    verComentarioPuntaje();
+//    listarPeliculas();
+//    seleccionarPeliculas();
+//    tienePuntaje();
+//    mostrarPuntaje();
+//    ingresarNuevoPuntaje();
+//    ingresarPuntaje();
+//    listarComentarios();
+//    crearComentarios();
+//    seleccionarComentarios();
+//    crearRespuesta();
+//    borrarPelicula();
+//    verInfoPeli();
+//    verComentarioPuntaje();
 };
 
 

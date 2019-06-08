@@ -19,7 +19,7 @@
 class usuPeli{
 private:
     int puntos;
-    pelicula* peliculaPuntuada;
+    Pelicula* peliculaPuntuada;
 public:
     usuPeli(int);
     ~usuPeli();

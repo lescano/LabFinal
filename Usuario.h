@@ -19,7 +19,7 @@
 #include "Pago.h"
 using namespace std;
 
-class usuario {
+class Usuario {
 private:
     string nickname;
     string img_perfil;
@@ -29,7 +29,7 @@ private:
     //Coleccion de los tipos de pago que tengo
 public:
     usuario(string, string, string);
-    ~usuario();
+    virtual ~Usuario();
     string getNickname();
     void setNickname(string);
     string getImg_perfil();

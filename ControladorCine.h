@@ -29,11 +29,11 @@
 
 class ControladorCine :public ICCines {
     private:
-        ControladorUsuario* usuario;
-        ControladorPelicula* pelicula;
-        Cine* cine;
-        Sala* sala;
-        Funcion* funcion;
+        ControladorUsuario* controladorUsuario;
+        ControladorPelicula* controladorPelicula;
+        Cine* cineRecordado;
+        Sala* salaRecordada;
+        Funcion* funcionRecordada;
         ControladorCine();
         static ControladorCine* instancia;
     
@@ -43,13 +43,15 @@ class ControladorCine :public ICCines {
         void ingresarDireccion(string);
         void ingresarCapacidadSalas(int);
         DtCine* listarCines();
-        string* listarPeliculas();
+        string** listarPeliculas();
         Cine* seleccionarCine(int);
         Pelicula* seleccionarPelicula(string);
         void altaSala();
         void altaCine();
         DtSala* listarSalas();
         Sala* seleccionarSala(int);
+        bool* fechaFuncion(DtFecha*);
+        void altaFuncion();
 };
 
 #endif /* CONTROLADORCINE_H */
