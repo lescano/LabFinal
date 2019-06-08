@@ -10,34 +10,34 @@
 
 using namespace std;
 
-funcion::funcion(int id, int cantA, float costo, DtFecha* f){
+Funcion::funcion(int id, int cantA, float costo, DtFecha* f){
     this->numero = id;
     this->cantAsientos = cantA;
     this->costo = costo;
     this->fecha = f;
 }
 
-int funcion::getNumero(){
+int Funcion::getNumero(){
     return this->numero;
 }
-void funcion::setNumero(int id){
+void Funcion::setNumero(int id){
     this->numero = id;
 }
-int funcion::getCantAsientos(){
+int Funcion::getCantAsientos(){
     return this->cantAsientos;
 }
-void funcion::setCantAsientos(int cantA){
+void Funcion::setCantAsientos(int cantA){
     this->cantAsientos = cantA;
 }
-float funcion::getCosto(){
+float Funcion::getCosto(){
     return this->costo;
 }
-void funcion::setCosto(float costo){
+void Funcion::setCosto(float costo){
     this->costo = costo;
 }
-DtFecha* funcion::getFecha(){
+DtFecha* Funcion::getFecha(){
     return this->fecha;
 }
-void funcion::setFecha(DtFecha* f){
+void Funcion::setFecha(DtFecha* f){
     this->fecha = f;
 }

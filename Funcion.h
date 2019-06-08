@@ -15,7 +15,7 @@
 #define FUNCION_H
 #include "DtFecha.h"
 
-class funcion {
+class Funcion {
 private:
     int numero;//identificador de la funcion
     int cantAsientos;
@@ -31,7 +31,7 @@ public:
     void setCosto(float);
     DtFecha* getFecha();
     void setFecha(DtFecha*);
-    ~funcion();
+    virtual ~Funcion();
 };
 
 

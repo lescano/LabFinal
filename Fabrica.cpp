@@ -1,6 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+#include "Fabrica.h"
+
+Fabrica* Fabrica::instancia = NULL;
+
+ControladorCine* Fabrica::controladorCine() {
+    return ControladorCine::getInstancia();
+}
+
+Fabrica::Fabrica() {
+}
+
+Fabrica* Fabrica::getInstancia() {
+    if (instancia == NULL)
+        instancia = new Fabrica();
+    return instancia;
+}

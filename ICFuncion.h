@@ -16,17 +16,17 @@
 
 class ICFuncion{
 public:
-    fechaFuncion()=0;
-    altaFuncion()=0;
-    listarFunciones()=0;
-    seleccionarFunciones()=0;
-    cantAsientos()=0;
-    reservaCredito()=0;
-    reservaDebito()=0;
-    precioTotal()=0;
-    crearReserva()=0;
-    cancelar()=0;
-    cancelarSeleccion()=0;
+//    fechaFuncion()=0;
+//    altaFuncion()=0;
+//    listarFunciones()=0;
+//    seleccionarFunciones()=0;
+//    cantAsientos()=0;
+//    reservaCredito()=0;
+//    reservaDebito()=0;
+//    precioTotal()=0;
+//    crearReserva()=0;
+//    cancelar()=0;
+//    cancelarSeleccion()=0;
 };
 
 #endif /* ICFUNCION_H */

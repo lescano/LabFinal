@@ -13,21 +13,30 @@
 
 #ifndef CONTROLADORFUNCIONES_H
 #define CONTROLADORFUNCIONES_H
+
 #include "ICFuncion.h"
 
+#include <string.h>
+
 class ControladorFuncion : public ICFuncion {
-public:
-    fechaFuncion();
-    altaFuncion();
-    listarFunciones();
-    seleccionarFunciones();
-    cantAsientos();
-    reservaCredito();
-    reservaDebito();
-    precioTotal();
-    crearReserva();
-    cancelar();
-    cancelarSeleccion();
+    private:   
+        ControladorFuncion();
+        static ControladorFuncion* instancia;
+    
+    public:
+        static ControladorFuncion* getInstancia();
+        
+//    fechaFuncion();
+//    altaFuncion();
+//    listarFunciones();
+//    seleccionarFunciones();
+//    cantAsientos();
+//    reservaCredito();
+//    reservaDebito();
+//    precioTotal();
+//    crearReserva();
+//    cancelar();
+//    cancelarSeleccion();
 };
 
 

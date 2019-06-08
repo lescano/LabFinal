@@ -20,7 +20,7 @@
 
 using namespace std;
 
-class cine {
+class Cine {
 private:
     int nro_cine;
     string direccion;
@@ -31,7 +31,7 @@ public:
     string getDireccion();
     void setNro_cine(int);
     void setDireccion(string);
-    ~cine();
+    ~Cine();
 };
 
 #endif /* CINE_H */

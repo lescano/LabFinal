@@ -6,35 +6,35 @@
 
 #include "Pelicula.h"
 
-pelicula::pelicula(){}
+Pelicula::pelicula(){}
 
-pelicula::pelicula(string tit, string poster, string sinopsis, float puntos){
+Pelicula::pelicula(string tit, string poster, string sinopsis, float puntos){
     this->titulo = tit;
     this->poster_url = poster;
     this->sinopsis = sinopsis;
     this->puntaje_total = puntos;
 }
-string pelicula::getTitulo(){
+string Pelicula::getTitulo(){
     return this->titulo;
 }
-void pelicula::setTitulo(string t){
+void Pelicula::setTitulo(string t){
     this->titulo = t;
 }
-string pelicula::getPoster_url(){
+string Pelicula::getPoster_url(){
     return this->poster_url;
 }
-void pelicula::setPoster_url(string p){
+void Pelicula::setPoster_url(string p){
     this->poster_url = p;
 }
-string pelicula::getSinopsis(){
+string Pelicula::getSinopsis(){
     return this->sinopsis;
 }
-void pelicula::setSinopsis(string s){
+void Pelicula::setSinopsis(string s){
     this->sinopsis = s;
 }
-float pelicula::getPuntaje_total(){
+float Pelicula::getPuntaje_total(){
     return this->puntaje_total;
 }
-void pelicula::setPuntaje_total(float puntos){
+void Pelicula::setPuntaje_total(float puntos){
     this->puntaje_total = puntos;
 }

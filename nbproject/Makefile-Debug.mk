@@ -48,8 +48,13 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/dfef8105/NodoDicc.o \
 	${OBJECTDIR}/_ext/dfef8105/Par.o \
 	${OBJECTDIR}/Cine.o \
+	${OBJECTDIR}/ControladorCine.o \
+	${OBJECTDIR}/ControladorFunciones.o \
+	${OBJECTDIR}/ControladorPelicula.o \
+	${OBJECTDIR}/ControladorUsuario.o \
 	${OBJECTDIR}/Credito.o \
 	${OBJECTDIR}/Debito.o \
+	${OBJECTDIR}/DtCine.o \
 	${OBJECTDIR}/DtFecha.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
@@ -153,6 +158,26 @@ ${OBJECTDIR}/Cine.o: Cine.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Cine.o Cine.cpp
 
+${OBJECTDIR}/ControladorCine.o: ControladorCine.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorCine.o ControladorCine.cpp
+
+${OBJECTDIR}/ControladorFunciones.o: ControladorFunciones.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorFunciones.o ControladorFunciones.cpp
+
+${OBJECTDIR}/ControladorPelicula.o: ControladorPelicula.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorPelicula.o ControladorPelicula.cpp
+
+${OBJECTDIR}/ControladorUsuario.o: ControladorUsuario.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ControladorUsuario.o ControladorUsuario.cpp
+
 ${OBJECTDIR}/Credito.o: Credito.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -162,6 +187,11 @@ ${OBJECTDIR}/Debito.o: Debito.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Debito.o Debito.cpp
+
+${OBJECTDIR}/DtCine.o: DtCine.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCine.o DtCine.cpp
 
 ${OBJECTDIR}/DtFecha.o: DtFecha.cpp
 	${MKDIR} -p ${OBJECTDIR}

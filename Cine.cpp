@@ -6,23 +6,23 @@
 
 #include "Cine.h"
 
-cine::cine(int id, string dire){
+Cine::cine(int id, string dire){
     this->nro_cine = id;
     this->direccion = dire;
 }
 
-int cine::getNro_cine(){
+int Cine::getNro_cine(){
     return this->nro_cine;
 }
 
-string cine::getDireccion(){
+string Cine::getDireccion(){
     return this->direccion;
 }
 
-void cine::setNro_cine(int id){
+void Cine::setNro_cine(int id){
     this->nro_cine = id;
 }
 
-void cine::setDireccion(string dire){
+void Cine::setDireccion(string dire){
     this->direccion = dire;
 }

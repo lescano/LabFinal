@@ -29,17 +29,17 @@
       <itemPath>../../../ColeccionesG/NodoDicc.cpp</itemPath>
       <itemPath>../../../ColeccionesG/NodoDicc.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="f2"
-                   displayName="Controladores"
-                   projectFiles="true"
-                   kind="ROOT">
-      <itemPath>CPelicula.h</itemPath>
+    <logicalFolder name="f2" displayName="Controladores" projectFiles="true">
+      <itemPath>ControladorCine.cpp</itemPath>
       <itemPath>ControladorCine.h</itemPath>
+      <itemPath>ControladorFunciones.cpp</itemPath>
       <itemPath>ControladorFunciones.h</itemPath>
+      <itemPath>ControladorPelicula.cpp</itemPath>
       <itemPath>ControladorPelicula.h</itemPath>
+      <itemPath>ControladorUsuario.cpp</itemPath>
       <itemPath>ControladorUsuario.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="f3" displayName="DataType" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f3" displayName="DataType" projectFiles="true">
       <itemPath>DtCine.h</itemPath>
       <itemPath>DtCom_Puntaje.h</itemPath>
       <itemPath>DtComentario.h</itemPath>
@@ -66,10 +66,7 @@
       <itemPath>sistema.h</itemPath>
       <itemPath>usuPeli.h</itemPath>
     </logicalFolder>
-    <logicalFolder name="f1"
-                   displayName="Interfaces"
-                   projectFiles="true"
-                   kind="ROOT">
+    <logicalFolder name="f1" displayName="Interfaces" projectFiles="true">
       <itemPath>Fabrica.cpp</itemPath>
       <itemPath>Fabrica.h</itemPath>
       <itemPath>ICCines.h</itemPath>
@@ -87,6 +84,7 @@
       <itemPath>Cine.cpp</itemPath>
       <itemPath>Credito.cpp</itemPath>
       <itemPath>Debito.cpp</itemPath>
+      <itemPath>DtCine.cpp</itemPath>
       <itemPath>Funcion.cpp</itemPath>
       <itemPath>Opinion.cpp</itemPath>
       <itemPath>Pago.cpp</itemPath>
@@ -218,17 +216,23 @@
       </item>
       <item path="../../../ColeccionesG/Par.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CPelicula.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Cine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Cine.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ControladorCine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="ControladorCine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ControladorFunciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ControladorFunciones.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ControladorPelicula.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="ControladorPelicula.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ControladorUsuario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ControladorUsuario.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -239,6 +243,8 @@
       <item path="Debito.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Debito.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtCine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtCine.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -421,17 +427,23 @@
       </item>
       <item path="../../../ColeccionesG/Par.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="CPelicula.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Cine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Cine.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ControladorCine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="ControladorCine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ControladorFunciones.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ControladorFunciones.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ControladorPelicula.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="ControladorPelicula.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ControladorUsuario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ControladorUsuario.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -442,6 +454,8 @@
       <item path="Debito.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Debito.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtCine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtCine.h" ex="false" tool="3" flavor2="0">
       </item>

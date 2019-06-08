@@ -15,9 +15,9 @@
 #define ICUSUARIO_H
 
 class ICUsuario{
-    ingresar()=0;
-    ingresarContrasenia()=0;
-    iniciarSesion()=0;
+//    ingresar()=0;
+//    ingresarContrasenia()=0;
+//    iniciarSesion()=0;
 };
 
 #endif /* ICUSUARIO_H */

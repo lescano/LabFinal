@@ -16,14 +16,14 @@
 
 class ICCines {
 public:
-    ingresarDireccion()=0;
-    ingresarCapacidadSalas()=0;
-    altaSala()=0;
-    altaCine()=0;
-    listarCines()=0;
-    seleccionarCine()=0;
-    listarSalas()=0;
-    seleccionarSala()=0;
+//    void ingresarDireccion()=0;
+//    void ingresarCapacidadSalas()=0;
+//    void altaSala()=0;
+//    void altaCine()=0;
+//    void listarCines()=0;
+//    void seleccionarCine()=0;
+//    void listarSalas()=0; 
+//    void seleccionarSala()=0;
 };
 
 #endif /* ICCINES_H */

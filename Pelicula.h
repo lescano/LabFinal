@@ -18,7 +18,7 @@
 #include "Cine.h"
 using namespace std;
 
-class pelicula {
+class Pelicula {
 private:
     string titulo;
     string poster_url;
@@ -37,7 +37,7 @@ public:
     void setSinopsis(string);
     float getPuntaje_total();
     void setPuntaje_total(float);
-    ~pelicula();
+    ~Pelicula();
 };
 
 #endif /* PELICULA_H */

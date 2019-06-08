@@ -13,13 +13,22 @@
 
 #ifndef CONTROLADORUSUARIO_H
 #define CONTROLADORUSUARIO_H
+
 #include "ICUsuario.h"
 
+#include <string.h>
+
 class ControladorUsuario : public ICUsuario {
-public:
-    ingresar();
-    ingresarContrasenia();
-    iniciarSesion();
+    private:   
+        ControladorUsuario();
+        static ControladorUsuario* instancia;
+    
+    public:
+        static ControladorUsuario* getInstancia();
+        
+//    ingresar();
+//    ingresarContrasenia();
+//    iniciarSesion();
 };
 
 

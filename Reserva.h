@@ -21,7 +21,7 @@ private:
     int cant_asientos;
     float costo_total;
     pago* mecanismoDePago;
-    funcion* funcionReservada;
+    Funcion* funcionReservada;
 public:
     reserva(int, float);
     int getCant_asientos();

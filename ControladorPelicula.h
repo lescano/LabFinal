@@ -13,10 +13,19 @@
 
 #ifndef CONTROLADORPELICULA_H
 #define CONTROLADORPELICULA_H
+
 #include "ICPelicula.h"
 
+#include <string.h>
+
 class ControladorPelicula : public ICPelicula {
-public:
+  private:   
+        ControladorPelicula();
+        static ControladorPelicula* instancia;
+    
+    public:
+        static ControladorPelicula* getInstancia();
+        
     listarPeliculas();
     seleccionarPeliculas();
     tienePuntaje();

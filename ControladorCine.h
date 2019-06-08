@@ -13,17 +13,43 @@
 
 #ifndef CONTROLADORCINE_H
 #define CONTROLADORCINE_H
+
 #include "ICCines.h"
+#include "ControladorUsuario.h"
+#include "ControladorPelicula.h"
+#include "Cine.h"
+#include "Sala.h"
+#include "Funcion.h"
+#include "Pelicula.h"
+#include "DtCine.h"
+#include "DtSala.h"
+#include "DtFuncion.h"
+
+#include <cstddef>
 
 class ControladorCine :public ICCines {
-    ingresarDireccion();
-    ingresarCapacidadSalas();
-    altaSala();
-    altaCine();
-    listarCines();
-    seleccionarCine();
-    listarSalas();
-    seleccionarSala();
+    private:
+        ControladorUsuario* usuario;
+        ControladorPelicula* pelicula;
+        Cine* cine;
+        Sala* sala;
+        Funcion* funcion;
+        ControladorCine();
+        static ControladorCine* instancia;
+    
+    public:
+        static ControladorCine* getInstancia();
+        
+        void ingresarDireccion(string);
+        void ingresarCapacidadSalas(int);
+        DtCine* listarCines();
+        string* listarPeliculas();
+        Cine* seleccionarCine(int);
+        Pelicula* seleccionarPelicula(string);
+        void altaSala();
+        void altaCine();
+        DtSala* listarSalas();
+        Sala* seleccionarSala(int);
 };
 
 #endif /* CONTROLADORCINE_H */

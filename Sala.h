@@ -15,14 +15,14 @@
 #define SALA_H
 #include "Funcion.h"
 
-class sala {
+class Sala {
 private:
     int nro_sala;
     int capacidad;
     //coleccion de funciones 
 public:
     sala(int, int);
-    ~sala();
+    ~Sala();
     int getNro_sala();
     void setNro_sala(int);
     int getCapacidad();

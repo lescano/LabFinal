@@ -16,19 +16,19 @@
 
 class ICPelicula {
 public: 
-    listarPeliculas()=0;
-    seleccionarPeliculas()=0;
-    tienePuntaje()=0;
-    mostrarPuntaje()=0;
-    ingresarNuevoPuntaje()=0;
-    ingresarPuntaje()=0;
-    listarComentarios()=0;
-    crearComentarios()=0;
-    seleccionarComentarios()=0;
-    crearRespuesta()=0;
-    borrarPelicula()=0;
-    verInfoPeli()=0;
-    verComentarioPuntaje()=0;
+//    listarPeliculas()=0;
+//    seleccionarPeliculas()=0;
+//    tienePuntaje()=0;
+//    mostrarPuntaje()=0;
+//    ingresarNuevoPuntaje()=0;
+//    ingresarPuntaje()=0;
+//    listarComentarios()=0;
+//    crearComentarios()=0;
+//    seleccionarComentarios()=0;
+//    crearRespuesta()=0;
+//    borrarPelicula()=0;
+//    verInfoPeli()=0;
+//    verComentarioPuntaje()=0;
 };
 
 #endif /* ICPELICULA_H */
