@@ -13,22 +13,34 @@
 
 #ifndef ICPELICULA_H
 #define ICPELICULA_H
+#include <string>
+#include "DtCine.h"
+#include "DtInfoPeli.h"
+#include "Pelicula.h"
+#include "DtComentario.h"
+#include "DtFuncion.h"
+
+
+
+using namespace std;
 
 class ICPelicula {
-public:
-//    virtual listarPeliculas()=0;
-//    virtual seleccionarPeliculas()=0;
-//    tienePuntaje()=0;
-//    mostrarPuntaje()=0;
-//    ingresarNuevoPuntaje()=0;
-//    ingresarPuntaje()=0;
-//    listarComentarios()=0;
-//    crearComentarios()=0;
-//    seleccionarComentarios()=0;
-//    crearRespuesta()=0;
-//    borrarPelicula()=0;
-//    verInfoPeli()=0;
-//    verComentarioPuntaje()=0;
+public: 
+    virtual void borrarPelicula()=0;
+    virtual void ingresarNuevoPuntaje()=0;
+    virtual void ingresarPuntaje()=0;
+    virtual string** listarPeliculas()=0;
+    virtual DtCine listarCines()=0;
+    virtual int mostrarPuntaje()=0;
+    virtual Pelicula* seleccionarPeliculas(string)=0;
+    virtual bool tienePuntaje()=0;
+    virtual DtInfoPeli* verInfoPeli()=0;
+    virtual DtComentario** listarComentarios()=0;
+    virtual void crearComentarios(string)=0;
+    virtual Opinion* seleccionarComentarios(string)=0;
+    virtual void crearRespuesta(string)=0;
+    virtual Cine* seleccionarCines(int)=0;
+    virtual DtFuncion** listarFunciones(DtFecha)=0;
 };
 
 #endif /* ICPELICULA_H */

@@ -17,7 +17,7 @@
 #include "ICUsuario.h"
 
 #include <string.h>
-
+using namespace std;
 class ControladorUsuario : public ICUsuario {
     private:   
         ControladorUsuario();
@@ -25,10 +25,9 @@ class ControladorUsuario : public ICUsuario {
     
     public:
         static ControladorUsuario* getInstancia();
-        
-//    ingresar();
-//    ingresarContrasenia();
-//    iniciarSesion();
+      void ingresar(string);
+      bool ingresarContrasenia(string);
+      void iniciarSesion();
 };
 
 

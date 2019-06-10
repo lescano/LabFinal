@@ -6,7 +6,7 @@
 
 #include "Cine.h"
 
-Cine::cine(int id, string dire, float costo){
+Cine::Cine(int id, string dire, float costo){
     this->nro_cine = id;
     this->direccion = dire;
     this->costo=costo;

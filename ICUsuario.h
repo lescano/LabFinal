@@ -13,11 +13,16 @@
 
 #ifndef ICUSUARIO_H
 #define ICUSUARIO_H
+#include <string>
+using namespace std;
 
 class ICUsuario{
-//    ingresar()=0;
-//    ingresarContrasenia()=0;
-//    iniciarSesion()=0;
+    public:
+        virtual void ingresar(string)=0;
+        virtual bool ingresarContrasenia(string)=0;
+        virtual void iniciarSesion()=0;
+    
+    
 };
 
 #endif /* ICUSUARIO_H */

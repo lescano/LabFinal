@@ -12,3 +12,11 @@ ControladorUsuario* ControladorUsuario::getInstancia() {
         instancia = new ControladorUsuario();
     return instancia;
 }
+void ControladorUsuario::ingresar(string){
+}
+bool ControladorUsuario::ingresarContrasenia(string){
+    
+}
+void ControladorUsuario::iniciarSesion(){
+    
+}

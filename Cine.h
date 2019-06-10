@@ -28,7 +28,7 @@ private:
     float costo;
     //Coleccion de las salas del cine
 public:
-    cine(int,string, float);
+    Cine(int,string, float);
     int getNro_cine();
     string getDireccion();
     float getCosto();

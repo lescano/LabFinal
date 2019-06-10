@@ -13,20 +13,33 @@
 
 #ifndef ICFUNCION_H
 #define ICFUNCION_H
+#include "ICFuncion.h"
+#include "Cine.h"
+#include "Pelicula.h"
+#include "ControladorUsuario.h"
+#include "ControladorPelicula.h"
+#include "Usuario.h"
+#include "ICollection.h"
+#include "DtInfoPeli.h"
+#include "DtFuncion.h"
+#include "DtCine.h"
 
+#include <string.h>
+using namespace std;
 class ICFuncion{
 public:
-//    fechaFuncion()=0;
-//    altaFuncion()=0;
-//    listarFunciones()=0;
-//    seleccionarFunciones()=0;
-//    cantAsientos()=0;
-//    reservaCredito()=0;
-//    reservaDebito()=0;
-//    precioTotal()=0;
-//    crearReserva()=0;
-//    cancelar()=0;
-//    cancelarSeleccion()=0;
+        virtual Cine* seleccionarCine(int)=0;
+        virtual Pelicula* seleccionarPelicula(string)=0;
+        virtual string** listarPeliculas()=0;
+        virtual DtInfoPeli* VerInfoPeli()=0;
+        virtual DtCine* listarCine()=0;
+        virtual DtFuncion* listarFunciones()=0;
+        virtual Funcion* seleccionarFunciones(int)=0;
+        virtual void cantAsientos(int)=0;
+        virtual float reservaCredito(int)=0;
+        virtual void reservaDebito(string)=0;
+        virtual int precioTotal()=0;
+        virtual void crearReserva()=0;
 };
 
 #endif /* ICFUNCION_H */
