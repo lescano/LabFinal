@@ -6,23 +6,27 @@
 
 #include "Credito.h"
 
-credito::credito(float d, string f){
+Credito::Credito(float d, string f){
     this->descuento = d;
     this->financiera = f;
 }
 
-float credito::getDescuento(){
+float Credito::getDescuento(){
     return this->descuento;
 }
 
-string credito::getFinanciera(){
+string Credito::getFinanciera(){
     return this->financiera;
 }
 
-void credito::setDescuento(float d){
+void Credito::setDescuento(float d){
     this->descuento = d;
 }
 
-void credito::setFinanciera(string f){
+void Credito::setFinanciera(string f){
     this->financiera = f;
+}
+
+Credito::~Credito(){
+    
 }

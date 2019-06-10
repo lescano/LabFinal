@@ -6,9 +6,10 @@
 
 #include "Cine.h"
 
-Cine::cine(int id, string dire){
+Cine::cine(int id, string dire, float costo){
     this->nro_cine = id;
     this->direccion = dire;
+    this->costo=costo;
 }
 
 int Cine::getNro_cine(){
@@ -19,10 +20,30 @@ string Cine::getDireccion(){
     return this->direccion;
 }
 
+float Cine::getCosto(){
+    return this->costo;
+}
+
 void Cine::setNro_cine(int id){
     this->nro_cine = id;
 }
 
 void Cine::setDireccion(string dire){
     this->direccion = dire;
+}
+
+void Cine::setCosto(float costo){
+    this->costo= costo;
+}
+
+void Cine::borrarSalas(){
+    
+}
+
+DtFuncion** Cine::listarFunciones(){
+    
+}
+
+Funcion* Cine::seleccionarFuncion(int){
+    
 }

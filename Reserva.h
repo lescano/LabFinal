@@ -20,7 +20,7 @@ class reserva {
 private:
     int cant_asientos;
     float costo_total;
-    pago* mecanismoDePago;
+    Pago* mecanismoDePago;
     Funcion* funcionReservada;
 public:
     reserva(int, float);

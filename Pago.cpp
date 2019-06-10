@@ -6,6 +6,6 @@
 
 #include "Pago.h"
 
-pago::pago(){ }
+Pago::Pago(){ }
 
-pago::~pago(){}
+Pago::~Pago(){}

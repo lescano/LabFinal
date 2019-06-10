@@ -14,23 +14,28 @@
 #ifndef FUNCION_H
 #define FUNCION_H
 #include "DtFecha.h"
+#include <string>
+using namespace std;
 
 class Funcion {
 private:
-    int numero;//identificador de la funcion
+    int id;//identificador de la funcion
     int cantAsientos;
     float costo;
-    DtFecha* fecha;
+    DtFecha* fecha; //preguntar si hay que hacer un DtHora
+    string duracion;
 public:
-    funcion(int, int, float, DtFecha*);
-    int getNumero();
-    void setNumero(int);
+    funcion(int, int, float, DtFecha*, string);
+    int getId();
+    void setId(int);
     int getCantAsientos();
     void setCantAsientos(int);
     float getCosto();
     void setCosto(float);
     DtFecha* getFecha();
     void setFecha(DtFecha*);
+    string getDuracion();
+    void setDuracion(string);
     virtual ~Funcion();
 };
 

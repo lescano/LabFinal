@@ -13,19 +13,20 @@
 
 #ifndef DTFUNCION_H
 #define DTFUNCION_H
+#include "DtFecha.h"
 
 class DtFuncion {
 private:
     int numero;//identificador de la funcion
     int cantAsientos;
     float costo;
-    DtFecha fecha;
+    DtFecha* fecha;
 public:
-    DtFuncion(int, int, float, DtFecha);
+    DtFuncion(int, int, float, DtFecha*);
     int getNumero();
     int getCantAsientos();
     float getCosto();
-    DtFecha getFecha();
+    DtFecha* getFecha();
     ~DtFuncion();
 };
 

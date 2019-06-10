@@ -4,24 +4,25 @@
  * and open the template in the editor.
  */
 #include <iostream>
-
+#include <string>
 #include "Funcion.h"
 #include "DtFecha.h"
 
 using namespace std;
 
-Funcion::funcion(int id, int cantA, float costo, DtFecha* f){
-    this->numero = id;
+Funcion::funcion(int id, int cantA, float costo, DtFecha* f, string dur){
+    this->id = id;
     this->cantAsientos = cantA;
     this->costo = costo;
     this->fecha = f;
+    this->duracion=dur;
 }
 
-int Funcion::getNumero(){
-    return this->numero;
+int Funcion::getId(){
+    return this->id;
 }
-void Funcion::setNumero(int id){
-    this->numero = id;
+void Funcion::setId(int id){
+    this->id = id;
 }
 int Funcion::getCantAsientos(){
     return this->cantAsientos;
@@ -40,4 +41,16 @@ DtFecha* Funcion::getFecha(){
 }
 void Funcion::setFecha(DtFecha* f){
     this->fecha = f;
+}
+
+string Funcion::getDuracion(){
+    return this->duracion;
+}
+
+void Funcion::setDuracion(string dur){
+    this->duracion=dur;
+}
+
+Funcion::~Funcion(){
+    
 }

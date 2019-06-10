@@ -17,14 +17,17 @@
 
 using namespace std;
 
-class opinion {
+class Opinion {
 private:
     string comentario;
+    string id;
 public:
-    opinion(string);
-    ~opinion();
+    Opinion(string, string);
+    ~Opinion();
     string getComentario();
     void setComentario(string);
+    string getId();
+    void setId(string);
 };
 
 #endif /* OPINION_H */

@@ -20,17 +20,17 @@
 
 using namespace std;
 
-class credito : public pago {
+class Credito : public Pago {
 private:
     float descuento;
     string financiera;
 public:
-    credito(float, string);
+    Credito(float, string);
     float getDescuento();
     string getFinanciera();
     void setDescuento(float);
     void setFinanciera(string);
-    ~credito();
+    ~Credito();
 };
 
 #endif /* CREDITO_H */

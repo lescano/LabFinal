@@ -7,12 +7,24 @@
 using namespace std;
 #include "Opinion.h"
 
-opinion::opinion(string comentario){
+Opinion::Opinion(string comentario, string id){
     this->comentario = comentario;
+    this->id=id;
 }
-string opinion::getComentario(){
+string Opinion::getComentario(){
     return this->comentario;
 }
-void opinion::setComentario(string c){
+void Opinion::setComentario(string c){
     this->comentario = c;
+}
+
+string Opinion::getId(){
+    return this->id;
+}
+void Opinion::setId(string id){
+    this->id=id;
+}
+
+Opinion::~Opinion(){
+    
 }

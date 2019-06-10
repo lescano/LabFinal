@@ -8,14 +8,18 @@
 #include <string>
 using namespace std;
 
-debito::debito(string b) {
+Debito::Debito(string b):Pago() {
     this->banco_emisor = b;
 }
 
-string debito::getBanco_emisor(){
+string Debito::getBanco_emisor(){
     return this->banco_emisor;
 }
 
-void debito::setBanco_emisor(string b){
+void Debito::setBanco_emisor(string b){
     this->banco_emisor = b;
+}
+
+Debito::~Debito(){
+    
 }

@@ -16,16 +16,17 @@
 #include "Pago.h"
 
 #include <string>
+#include "Pago.h"
 using namespace std;
 
-class debito : public pago {
+class Debito : public Pago {
 private: 
     string banco_emisor;
 public:
-    debito(string);
+    Debito(string);
     string getBanco_emisor();
     void setBanco_emisor(string);
-    ~debito();
+    ~Debito();
 };
 
 #endif /* DEBITO_H */

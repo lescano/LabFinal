@@ -17,10 +17,10 @@
 
 
 
-class pago {
+class Pago {
 public:
-    pago();
-    ~pago();
+    Pago();
+    ~Pago();
 };
 
 #endif /* PAGO_H */
