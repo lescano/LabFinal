@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=MinGW-Windows
+CND_PLATFORM=Cygwin-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Credito.o \
 	${OBJECTDIR}/Debito.o \
 	${OBJECTDIR}/DtCine.o \
+	${OBJECTDIR}/DtCredito.o \
 	${OBJECTDIR}/DtFecha.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
@@ -65,8 +66,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Sala.o \
 	${OBJECTDIR}/Usuario.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/sistema.o \
-	${OBJECTDIR}/usuPeli.o
+	${OBJECTDIR}/sistema.o
 
 
 # C Compiler Flags
@@ -132,6 +132,11 @@ ${OBJECTDIR}/DtCine.o: DtCine.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCine.o DtCine.cpp
+
+${OBJECTDIR}/DtCredito.o: DtCredito.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCredito.o DtCredito.cpp
 
 ${OBJECTDIR}/DtFecha.o: DtFecha.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -247,11 +252,6 @@ ${OBJECTDIR}/sistema.o: sistema.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sistema.o sistema.cpp
-
-${OBJECTDIR}/usuPeli.o: usuPeli.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/usuPeli.o usuPeli.cpp
 
 # Subprojects
 .build-subprojects:

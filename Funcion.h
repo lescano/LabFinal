@@ -19,24 +19,24 @@ using namespace std;
 
 class Funcion {
 private:
-    int id;//identificador de la funcion
+    int idFuncion;//identificador de la funcion
     int cantAsientos;
     float costo;
     DtFecha* fecha; //preguntar si hay que hacer un DtHora
-    string duracion;
+    int duracion;
 public:
-    funcion(int, int, float, DtFecha*, string);
-    int getId();
-    void setId(int);
+    Funcion(int idFuncion, int cantA, float costo, DtFecha* fecha, int duracion);
+    int getIdFuncion();
+    void setIdFuncion(int);
     int getCantAsientos();
     void setCantAsientos(int);
     float getCosto();
     void setCosto(float);
     DtFecha* getFecha();
     void setFecha(DtFecha*);
-    string getDuracion();
-    void setDuracion(string);
-    virtual ~Funcion();
+    int getDuracion();
+    void setDuracion(int);
+    ~Funcion();
 };
 
 

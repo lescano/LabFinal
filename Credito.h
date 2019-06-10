@@ -20,7 +20,7 @@
 
 using namespace std;
 
-class Credito : public Pago {
+class Credito : public pago {
 private:
     float descuento;
     string financiera;

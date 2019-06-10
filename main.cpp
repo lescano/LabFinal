@@ -26,19 +26,62 @@
 #include "Pelicula.h"
 #include "Reserva.h"
 #include "Sala.h"
-#include "usuPeli.h"
+#include "Puntaje.h"
 #include "Usuario.h"
 
 void menu();
 void pausa();
+void Borrar();
 
 using namespace std;
 
 int main(int argc, char** argv) {
-    int op;
-    menu();
-    cin>>op;
-    fflush(stdin);
+    char op;
+    bool salir=false;
+    
+    while(!salir){
+        Borrar();
+        menu();
+        cin>>op;
+        fflush(stdin);
+    
+        switch (op){
+            case '1':
+                break;
+            case '2':
+                break;
+            case '3':
+                break;
+            case '4':
+                break;
+            case '5':
+                break;
+            case '6':
+                break;
+            case '7':
+                break;
+            case '8':
+                break;            
+            case '9':
+                break;
+            case '10':
+                break;
+            case '11':
+                break;
+            case '12':
+                break;
+            case '13':
+                break;
+            case '14':
+                break;
+            case '0':
+                salir=true;
+                break;
+            default:
+                cout<<"\nOpcion no valida. Intentelo nuevamente.\n";
+                break;
+        }
+    }
 
     return 0;
 }
@@ -48,8 +91,15 @@ void pausa(){
     std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' );
 }
 
+void Borrar(){
+          if(system("cls"))
+            system("clear");
+  }
+
 void menu(){
-    cout<<"\t\t -TIPCinemas-\n\n";
+    cout<<"\t\t --------------\n";
+    cout<<"\t\t --TIPCinemas--\n";
+    cout<<"\t\t --------------\n\n";
     cout<<"\t1- Iniciar Sesión\n";
     cout<<"\t2- Crear Reserva\n";
     cout<<"\t3- Alta Cine\n";
@@ -63,6 +113,7 @@ void menu(){
     cout<<"\t11- Cerrar sesion\n";
     cout<<"\t12- Modificar fecha del sistema\n";
     cout<<"\t13- Consultar fecha del sistema\n";
-    cout<<"\t14- Cargar datos de prueba\n\n";
+    cout<<"\t14- Cargar datos de prueba\n";
+    cout<<"\t0- Salir\n\n";
     cout<<"Elija una opcion: ";
 }

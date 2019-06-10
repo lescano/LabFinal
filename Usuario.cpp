@@ -9,7 +9,7 @@
 
 using namespace std;
 
-Usuario::usuario(string nickname, string imagen, string contra){
+Usuario::Usuario(string nickname, string imagen, string contra){
     this->nickname = nickname;
     this->img_perfil = imagen;
     this->contrasenia = contra;

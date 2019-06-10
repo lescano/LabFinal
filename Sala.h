@@ -14,20 +14,28 @@
 #ifndef SALA_H
 #define SALA_H
 #include "Funcion.h"
+#include "IDictionary.h"
+#include "DtFuncion.h"
 
 class Sala {
 private:
-    int nro_sala;
+    int nroSala;
     int capacidad;
-    //coleccion de funciones 
+    IDictionary* funciones;
 public:
-    sala(int, int);
+    Sala(int, int);
     ~Sala();
     int getNro_sala();
     void setNro_sala(int);
     int getCapacidad();
     void setCapacidad(int);
+    IDictionary* getFunciones();
+    void setFunciones(IDictionary*);
+    
+    void borrarFunciones();
+    DtFuncion** listarFunciones();
+    Funcion* seleccionarFuncion(int idFuncion);
+    
 };
-
 #endif /* SALA_H */
 

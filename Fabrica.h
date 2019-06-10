@@ -3,6 +3,12 @@
 
 #include "ICCines.h"
 #include "ControladorCine.h"
+#include "ICFuncion.h"
+#include "ControladorFunciones.h"
+#include "ICPelicula.h"
+#include "ControladorPelicula.h"
+#include "ICUsuario.h"
+#include "ControladorUsuario.h"
 
 #include <string.h>
 
@@ -12,7 +18,10 @@ private:
     static Fabrica* instancia;
 public:
     static Fabrica* getInstancia();
-    ControladorCine* controladorCine();
+    ICCines* getInterfaceCine();
+    ICFuncion* getInterfaceFuncion();
+    ICPelicula* getInterfacePelicula();
+    ICUsuario* getInterfaceUsuario();
 };
 
 #endif /* FABRICA_H */

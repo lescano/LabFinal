@@ -16,19 +16,24 @@
 #include <string>
 #include "Opinion.h"
 #include "Cine.h"
+#include "DtCine.h"
+#include "DtFuncion.h"
+#include "Funcion.h"
+#include "DtInfoPeli.h"
+
 using namespace std;
 
 class Pelicula {
 private:
     string titulo;
-    string poster_url;
+    string posterURL;
     string sinopsis;
-    float puntaje_total;
-    //coleccion de las opiniones de esa pelicula
-    //coleccion de los cines de esa pelicula
+    float puntajeTotal;
+    IDictionary* opinion;
+    IDictionary* cines;
 public:
-    pelicula();
-    pelicula(string, string, string, float);
+    Pelicula();
+    Pelicula(string, string, string, float);
     string getTitulo();
     void setTitulo(string);
     string getPoster_url();
@@ -37,6 +42,19 @@ public:
     void setSinopsis(string);
     float getPuntaje_total();
     void setPuntaje_total(float);
+    IDictionary* getOpinion();
+    void setOpinion(IDictionary*);
+    IDictionary* getCine();
+    void setCine(IDictionary*);
+    
+    void borarSalaCineFunc();
+    void borrarOpiniones();
+    bool esPelicula(string);
+    DtCine** listarCine();
+    DtFuncion** listarFunciones(Cine*);
+    Funcion* seleccionarFuncion(int idFuncion, Cine*);
+    Cine* seleccionarCine(int idCine);
+    DtInfoPeli* verInfoPeli();
     ~Pelicula();
 };
 

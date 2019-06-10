@@ -15,9 +15,9 @@
 #define ICPELICULA_H
 
 class ICPelicula {
-public: 
-//    listarPeliculas()=0;
-//    seleccionarPeliculas()=0;
+public:
+//    virtual listarPeliculas()=0;
+//    virtual seleccionarPeliculas()=0;
 //    tienePuntaje()=0;
 //    mostrarPuntaje()=0;
 //    ingresarNuevoPuntaje()=0;

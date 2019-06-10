@@ -6,13 +6,13 @@
 
 #include "Pelicula.h"
 
-Pelicula::pelicula(){}
+Pelicula::Pelicula(){}
 
-Pelicula::pelicula(string tit, string poster, string sinopsis, float puntos){
+Pelicula::Pelicula(string tit, string poster, string sinopsis, float puntos){
     this->titulo = tit;
-    this->poster_url = poster;
+    this->posterURL = poster;
     this->sinopsis = sinopsis;
-    this->puntaje_total = puntos;
+    this->puntajeTotal = puntos;
 }
 string Pelicula::getTitulo(){
     return this->titulo;
@@ -21,10 +21,10 @@ void Pelicula::setTitulo(string t){
     this->titulo = t;
 }
 string Pelicula::getPoster_url(){
-    return this->poster_url;
+    return this->posterURL;
 }
 void Pelicula::setPoster_url(string p){
-    this->poster_url = p;
+    this->posterURL = p;
 }
 string Pelicula::getSinopsis(){
     return this->sinopsis;
@@ -33,8 +33,8 @@ void Pelicula::setSinopsis(string s){
     this->sinopsis = s;
 }
 float Pelicula::getPuntaje_total(){
-    return this->puntaje_total;
+    return this->puntajeTotal;
 }
 void Pelicula::setPuntaje_total(float puntos){
-    this->puntaje_total = puntos;
+    this->puntajeTotal = puntos;
 }

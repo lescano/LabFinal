@@ -34,14 +34,16 @@ class ControladorCine :public ICCines {
         Cine* cineRecordado;
         Sala* salaRecordada;
         Funcion* funcionRecordada;
+        string direccion;
+        int capacidadSala;
         ControladorCine();
         static ControladorCine* instancia;
     
     public:
         static ControladorCine* getInstancia();
         
-        void ingresarDireccion(string);
-        void ingresarCapacidadSalas(int);
+        void setDireccion(string);
+        void setCapacidadSalas(int);
         DtCine* listarCines();
         string** listarPeliculas();
         Cine* seleccionarCine(int);

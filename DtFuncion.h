@@ -15,6 +15,8 @@
 #define DTFUNCION_H
 #include "DtFecha.h"
 
+#include "DtFecha.h"
+
 class DtFuncion {
 private:
     int numero;//identificador de la funcion

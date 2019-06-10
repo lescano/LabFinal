@@ -14,7 +14,12 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 #include <string>
-#include "usuPeli.h"
+#include "ICollection.h"
+#include "IDictionary.h"
+#include "tipoUsuario.h"
+#include "DtCredito.h"
+#include "DtFuncion.h"
+#include "Puntaje.h"
 #include "Reserva.h"
 #include "Pago.h"
 using namespace std;
@@ -24,18 +29,37 @@ private:
     string nickname;
     string img_perfil;
     string contrasenia;
-    //Colleccion de puntajes
-    //Colleccion de reservas
-    //Coleccion de los tipos de pago que tengo
+    tipoUsuario tipo;
+    ICollection*  puntajes;
+    IDictionary* reservas;
+    IDictionary* tipoPago;
 public:
-    usuario(string, string, string);
-    virtual ~Usuario();
+    Usuario(string, string, string);
+    ~Usuario();
     string getNickname();
     void setNickname(string);
     string getImg_perfil();
     void setImg_perfil(string);
     string getContrasenia();
     void setContrasenia(string);
+    tipoUsuario getTipoUsuario();
+    void setTipoUsuario(tipoUsuario);
+    ICollection* getPuntaje();
+    void setPuntaje(ICollectible*);
+    IDictionary* getReserva();
+    void setReserva(IDictionary*);
+    IDictionary* getTipoPago();
+    void setTipoPago(IDictionary*);
+    
+    void borrarPuntaje(string);
+    void borarReservas();
+    bool esMiPWD(string);
+    void ingresarNuevoPuntaje(Pelicula*, int puntos);
+    void ingresarPuntaje(string titulo, int puntos);
+    DtFuncion** listarFunciones(Pelicula* , Cine*);
+    int mostrarPuntaje(string);
+    DtCredito* reservaCredito(string);
+    bool tienePuntaje();
 };
 
 #endif /* USUARIO_H */

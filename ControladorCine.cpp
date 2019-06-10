@@ -16,3 +16,52 @@ ControladorCine* ControladorCine::getInstancia() {
         instancia = new ControladorCine();
     return instancia;
 }
+
+void ControladorCine::setDireccion(string direccion){
+    this->direccion=direccion;
+    
+}
+
+void ControladorCine::setCapacidadSalas(int capacidad){
+    this->capacidadSala=capacidad;
+}
+
+DtCine* ControladorCine::listarCines(){
+    
+}
+
+string** ControladorCine::listarPeliculas(){
+    
+}
+
+Cine* ControladorCine::seleccionarCine(int){
+    
+}
+
+Pelicula* ControladorCine::seleccionarPelicula(string pelicula){
+    
+}
+
+void ControladorCine::altaSala(){
+    
+}
+
+void ControladorCine::altaCine(){
+    
+}
+
+DtSala* ControladorCine::listarSalas(){
+    
+}
+
+Sala* ControladorCine::seleccionarSala(int idSala){
+    
+}
+
+bool* ControladorCine::fechaFuncion(DtFecha* fecha){
+    
+}
+
+void ControladorCine::altaFuncion(){
+    
+}

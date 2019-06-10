@@ -6,13 +6,13 @@
 
 #include "Sala.h"
 
-Sala::sala(int nro, int cap){
-    this->nro_sala = nro;
+Sala::Sala(int nro, int cap){
+    this->nroSala = nro;
     this->capacidad = cap;
 }
 
 int Sala::getNro_sala(){
-    return this->nro_sala;
+    return this->nroSala;
 }
 
 int Sala::getCapacidad(){
@@ -20,7 +20,7 @@ int Sala::getCapacidad(){
 }
 
 void Sala::setNro_sala(int nro){
-    this->nro_sala = nro;
+    this->nroSala = nro;
 }
 
 void Sala::setCapacidad(int cap) {

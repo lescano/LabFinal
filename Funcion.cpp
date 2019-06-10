@@ -10,19 +10,19 @@
 
 using namespace std;
 
-Funcion::funcion(int id, int cantA, float costo, DtFecha* f, string dur){
-    this->id = id;
+Funcion::Funcion(int idFuncion, int cantA, float costo, DtFecha* f, int dur){
+    this->idFuncion = idFuncion;
     this->cantAsientos = cantA;
     this->costo = costo;
     this->fecha = f;
     this->duracion=dur;
 }
 
-int Funcion::getId(){
-    return this->id;
+int Funcion::getIdFuncion(){
+    return this->idFuncion;
 }
-void Funcion::setId(int id){
-    this->id = id;
+void Funcion::setIdFuncion(int id){
+    this->idFuncion = id;
 }
 int Funcion::getCantAsientos(){
     return this->cantAsientos;
@@ -43,11 +43,11 @@ void Funcion::setFecha(DtFecha* f){
     this->fecha = f;
 }
 
-string Funcion::getDuracion(){
+int Funcion::getDuracion(){
     return this->duracion;
 }
 
-void Funcion::setDuracion(string dur){
+void Funcion::setDuracion(int dur){
     this->duracion=dur;
 }
 
