@@ -8,11 +8,11 @@
 
 Pelicula::Pelicula(){}
 
-Pelicula::Pelicula(string tit, string poster, string sinopsis, float puntos){
+Pelicula::Pelicula(string tit, string sinopsis, string poster){
     this->titulo = tit;
     this->posterURL = poster;
     this->sinopsis = sinopsis;
-    this->puntajeTotal = puntos;
+    this->puntajeTotal = 0;
 }
 string Pelicula::getTitulo(){
     return this->titulo;
@@ -37,4 +37,8 @@ float Pelicula::getPuntaje_total(){
 }
 void Pelicula::setPuntaje_total(float puntos){
     this->puntajeTotal = puntos;
+}
+
+Pelicula::~Pelicula(){
+    
 }

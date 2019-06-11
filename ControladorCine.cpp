@@ -26,7 +26,7 @@ void ControladorCine::setCapacidadSalas(int capacidad){
     this->capacidadSala=capacidad;
 }
 
-DtCine* ControladorCine::listarCines(){
+ICollection* ControladorCine::listarCines(){
     
 }
 
@@ -50,7 +50,7 @@ void ControladorCine::altaCine(){
     
 }
 
-DtSala* ControladorCine::listarSalas(){
+ICollection* ControladorCine::listarSalas(){
     
 }
 

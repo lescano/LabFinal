@@ -16,12 +16,25 @@ class Fabrica{
 private:
     Fabrica();
     static Fabrica* instancia;
+    
+    static void cargarDatosPrueba();
+    
+//    static ICCines* instanciaCine;
+//    static ICFuncion* instanciaFuncion;
+//    static ICPelicula* instanciaPelicula;
+//    static ICUsuario* instanciaUsuario;
+    
 public:
     static Fabrica* getInstancia();
     ICCines* getInterfaceCine();
     ICFuncion* getInterfaceFuncion();
     ICPelicula* getInterfacePelicula();
     ICUsuario* getInterfaceUsuario();
+    
+//    static ICCines* getInterfaceCine();
+//    static ICFuncion* getInterfaceFuncion();
+//    static ICPelicula* getInterfacePelicula();
+//    static ICUsuario* getInterfaceUsuario();
 };
 
 #endif /* FABRICA_H */

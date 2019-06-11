@@ -6,8 +6,8 @@
 
 #include "Cine.h"
 
-Cine::Cine(int id, string dire, float costo){
-    this->nro_cine = id;
+Cine::Cine(string dire, float costo){
+    //this->nro_cine = generarId();
     this->direccion = dire;
     this->costo=costo;
 }
@@ -40,10 +40,22 @@ void Cine::borrarSalas(){
     
 }
 
-DtFuncion** Cine::listarFunciones(){
+ICollection* Cine::listarFunciones(){
     
 }
 
 Funcion* Cine::seleccionarFuncion(int){
+    
+}
+
+int Cine::generarId(){
+    return id+1;
+}
+
+void Cine::setSala(Sala* sala){
+//    this->sala->add(sala,)
+}
+
+Cine::~Cine(){
     
 }

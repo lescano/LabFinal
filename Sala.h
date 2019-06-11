@@ -13,17 +13,23 @@
 
 #ifndef SALA_H
 #define SALA_H
-#include "Funcion.h"
+
+//#include "Cine.h"
+//#include "Funcion.h"
 #include "IDictionary.h"
 #include "DtFuncion.h"
 
-class Sala {
+class Cine;
+class Funcion;
+
+class Sala : public ICollectible {
 private:
+    int id = 0;
     int nroSala;
     int capacidad;
     IDictionary* funciones;
 public:
-    Sala(int, int);
+    Sala(int capacidad, Cine*);
     ~Sala();
     int getNro_sala();
     void setNro_sala(int);
@@ -31,9 +37,9 @@ public:
     void setCapacidad(int);
     IDictionary* getFunciones();
     void setFunciones(IDictionary*);
-    
+    int generarId();
     void borrarFunciones();
-    DtFuncion** listarFunciones();
+    DtFuncion** listarFunciones();      //preguntar
     Funcion* seleccionarFuncion(int idFuncion);
     
 };

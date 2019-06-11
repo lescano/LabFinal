@@ -40,7 +40,7 @@ class ControladorPelicula : public ICPelicula {
      Opinion* seleccionarComentarios(string);
      void crearRespuesta(string);
      Cine* seleccionarCines(int);
-     DtFuncion** listarFunciones(DtFecha);
+     ICollection* listarFunciones(Cine*);
 };
 
 

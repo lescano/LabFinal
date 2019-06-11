@@ -15,15 +15,21 @@
 #define PELICULA_H
 #include <string>
 #include "Opinion.h"
-#include "Cine.h"
+//#include "Cine.h"
 #include "DtCine.h"
 #include "DtFuncion.h"
-#include "Funcion.h"
+//#include "Funcion.h"
 #include "DtInfoPeli.h"
+#include "IDictionary.h"
+#include "ICollectible.h"
+#include "ICollection.h"
 
 using namespace std;
 
-class Pelicula {
+class Cine;
+class Funcion;
+
+class Pelicula : public ICollectible{
 private:
     string titulo;
     string posterURL;
@@ -33,7 +39,7 @@ private:
     IDictionary* cines;
 public:
     Pelicula();
-    Pelicula(string, string, string, float);
+    Pelicula(string titulo, string sinopsis, string poster);
     string getTitulo();
     void setTitulo(string);
     string getPoster_url();
@@ -50,8 +56,8 @@ public:
     void borarSalaCineFunc();
     void borrarOpiniones();
     bool esPelicula(string);
-    DtCine** listarCine();
-    DtFuncion** listarFunciones(Cine*);
+    DtCine** listarCine();      //pregunra
+    ICollection* listarFunciones(Cine*);     //preguntar
     Funcion* seleccionarFuncion(int idFuncion, Cine*);
     Cine* seleccionarCine(int idCine);
     DtInfoPeli* verInfoPeli();

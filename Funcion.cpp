@@ -8,12 +8,13 @@
 #include "Funcion.h"
 #include "DtFecha.h"
 
+
 using namespace std;
 
-Funcion::Funcion(int idFuncion, int cantA, float costo, DtFecha* f, int dur){
-    this->idFuncion = idFuncion;
-    this->cantAsientos = cantA;
-    this->costo = costo;
+Funcion::Funcion(DtFecha* f, int dur, Pelicula* pelicula, Sala* sala){
+    this->idFuncion = generarId();
+    this->cantAsientos = 0;
+    this->costo = 0;
     this->fecha = f;
     this->duracion=dur;
 }
@@ -49,6 +50,11 @@ int Funcion::getDuracion(){
 
 void Funcion::setDuracion(int dur){
     this->duracion=dur;
+}
+
+
+int Funcion::generarId(){
+    return id+1;
 }
 
 Funcion::~Funcion(){

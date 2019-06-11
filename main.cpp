@@ -28,10 +28,13 @@
 #include "Sala.h"
 #include "Puntaje.h"
 #include "Usuario.h"
+#include "Fabrica.h"
 
 void menu();
-void pausa();
+void Pausa();
 void Borrar();
+void datosDePrueba();
+void actualizarFecha();
 
 using namespace std;
 
@@ -39,8 +42,11 @@ int main(int argc, char** argv) {
     char op;
     bool salir=false;
     
+//    datosDePrueba();
+    actualizarFecha();
+    Pausa();
     while(!salir){
-        Borrar();
+//        Borrar();
         menu();
         cin>>op;
         fflush(stdin);
@@ -86,7 +92,8 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void pausa(){
+void Pausa(){
+    std::cin.clear();
     std::cout << "Precione una tecla para continuar...";
     std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' );
 }
@@ -100,20 +107,56 @@ void menu(){
     cout<<"\t\t --------------\n";
     cout<<"\t\t --TIPCinemas--\n";
     cout<<"\t\t --------------\n\n";
-    cout<<"\t1- Iniciar Sesión\n";
+    cout<<"\t1- Iniciar Sesión\n";      //vanessa
     cout<<"\t2- Crear Reserva\n";
-    cout<<"\t3- Alta Cine\n";
+    cout<<"\t3- Alta Cine\n";       //vanessa
     cout<<"\t4- Alta Función\n";
-    cout<<"\t5- Puntuar Película\n";
-    cout<<"\t6- Comentar Película\n";
-    cout<<"\t7- Ver Información de Película\n";
+    cout<<"\t5- Puntuar Película\n";        //eve
+    cout<<"\t6- Comentar Película\n";       //joaquin
+    cout<<"\t7- Ver Información de Película\n";     //eve
     cout<<"\t8- Ver Comentarios y Puntaje de Película\n";
     cout<<"\t9- Eliminar Película\n";
-    cout<<"\t10- Ver reserva\n";
+    cout<<"\t10- Ver reserva\n";        //joaquin
     cout<<"\t11- Cerrar sesion\n";
-    cout<<"\t12- Modificar fecha del sistema\n";
-    cout<<"\t13- Consultar fecha del sistema\n";
+    cout<<"\t12- Modificar fecha del sistema\n";        //danilo
+    cout<<"\t13- Consultar fecha del sistema\n";        //danilo
     cout<<"\t14- Cargar datos de prueba\n";
     cout<<"\t0- Salir\n\n";
     cout<<"Elija una opcion: ";
+}
+
+void actualizarFecha(){
+    DtFecha* hoy;
+
+    int dia, mes, anio, hora, min, seg;
+    
+    cout<<"\t-----------------------------"<<endl;
+    cout<<"\t-------ACTUALIZAR FECHA------"<<endl;
+    cout<<"\t-----------------------------"<<endl<<endl<<endl;
+    cout<<"Ingrese dia: ";
+    cin>>dia;
+    fflush(stdin);
+    cout<<"ingrese mes: ";
+    cin>>mes;
+    fflush(stdin);
+    cout<<"Ingrese anio: ";
+    cin>>anio;
+    fflush(stdin);
+    cout<<"Ingrese hora: ";
+    cin>>hora;
+    fflush(stdin);
+    cout<<"Ingrese minutos: ";
+    cin>>min;
+    fflush(stdin);
+    cout<<"Ingrese segundos: ";
+    cin>>seg;
+    fflush(stdin);
+    
+    hoy=new DtFecha(dia,mes,anio,hora,min,seg);
+    Fabrica::getInstancia()->getInterfaceUsuario()->setHoraSistema(hoy);
+    cout<<endl<<"Se cargaron los datos correctamente."<<endl<<endl;
+}
+
+void datosDePrueba(){
+    
 }

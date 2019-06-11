@@ -62,6 +62,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Pago.o \
 	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/Pelicula.o \
+	${OBJECTDIR}/Puntaje.o \
 	${OBJECTDIR}/Reserva.o \
 	${OBJECTDIR}/Sala.o \
 	${OBJECTDIR}/Usuario.o \
@@ -227,6 +228,11 @@ ${OBJECTDIR}/Pelicula.o: Pelicula.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pelicula.o Pelicula.cpp
+
+${OBJECTDIR}/Puntaje.o: Puntaje.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Puntaje.o Puntaje.cpp
 
 ${OBJECTDIR}/Reserva.o: Reserva.cpp
 	${MKDIR} -p ${OBJECTDIR}

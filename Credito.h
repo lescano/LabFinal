@@ -20,12 +20,12 @@
 
 using namespace std;
 
-class Credito : public pago {
+class Credito : public Pago {
 private:
     float descuento;
     string financiera;
 public:
-    Credito(float, string);
+    Credito(string, float);
     float getDescuento();
     string getFinanciera();
     void setDescuento(float);

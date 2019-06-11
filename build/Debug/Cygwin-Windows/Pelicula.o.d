@@ -1,20 +1,18 @@
 build/Debug/Cygwin-Windows/Pelicula.o: Pelicula.cpp Pelicula.h Opinion.h \
- Cine.h DtFuncion.h DtFecha.h Sala.h Funcion.h IDictionary.h \
- ICollectible.h IKey.h IIterator.h DtCine.h DtInfoPeli.h
+ DtCine.h DtFuncion.h DtFecha.h DtInfoPeli.h IDictionary.h ICollectible.h \
+ IKey.h IIterator.h ICollection.h
 
 Pelicula.h:
 
 Opinion.h:
 
-Cine.h:
+DtCine.h:
 
 DtFuncion.h:
 
 DtFecha.h:
 
-Sala.h:
-
-Funcion.h:
+DtInfoPeli.h:
 
 IDictionary.h:
 
@@ -24,6 +22,4 @@ IKey.h:
 
 IIterator.h:
 
-DtCine.h:
-
-DtInfoPeli.h:
+ICollection.h:

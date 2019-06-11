@@ -15,6 +15,9 @@
 #define CONTROLADORUSUARIO_H
 
 #include "ICUsuario.h"
+#include "DtFecha.h"
+#include "Usuario.h"
+#include "IDictionary.h"
 
 #include <string.h>
 using namespace std;
@@ -22,12 +25,20 @@ class ControladorUsuario : public ICUsuario {
     private:   
         ControladorUsuario();
         static ControladorUsuario* instancia;
+        DtFecha* horaSistema;
+        Usuario* usuarioRecordado;
+        IDictionary* usuarios;
+        string nickname;
     
     public:
         static ControladorUsuario* getInstancia();
-      void ingresar(string);
-      bool ingresarContrasenia(string);
-      void iniciarSesion();
+
+        DtFecha* getHoraSistema();
+        void setHoraSistema(DtFecha*);
+        void ingresar(string);
+        bool ingresarContrasenia(string);
+        void iniciarSesion();
+        string getNickname();
 };
 
 

@@ -5,24 +5,31 @@
  */
 
 #include "Reserva.h"
+#include "Usuario.h"
 
-reserva::reserva(int asientos, float costo){
+Reserva::Reserva(Usuario* usuario, Funcion* funcion,string financiera, int asientos){
     this->cant_asientos = asientos;
-    this->costo_total = costo;
+    this->costo_total = 0;
+//    usuario->setPuntaje(this);
+    this->funcionReservada = funcion;
 }
 
-void reserva::setCosto_total(float c) {
+void Reserva::setCosto_total(float c) {
     this->costo_total = c;
 }
 
-void reserva::setCant_asientos(int a){
+void Reserva::setCant_asientos(int a){
     this->cant_asientos = a;
 }
 
-float reserva::getCosto_total() {
+float Reserva::getCosto_total() {
     return this->costo_total;
 }
 
-int reserva::getCant_asientos(){
+int Reserva::getCant_asientos(){
     return this->cant_asientos;
+}
+
+Reserva::~Reserva(){
+
 }

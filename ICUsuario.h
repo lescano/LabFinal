@@ -13,7 +13,10 @@
 
 #ifndef ICUSUARIO_H
 #define ICUSUARIO_H
+
 #include <string>
+#include "DtFecha.h"
+
 using namespace std;
 
 class ICUsuario{
@@ -21,8 +24,7 @@ class ICUsuario{
         virtual void ingresar(string)=0;
         virtual bool ingresarContrasenia(string)=0;
         virtual void iniciarSesion()=0;
-    
-    
+        virtual void setHoraSistema(DtFecha*) = 0;
 };
 
 #endif /* ICUSUARIO_H */

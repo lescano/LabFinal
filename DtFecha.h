@@ -18,13 +18,21 @@ class DtFecha {
 private:
     int anio, mes, dia, hora, minutos, segundos;
 public:
-    DtFecha(int, int, int, int, int, int);
+    DtFecha(int dia, int mes, int anio, int hora, int minutos, int segundos);
     int getAnio();
     int getMes();
     int getDia();
     int getHora();
     int getMinutos();
     int getSegundos();
+    
+    void setAnio(int);
+    void setMes(int);
+    void setDia(int);
+    void setHora(int);
+    void setMinutos(int);
+    void setSegundos(int);
+    
     ~DtFecha();
 };
 

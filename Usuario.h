@@ -22,9 +22,13 @@
 #include "Puntaje.h"
 #include "Reserva.h"
 #include "Pago.h"
+//#include "Cine.h"
+
 using namespace std;
 
-class Usuario {
+class Cine;
+
+class Usuario : public ICollectible{
 private:
     string nickname;
     string img_perfil;
@@ -34,7 +38,7 @@ private:
     IDictionary* reservas;
     IDictionary* tipoPago;
 public:
-    Usuario(string, string, string);
+    Usuario(string nick, string contrasenia, string foto, tipoUsuario tipo);
     ~Usuario();
     string getNickname();
     void setNickname(string);
@@ -47,16 +51,16 @@ public:
     ICollection* getPuntaje();
     void setPuntaje(ICollectible*);
     IDictionary* getReserva();
-    void setReserva(IDictionary*);
+    void setReserva(ICollectible*);
     IDictionary* getTipoPago();
-    void setTipoPago(IDictionary*);
+    void setTipoPago(ICollectible*);
     
     void borrarPuntaje(string);
     void borarReservas();
     bool esMiPWD(string);
     void ingresarNuevoPuntaje(Pelicula*, int puntos);
     void ingresarPuntaje(string titulo, int puntos);
-    DtFuncion** listarFunciones(Pelicula* , Cine*);
+    ICollection* listarFunciones(Pelicula* , Cine*);     //preguntar
     int mostrarPuntaje(string);
     DtCredito* reservaCredito(string);
     bool tienePuntaje();

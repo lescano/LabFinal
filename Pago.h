@@ -16,8 +16,10 @@
 #define PAGO_H
 
 
+#include "ICollectible.h"
 
-class Pago {
+
+class Pago : public ICollectible{
 public:
     Pago();
     ~Pago();

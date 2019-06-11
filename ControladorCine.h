@@ -44,13 +44,13 @@ class ControladorCine :public ICCines {
         
         void setDireccion(string);
         void setCapacidadSalas(int);
-        DtCine* listarCines();
+        ICollection* listarCines();
         string** listarPeliculas();
         Cine* seleccionarCine(int);
         Pelicula* seleccionarPelicula(string);
         void altaSala();
         void altaCine();
-        DtSala* listarSalas();
+        ICollection* listarSalas();
         Sala* seleccionarSala(int);
         bool* fechaFuncion(DtFecha*);
         void altaFuncion();

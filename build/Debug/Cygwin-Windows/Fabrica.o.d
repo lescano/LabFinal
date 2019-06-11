@@ -1,10 +1,10 @@
 build/Debug/Cygwin-Windows/Fabrica.o: Fabrica.cpp Fabrica.h ICCines.h \
- ControladorUsuario.h ICUsuario.h ControladorPelicula.h ICPelicula.h \
- Cine.h DtFuncion.h DtFecha.h Sala.h Funcion.h IDictionary.h \
- ICollectible.h IKey.h IIterator.h Pelicula.h Opinion.h DtCine.h \
- DtInfoPeli.h DtSala.h ControladorCine.h ICFuncion.h \
- ControladorFunciones.h Usuario.h ICollection.h tipoUsuario.h DtCredito.h \
- Credito.h Pago.h Puntaje.h Reserva.h
+ ControladorUsuario.h ICUsuario.h DtFecha.h Usuario.h ICollection.h \
+ IIterator.h ICollectible.h IDictionary.h IKey.h tipoUsuario.h \
+ DtCredito.h Credito.h Pago.h DtFuncion.h Puntaje.h Reserva.h \
+ ControladorPelicula.h ICPelicula.h DtCine.h DtInfoPeli.h Pelicula.h \
+ Opinion.h DtComentario.h Cine.h Sala.h Funcion.h DtSala.h \
+ ControladorCine.h ICFuncion.h ControladorFunciones.h
 
 Fabrica.h:
 
@@ -14,47 +14,19 @@ ControladorUsuario.h:
 
 ICUsuario.h:
 
-ControladorPelicula.h:
-
-ICPelicula.h:
-
-Cine.h:
-
-DtFuncion.h:
-
 DtFecha.h:
-
-Sala.h:
-
-Funcion.h:
-
-IDictionary.h:
-
-ICollectible.h:
-
-IKey.h:
-
-IIterator.h:
-
-Pelicula.h:
-
-Opinion.h:
-
-DtCine.h:
-
-DtInfoPeli.h:
-
-DtSala.h:
-
-ControladorCine.h:
-
-ICFuncion.h:
-
-ControladorFunciones.h:
 
 Usuario.h:
 
 ICollection.h:
+
+IIterator.h:
+
+ICollectible.h:
+
+IDictionary.h:
+
+IKey.h:
 
 tipoUsuario.h:
 
@@ -64,6 +36,36 @@ Credito.h:
 
 Pago.h:
 
+DtFuncion.h:
+
 Puntaje.h:
 
 Reserva.h:
+
+ControladorPelicula.h:
+
+ICPelicula.h:
+
+DtCine.h:
+
+DtInfoPeli.h:
+
+Pelicula.h:
+
+Opinion.h:
+
+DtComentario.h:
+
+Cine.h:
+
+Sala.h:
+
+Funcion.h:
+
+DtSala.h:
+
+ControladorCine.h:
+
+ICFuncion.h:
+
+ControladorFunciones.h:

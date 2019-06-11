@@ -45,6 +45,7 @@
       <itemPath>DtCine.h</itemPath>
       <itemPath>DtCom_Puntaje.h</itemPath>
       <itemPath>DtComentario.h</itemPath>
+      <itemPath>DtCredito.h</itemPath>
       <itemPath>DtFecha.cpp</itemPath>
       <itemPath>DtFecha.h</itemPath>
       <itemPath>DtFuncion.h</itemPath>
@@ -57,7 +58,6 @@
       <itemPath>Cine.h</itemPath>
       <itemPath>Credito.h</itemPath>
       <itemPath>Debito.h</itemPath>
-      <itemPath>DtCredito.h</itemPath>
       <itemPath>Funcion.h</itemPath>
       <itemPath>Opinion.h</itemPath>
       <itemPath>Pago.h</itemPath>
@@ -92,6 +92,7 @@
       <itemPath>Opinion.cpp</itemPath>
       <itemPath>Pago.cpp</itemPath>
       <itemPath>Pelicula.cpp</itemPath>
+      <itemPath>Puntaje.cpp</itemPath>
       <itemPath>Reserva.cpp</itemPath>
       <itemPath>Sala.cpp</itemPath>
       <itemPath>Usuario.cpp</itemPath>
@@ -265,6 +266,8 @@
       </item>
       <item path="Pelicula.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Puntaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Puntaje.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Reserva.cpp" ex="false" tool="1" flavor2="0">
@@ -435,6 +438,8 @@
       <item path="Pelicula.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Pelicula.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Puntaje.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Puntaje.h" ex="false" tool="3" flavor2="0">
       </item>

@@ -9,10 +9,14 @@
 
 using namespace std;
 
-Usuario::Usuario(string nickname, string imagen, string contra){
+Usuario::Usuario(string nickname, string imagen, string contra, tipoUsuario tipo){
     this->nickname = nickname;
     this->img_perfil = imagen;
     this->contrasenia = contra;
+    this->tipo=tipo;
+    this->puntajes=NULL;
+    this->reservas=NULL;
+    this->tipoPago=NULL;
 }
 
 string Usuario::getNickname(){
@@ -37,4 +41,8 @@ void Usuario::setImg_perfil(string imagen){
 
 void Usuario::setContrasenia(string contra){
     this->contrasenia = contra;
+}
+
+Usuario::~Usuario(){
+    
 }

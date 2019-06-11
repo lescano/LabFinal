@@ -14,17 +14,22 @@
 #ifndef PUNTAJE_H
 #define PUNTAJE_H
 
-#include "Pelicula.h"
+//#include "Pelicula.h"
+//#include "Usuario.h"
 #include "IDictionary.h"
+#include "ICollectible.h"
 #include <string>
 using namespace std;
 
-class Puntaje{
+class Usuario;
+class Pelicula;
+
+class Puntaje : public ICollectible{
 private:
     int puntos;
     Pelicula* peliculaPuntuada;
 public:
-    Puntaje(int);
+    Puntaje(Usuario*, Pelicula*, int puntos);
     ~Puntaje();
     int getPuntos();
     void setPuntos(int);

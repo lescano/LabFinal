@@ -29,13 +29,13 @@ class ICCines {
 public:
     virtual void setDireccion(string) = 0;
     virtual void setCapacidadSalas(int) = 0;
-    virtual DtCine* listarCines() = 0;
+    virtual ICollection* listarCines() = 0;
     virtual string** listarPeliculas() = 0;
     virtual Cine* seleccionarCine(int) = 0;
     virtual Pelicula* seleccionarPelicula(string) = 0;
     virtual void altaSala() = 0;
     virtual void altaCine() = 0;
-    virtual DtSala* listarSalas() = 0;
+    virtual ICollection* listarSalas() = 0;
     virtual Sala* seleccionarSala(int) = 0;
     virtual bool* fechaFuncion(DtFecha*) = 0;
     virtual void altaFuncion() = 0;

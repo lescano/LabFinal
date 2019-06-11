@@ -16,19 +16,25 @@
 #include <string>
 #include "DtFuncion.h"
 #include "DtFecha.h"
-#include "Sala.h"
 #include "IDictionary.h"
+#include "ICollectible.h"
+#include "ICollection.h"
 
 using namespace std;
 
-class Cine {
+class Funcion;
+class Sala;
+
+class Cine : public ICollectible {
 private:
     int nro_cine;
     string direccion;
     float costo;
+    IDictionary* sala;
+    int id=0;
     //Coleccion de las salas del cine
 public:
-    Cine(int,string, float);
+    Cine(string, float);
     int getNro_cine();
     string getDireccion();
     float getCosto();
@@ -36,8 +42,11 @@ public:
     void setDireccion(string);
     void setCosto(float);
     void borrarSalas();
-    DtFuncion** listarFunciones();  
+    ICollection* listarFunciones();  //preguntar
     Funcion* seleccionarFuncion(int);
+    void setSala(Sala*);
+    
+    int generarId();
     ~Cine();
 };
 

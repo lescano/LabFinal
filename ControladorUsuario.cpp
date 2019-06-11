@@ -1,10 +1,13 @@
 
 #include "ControladorUsuario.h"
+#include "Fabrica.h"
 
 ControladorUsuario* ControladorUsuario::instancia = NULL;
 
 ControladorUsuario::ControladorUsuario() {
-	//seteo de atributos
+    this->usuarioRecordado=NULL;
+    this->usuarios=NULL;
+    this->horaSistema=NULL;
 }
 
 ControladorUsuario* ControladorUsuario::getInstancia() {
@@ -12,6 +15,15 @@ ControladorUsuario* ControladorUsuario::getInstancia() {
         instancia = new ControladorUsuario();
     return instancia;
 }
+
+DtFecha* ControladorUsuario::getHoraSistema(){
+    return this->horaSistema;
+}
+
+void ControladorUsuario::setHoraSistema(DtFecha* hoy){
+    this->horaSistema=hoy;
+}
+
 void ControladorUsuario::ingresar(string){
 }
 bool ControladorUsuario::ingresarContrasenia(string){

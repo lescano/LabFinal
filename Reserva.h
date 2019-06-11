@@ -14,12 +14,17 @@
 #ifndef RESERVA_H
 #define RESERVA_H
 #include "Pago.h"
-#include "Funcion.h"
+//#include "Funcion.h"
+//#include "Usuario.h"
 #include "ICollection.h"
+#include "ICollectible.h"
 #include <string>
 using namespace std;
 
-class reserva {
+class Funcion;
+class Usuario;
+
+class Reserva : public ICollectible{
 private:
     int cant_asientos;
     float costo_total;
@@ -27,7 +32,7 @@ private:
     Funcion* funcionReservada;
     ICollection* peliculas;
 public:
-    reserva(int, float);
+    Reserva(Usuario*, Funcion*,string financiera, int);
     int getCant_asientos();
     void setCant_asientos(int);
     float getCosto_total();
@@ -36,7 +41,7 @@ public:
     void serMecanismoDePago(Pago*);
     Funcion* getFuncionReservada();
     void setFuncionReservada(Funcion*);
-    ~reserva();
+    ~Reserva();
     
     bool esPelicula(string titulo);
 };

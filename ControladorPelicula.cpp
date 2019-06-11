@@ -34,7 +34,7 @@ DtCine ControladorPelicula::listarCines(){
 DtComentario** ControladorPelicula::listarComentarios(){
     
 }
-DtFuncion** ControladorPelicula::listarFunciones(DtFecha){
+ICollection* ControladorPelicula::listarFunciones(Cine*){
     
 }
 string** ControladorPelicula::listarPeliculas(){

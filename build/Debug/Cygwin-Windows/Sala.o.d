@@ -1,11 +1,9 @@
-build/Debug/Cygwin-Windows/Sala.o: Sala.cpp Sala.h Funcion.h DtFecha.h \
- IDictionary.h ICollectible.h IKey.h IIterator.h DtFuncion.h
+build/Debug/Cygwin-Windows/Sala.o: Sala.cpp Sala.h IDictionary.h \
+ ICollectible.h IKey.h IIterator.h DtFuncion.h DtFecha.h ListaDicc.h \
+ NodoDicc.h Par.h ListDiccIterator.h ListDiccIteratorObj.h \
+ ListDiccIteratorKey.h
 
 Sala.h:
-
-Funcion.h:
-
-DtFecha.h:
 
 IDictionary.h:
 
@@ -16,3 +14,17 @@ IKey.h:
 IIterator.h:
 
 DtFuncion.h:
+
+DtFecha.h:
+
+ListaDicc.h:
+
+NodoDicc.h:
+
+Par.h:
+
+ListDiccIterator.h:
+
+ListDiccIteratorObj.h:
+
+ListDiccIteratorKey.h:

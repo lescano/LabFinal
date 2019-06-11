@@ -40,7 +40,7 @@ public:
     virtual Opinion* seleccionarComentarios(string)=0;
     virtual void crearRespuesta(string)=0;
     virtual Cine* seleccionarCines(int)=0;
-    virtual DtFuncion** listarFunciones(DtFecha)=0;
+    virtual ICollection* listarFunciones(Cine*)=0;
 };
 
 #endif /* ICPELICULA_H */

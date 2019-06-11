@@ -15,19 +15,26 @@
 
 #include <iostream>
 
+//#include "Usuario.h"
+//#include "Pelicula.h"
+
 using namespace std;
+
+class Usuario;
+class Pelicula;
 
 class Opinion {
 private:
     string comentario;
-    string id;
+    int id;
 public:
-    Opinion(string, string);
+    Opinion(Usuario*, Pelicula*, string);
+    Opinion(Usuario*, Opinion*, string);
     ~Opinion();
     string getComentario();
     void setComentario(string);
-    string getId();
-    void setId(string);
+    int getId();
+    void setId(int);
 };
 
 #endif /* OPINION_H */

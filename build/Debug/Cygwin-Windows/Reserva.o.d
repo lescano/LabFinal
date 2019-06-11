@@ -1,16 +1,31 @@
 build/Debug/Cygwin-Windows/Reserva.o: Reserva.cpp Reserva.h Pago.h \
- Funcion.h DtFecha.h ICollection.h IIterator.h ICollectible.h
+ ICollectible.h ICollection.h IIterator.h Usuario.h IDictionary.h IKey.h \
+ tipoUsuario.h DtCredito.h Credito.h DtFuncion.h DtFecha.h Puntaje.h
 
 Reserva.h:
 
 Pago.h:
 
-Funcion.h:
-
-DtFecha.h:
+ICollectible.h:
 
 ICollection.h:
 
 IIterator.h:
 
-ICollectible.h:
+Usuario.h:
+
+IDictionary.h:
+
+IKey.h:
+
+tipoUsuario.h:
+
+DtCredito.h:
+
+Credito.h:
+
+DtFuncion.h:
+
+DtFecha.h:
+
+Puntaje.h:

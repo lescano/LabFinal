@@ -13,19 +13,29 @@
 
 #ifndef FUNCION_H
 #define FUNCION_H
+
+#include "Sala.h"
+#include "Pelicula.h"
 #include "DtFecha.h"
+#include "ICollectible.h"
+
 #include <string>
+
+class Sala;
+class Pelicula;
+
 using namespace std;
 
-class Funcion {
+class Funcion : public ICollectible{
 private:
     int idFuncion;//identificador de la funcion
     int cantAsientos;
     float costo;
+    int id=0;
     DtFecha* fecha; //preguntar si hay que hacer un DtHora
     int duracion;
 public:
-    Funcion(int idFuncion, int cantA, float costo, DtFecha* fecha, int duracion);
+    Funcion(DtFecha* fecha, int duracion, Pelicula*, Sala*);
     int getIdFuncion();
     void setIdFuncion(int);
     int getCantAsientos();
@@ -36,6 +46,7 @@ public:
     void setFecha(DtFecha*);
     int getDuracion();
     void setDuracion(int);
+    int generarId();
     ~Funcion();
 };
 

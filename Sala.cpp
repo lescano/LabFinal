@@ -5,10 +5,12 @@
  */
 
 #include "Sala.h"
+#include "ListaDicc.h"
 
-Sala::Sala(int nro, int cap){
-    this->nroSala = nro;
+Sala::Sala(int cap, Cine* cine){
+    this->nroSala = generarId();
     this->capacidad = cap;
+    this->funciones = new ListDicc();
 }
 
 int Sala::getNro_sala(){
@@ -25,4 +27,12 @@ void Sala::setNro_sala(int nro){
 
 void Sala::setCapacidad(int cap) {
     this->capacidad = cap;
+}
+
+int Sala::generarId(){
+    return id+1;
+}
+
+Sala::~Sala(){
+
 }

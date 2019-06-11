@@ -6,9 +6,9 @@
 
 #include "Credito.h"
 
-Credito::Credito(float d, string f){
-    this->descuento = d;
-    this->financiera = f;
+Credito::Credito( string financiera, float descuento){
+    this->descuento = descuento;
+    this->financiera = financiera;
 }
 
 float Credito::getDescuento(){

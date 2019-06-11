@@ -6,13 +6,13 @@
 
 #include "DtFecha.h"
 
-DtFecha::DtFecha(int a, int m, int d, int h, int min, int s){
-    this->anio = a;
-    this->mes = m;
-    this->dia = d;
-    this->hora = h;
-    this->minutos = min;
-    this->segundos = s;
+DtFecha::DtFecha(int dia, int mes, int anio, int hora, int minutos, int segundos){
+    this->dia = dia;
+    this->mes = mes;
+    this->anio = anio;
+    this->hora = hora;
+    this->minutos = minutos;
+    this->segundos = segundos;
 }
 
 int DtFecha::getAnio(){
@@ -37,4 +37,27 @@ int DtFecha::getMinutos(){
 
 int DtFecha::getSegundos(){
     return this->segundos;
+}
+
+void DtFecha::setDia(int dia){
+    this->dia=dia;
+}
+
+void DtFecha::setMes(int mes){
+    this->mes=mes;
+}
+
+void DtFecha::setAnio(int anio){
+    this->anio=anio;
+}
+
+void DtFecha::setHora(int hora){
+    this->hora=hora;
+}
+
+void DtFecha::setMinutos(int minutos){
+    this->minutos=minutos;
+}
+void DtFecha::setSegundos(int segundos){
+    this->segundos=segundos;
 }
