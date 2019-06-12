@@ -14,6 +14,10 @@
 #ifndef DTFECHA_H
 #define DTFECHA_H
 
+#include <iostream>
+
+using namespace std;
+
 class DtFecha {
 private:
     int anio, mes, dia, hora, minutos, segundos;
@@ -32,6 +36,8 @@ public:
     void setHora(int);
     void setMinutos(int);
     void setSegundos(int);
+    
+    friend ostream &operator << (ostream& salida,DtFecha& fecha);
     
     ~DtFecha();
 };

@@ -25,6 +25,7 @@ class ICUsuario{
         virtual bool ingresarContrasenia(string)=0;
         virtual void iniciarSesion()=0;
         virtual void setHoraSistema(DtFecha*) = 0;
+        virtual DtFecha* getHoraSistema() = 0;
 };
 
 #endif /* ICUSUARIO_H */

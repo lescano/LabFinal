@@ -16,9 +16,7 @@ class Fabrica{
 private:
     Fabrica();
     static Fabrica* instancia;
-    
-    static void cargarDatosPrueba();
-    
+
 //    static ICCines* instanciaCine;
 //    static ICFuncion* instanciaFuncion;
 //    static ICPelicula* instanciaPelicula;
@@ -30,6 +28,8 @@ public:
     ICFuncion* getInterfaceFuncion();
     ICPelicula* getInterfacePelicula();
     ICUsuario* getInterfaceUsuario();
+    
+    static void cargarDatosPrueba();
     
 //    static ICCines* getInterfaceCine();
 //    static ICFuncion* getInterfaceFuncion();

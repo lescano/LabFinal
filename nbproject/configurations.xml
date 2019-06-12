@@ -42,9 +42,11 @@
       <itemPath>ControladorUsuario.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f3" displayName="DataType" projectFiles="true">
+      <itemPath>DtCine.cpp</itemPath>
       <itemPath>DtCine.h</itemPath>
       <itemPath>DtCom_Puntaje.h</itemPath>
       <itemPath>DtComentario.h</itemPath>
+      <itemPath>DtCredito.cpp</itemPath>
       <itemPath>DtCredito.h</itemPath>
       <itemPath>DtFecha.cpp</itemPath>
       <itemPath>DtFecha.h</itemPath>
@@ -59,6 +61,8 @@
       <itemPath>Credito.h</itemPath>
       <itemPath>Debito.h</itemPath>
       <itemPath>Funcion.h</itemPath>
+      <itemPath>KeyInteger.h</itemPath>
+      <itemPath>KeyString.h</itemPath>
       <itemPath>Opinion.h</itemPath>
       <itemPath>Pago.h</itemPath>
       <itemPath>Pelicula.h</itemPath>
@@ -86,9 +90,9 @@
       <itemPath>Cine.cpp</itemPath>
       <itemPath>Credito.cpp</itemPath>
       <itemPath>Debito.cpp</itemPath>
-      <itemPath>DtCine.cpp</itemPath>
-      <itemPath>DtCredito.cpp</itemPath>
       <itemPath>Funcion.cpp</itemPath>
+      <itemPath>KeyInteger.cpp</itemPath>
+      <itemPath>KeyString.cpp</itemPath>
       <itemPath>Opinion.cpp</itemPath>
       <itemPath>Pago.cpp</itemPath>
       <itemPath>Pelicula.cpp</itemPath>
@@ -217,6 +221,14 @@
       <item path="IKey.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="KeyInteger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KeyInteger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="KeyString.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KeyString.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ListDiccIterator.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -390,6 +402,14 @@
       <item path="IKey.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="IKey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="KeyInteger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KeyInteger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="KeyString.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="KeyString.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="ListDiccIterator.cpp" ex="false" tool="1" flavor2="0">
       </item>

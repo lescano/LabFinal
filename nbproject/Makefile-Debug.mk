@@ -50,6 +50,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/ICollectible.o \
 	${OBJECTDIR}/IDictionary.o \
 	${OBJECTDIR}/IKey.o \
+	${OBJECTDIR}/KeyInteger.o \
+	${OBJECTDIR}/KeyString.o \
 	${OBJECTDIR}/ListDiccIterator.o \
 	${OBJECTDIR}/ListDiccIteratorKey.o \
 	${OBJECTDIR}/ListDiccIteratorObj.o \
@@ -168,6 +170,16 @@ ${OBJECTDIR}/IKey.o: IKey.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IKey.o IKey.cpp
+
+${OBJECTDIR}/KeyInteger.o: KeyInteger.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/KeyInteger.o KeyInteger.cpp
+
+${OBJECTDIR}/KeyString.o: KeyString.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/KeyString.o KeyString.cpp
 
 ${OBJECTDIR}/ListDiccIterator.o: ListDiccIterator.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -61,3 +61,12 @@ void DtFecha::setMinutos(int minutos){
 void DtFecha::setSegundos(int segundos){
     this->segundos=segundos;
 }
+
+ostream &operator << (ostream &salida, DtFecha& fecha){
+    
+    salida << fecha.getHora() << ":" << fecha.getMinutos() << ":" << fecha.getSegundos() << " " 
+            <<fecha.getDia() << "/" << fecha.getMes() << "/" << fecha.getAnio() << endl;
+    salida << endl;
+    
+    return salida;
+}
