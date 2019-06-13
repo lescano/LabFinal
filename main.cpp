@@ -174,6 +174,7 @@ void actualizarFecha(){
 void datosDePrueba(){
     Fabrica::cargarDatosPrueba();
     cout<<"Datos de Prueba cargados Exitosamente!!!"<<endl;
+    
 }
 
 void verFecha(){
