@@ -43,6 +43,16 @@ void Usuario::setContrasenia(string contra){
     this->contrasenia = contra;
 }
 
+bool Usuario::esMiPWD(string psw){
+  if (this->contrasenia.compare(psw) == 0)
+      return true;
+  else
+      return false;
+}
+
+bool Usuario::tienePuntaje(){
+}
+
 Usuario::~Usuario(){
     
 }

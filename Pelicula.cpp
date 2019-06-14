@@ -39,6 +39,10 @@ void Pelicula::setPuntaje_total(float puntos){
     this->puntajeTotal = puntos;
 }
 
+bool Pelicula::seleccionarPelicula(string titulo){
+    
+}
+
 Pelicula::~Pelicula(){
     
 }

@@ -19,7 +19,7 @@
 
 using namespace std;
 
-class KeyString {
+class KeyString : public IKey {
 public:
     KeyString(string keyString);
     virtual ~KeyString();

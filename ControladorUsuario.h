@@ -18,6 +18,7 @@
 #include "DtFecha.h"
 #include "Usuario.h"
 #include "IDictionary.h"
+#include "ListaDicc.h"
 
 #include <string.h>
 using namespace std;
@@ -28,7 +29,7 @@ class ControladorUsuario : public ICUsuario {
         DtFecha* horaSistema;
         Usuario* usuarioRecordado;
         IDictionary* usuarios;
-        string nickname;
+        string nickname, psw;
     
     public:
         static ControladorUsuario* getInstancia();

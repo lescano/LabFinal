@@ -30,6 +30,7 @@
 #include "Puntaje.h"
 #include "Usuario.h"
 #include "Fabrica.h"
+#include "DtPelicula.h"
 
 void menu();
 void Pausa();
@@ -39,10 +40,30 @@ void actualizarFecha();
 void verFecha();
 bool validarFecha(int,int,int,int,int,int);
 
+void iniciarSesion();
+void crearReserva();
+void altaCine();
+void altaFuncion();
+void puntuarPelicula();
+void comentarPelicula();
+void verInformacionPelicula();
+void verComentariosPuntajePelicula();
+void eliminarPelicula();
+void verReserva();
+void cerrarSesion();
+void modificarFechaSistema();
+void consultarFechaSistema();
+void cargarDatosPrueba();
+
 using namespace std;
 
+Fabrica* f = f->getInstancia();
+ICUsuario* controladorUsuario = f->getInterfaceUsuario();
+ICPelicula* controladorPelicula = f->getInterfacePelicula();
+
+
 int main(int argc, char** argv) {
-    int op;
+    char op;
     bool salir=false;
     
     actualizarFecha();
@@ -53,86 +74,97 @@ int main(int argc, char** argv) {
         menu();
         cin>>op;
         fflush(stdin);
-        
+
         Borrar();
-        try{
-            switch (op){
-                case 1:
+        try {
+            switch (op) {
+                case 'a':
+                    iniciarSesion();
                     break;
-                case 2:
+                case 'b':
+                    crearReserva();
                     break;
-                case 3:
+                case 'c':
+                    altaCine();
                     break;
-                case 4:
+                case 'd':
+                    altaFuncion();
                     break;
-                case 5:
+                case 'e':
+                    puntuarPelicula();
                     break;
-                case 6:
+                case 'f':
+                    comentarPelicula();
                     break;
-                case 7:
+                case 'g':
+                    verInformacionPelicula();
                     break;
-                case 8:
-                    break;            
-                case 9:
+                case 'h':
+                    verComentariosPuntajePelicula();
                     break;
-                case 10:
+                case 'i':
+                    eliminarPelicula();
                     break;
-                case 11:
+                case 'j':
+                    verReserva();
                     break;
-                case 12:
-                    actualizarFecha();
+                case 'k':
+                    cerrarSesion();
                     break;
-                case 13:
-                    verFecha();
+                case 'l':
+                    modificarFechaSistema();
                     break;
-                case 14:
-                        datosDePrueba();
+                case 'm':
+                    consultarFechaSistema();
                     break;
-                case 0:
-                    salir=true;
+                case 'n':
+                    cargarDatosPrueba();
+                    break;
+                case 'z':
+                    salir = true;
                     break;
                 default:
-                    cout<<"\nOpcion no valida. Intentelo nuevamente.\n";
+                    cout << "\nOpcion no valida. Intentelo nuevamente.\n";
                     break;
             }
-        }catch (std::invalid_argument& e) {
+        } catch (std::invalid_argument& e) {
             cout << "\nERROR: " << e.what() << endl;
         }
     }
-    
+
     return 0;
 }
 
-void Pausa(){
+void Pausa() {
     cin.ignore();
-    std::cout<<"Precione una tecla para continuar...";
+    std::cout << "Precione una tecla para continuar...";
     cin.ignore();
 }
 
-void Borrar(){
+void Borrar() {
     system("clear");
-//    system("cls");
-  }
+    //    system("cls");
+}
 
-void menu(){
-    cout<<"\t\t --------------\n";
-    cout<<"\t\t --TIPCinemas--\n";
-    cout<<"\t\t --------------\n\n";
-    cout<<"\t1- Iniciar Sesión\n";                          //vanessa
-    cout<<"\t2- Crear Reserva\n";
-    cout<<"\t3- Alta Cine\n";                               //vanessa
-    cout<<"\t4- Alta Función\n";
-    cout<<"\t5- Puntuar Película\n";                        //eve
-    cout<<"\t6- Comentar Película\n";                       //joaquin
-    cout<<"\t7- Ver Información de Película\n";             //eve
-    cout<<"\t8- Ver Comentarios y Puntaje de Película\n";   //danilo
-    cout<<"\t9- Eliminar Película\n";
-    cout<<"\t10- Ver reserva\n";                            //joaquin
-    cout<<"\t11- Cerrar sesion\n";
-    cout<<"\t12- Modificar fecha del sistema\n";            //danilo
-    cout<<"\t13- Consultar fecha del sistema\n";            //danilo
-    cout<<"\t14- Cargar datos de prueba\n";
-    cout<<"\t0- Salir\n\n";
+void menu() {
+    cout << "\t\t --------------\n";
+    cout << "\t\t --TIPCinemas--\n";
+    cout << "\t\t --------------\n\n";
+    cout << "\ta- Iniciar Sesión\n"; //vanessa
+    cout << "\tb- Crear Reserva\n";
+    cout << "\tc- Alta Cine\n"; //vanessa
+    cout << "\td- Alta Función\n";
+    cout<<"\te- Puntuar Película\n";                        //eve
+    cout<<"\tf- Comentar Película\n";                       //joaquin
+    cout<<"\tg- Ver Información de Película\n";             //eve
+    cout<<"\th- Ver Comentarios y Puntaje de Película\n";   //danilo
+    cout<<"\ti- Eliminar Película\n";
+    cout<<"\tj- Ver reserva\n";                            //joaquin
+    cout<<"\tk- Cerrar sesion\n";
+    cout<<"\tl- Modificar fecha del sistema\n";            //danilo
+    cout<<"\tm- Consultar fecha del sistema\n";            //danilo
+    cout<<"\tn- Cargar datos de prueba\n";
+    cout<<"\tz- Salir\n\n";
     cout<<"Elija una opcion: ";
 }
 
@@ -174,7 +206,6 @@ void actualizarFecha(){
 void datosDePrueba(){
     Fabrica::cargarDatosPrueba();
     cout<<"Datos de Prueba cargados Exitosamente!!!"<<endl;
-    
 }
 
 void verFecha(){
@@ -228,4 +259,107 @@ bool validarFecha(int dia, int mes, int anio, int hora, int minutos, int segundo
     }
         else
             return false;
+}
+
+void iniciarSesion(){
+    string nickname, psw;
+    char seguir = 's';
+    bool existe = false;
+    
+    cout<<"Nickname: ";
+    cin>>nickname;
+    controladorUsuario->ingresar(nickname);
+    
+    while(seguir == 's' && existe == false){
+        cout<<"Contrasenia: ";
+        cin>>psw;
+        existe = controladorUsuario->ingresarContrasenia(psw);
+        if (existe){
+            controladorUsuario->iniciarSesion();
+            cout<<"Bienvenido/a "<<nickname<<endl;
+            seguir = 'n';
+        }
+        else{
+            cout<<"La contraseña ingresada no es correcta"<<endl<<"ingresar otra contraseña? (s/n): ";
+            cin>>seguir;
+        }
+    }
+}
+
+void crearReserva(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void altaCine(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void altaFuncion(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void puntuarPelicula(){
+    string titulo, modificar;
+    int nuevo, puntaje;
+    DtPelicula** listaPeliculas= controladorPelicula->listarPeliculas();
+    cout<<"Peliculas"<<endl<<endl;
+    int i=0;
+    while(listaPeliculas){
+        cout<<"Titulo: "<<listaPeliculas[i]->getTitulo();
+        i++;
+    }
+    cout<<"Seleccione una pelicula"<<endl;
+    cin>>titulo;   //buscar
+    controladorPelicula->seleccionarPeliculas(titulo);
+    bool tienep=controladorPelicula->tienePuntaje();
+    if(tienep){
+        controladorPelicula->mostrarPuntaje();
+        cout<<"Desea modificar puntaje(si, no): ";
+        cin>>modificar;
+        if(modificar.compare("si")==0){
+            cout<<"Ingrese nuevo puntaje: ";
+            cin>>nuevo;
+            controladorPelicula->ingresarPuntaje(nuevo);}
+    }else{
+        cout<<"Ingrese un puntaje: ";
+        cin>>puntaje;
+        controladorPelicula->ingresarNuevoPuntaje(puntaje);
+    }
+    
+}
+
+void comentarPelicula(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void verInformacionPelicula(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void verComentariosPuntajePelicula(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void eliminarPelicula(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void verReserva(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void cerrarSesion(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void modificarFechaSistema(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void consultarFechaSistema(){
+    cout<<"Se trabaja en esta funcion.\n\n";
+}
+
+void cargarDatosPrueba(){
+    cout<<"Se trabaja en esta funcion.\n\n";
 }

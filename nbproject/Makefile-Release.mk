@@ -43,12 +43,16 @@ OBJECTFILES= \
 	${OBJECTDIR}/Credito.o \
 	${OBJECTDIR}/Debito.o \
 	${OBJECTDIR}/DtCine.o \
+	${OBJECTDIR}/DtCredito.o \
 	${OBJECTDIR}/DtFecha.o \
+	${OBJECTDIR}/DtPelicula.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
 	${OBJECTDIR}/ICollectible.o \
 	${OBJECTDIR}/IDictionary.o \
 	${OBJECTDIR}/IKey.o \
+	${OBJECTDIR}/KeyInteger.o \
+	${OBJECTDIR}/KeyString.o \
 	${OBJECTDIR}/ListDiccIterator.o \
 	${OBJECTDIR}/ListDiccIteratorKey.o \
 	${OBJECTDIR}/ListDiccIteratorObj.o \
@@ -61,12 +65,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/Pago.o \
 	${OBJECTDIR}/Par.o \
 	${OBJECTDIR}/Pelicula.o \
+	${OBJECTDIR}/Puntaje.o \
 	${OBJECTDIR}/Reserva.o \
 	${OBJECTDIR}/Sala.o \
 	${OBJECTDIR}/Usuario.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/sistema.o \
-	${OBJECTDIR}/usuPeli.o
+	${OBJECTDIR}/sistema.o
 
 
 # C Compiler Flags
@@ -87,11 +91,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Cine.o: Cine.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -133,10 +137,20 @@ ${OBJECTDIR}/DtCine.o: DtCine.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCine.o DtCine.cpp
 
+${OBJECTDIR}/DtCredito.o: DtCredito.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCredito.o DtCredito.cpp
+
 ${OBJECTDIR}/DtFecha.o: DtFecha.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtFecha.o DtFecha.cpp
+
+${OBJECTDIR}/DtPelicula.o: DtPelicula.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtPelicula.o DtPelicula.cpp
 
 ${OBJECTDIR}/Fabrica.o: Fabrica.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -162,6 +176,16 @@ ${OBJECTDIR}/IKey.o: IKey.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/IKey.o IKey.cpp
+
+${OBJECTDIR}/KeyInteger.o: KeyInteger.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/KeyInteger.o KeyInteger.cpp
+
+${OBJECTDIR}/KeyString.o: KeyString.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/KeyString.o KeyString.cpp
 
 ${OBJECTDIR}/ListDiccIterator.o: ListDiccIterator.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -223,6 +247,11 @@ ${OBJECTDIR}/Pelicula.o: Pelicula.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Pelicula.o Pelicula.cpp
 
+${OBJECTDIR}/Puntaje.o: Puntaje.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Puntaje.o Puntaje.cpp
+
 ${OBJECTDIR}/Reserva.o: Reserva.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -247,11 +276,6 @@ ${OBJECTDIR}/sistema.o: sistema.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/sistema.o sistema.cpp
-
-${OBJECTDIR}/usuPeli.o: usuPeli.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/usuPeli.o usuPeli.cpp
 
 # Subprojects
 .build-subprojects:

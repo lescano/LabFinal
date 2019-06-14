@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=Cygwin-Windows
-CND_DLIB_EXT=dll
+CND_PLATFORM=GNU-Linux
+CND_DLIB_EXT=so
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -45,6 +45,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/DtCine.o \
 	${OBJECTDIR}/DtCredito.o \
 	${OBJECTDIR}/DtFecha.o \
+	${OBJECTDIR}/DtPelicula.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
 	${OBJECTDIR}/ICollectible.o \
@@ -90,11 +91,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Cine.o: Cine.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -145,6 +146,11 @@ ${OBJECTDIR}/DtFecha.o: DtFecha.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtFecha.o DtFecha.cpp
+
+${OBJECTDIR}/DtPelicula.o: DtPelicula.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtPelicula.o DtPelicula.cpp
 
 ${OBJECTDIR}/Fabrica.o: Fabrica.cpp
 	${MKDIR} -p ${OBJECTDIR}

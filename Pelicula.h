@@ -61,6 +61,7 @@ public:
     Funcion* seleccionarFuncion(int idFuncion, Cine*);
     Cine* seleccionarCine(int idCine);
     DtInfoPeli* verInfoPeli();
+    bool seleccionarPelicula(string);
     ~Pelicula();
 };
 

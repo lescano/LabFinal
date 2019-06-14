@@ -15,6 +15,8 @@
 #define CONTROLADORPELICULA_H
 
 #include "ICPelicula.h"
+#include "IIterator.h"
+#include "DtPelicula.h"
 
 #include <string.h>
 
@@ -22,17 +24,20 @@ class ControladorPelicula : public ICPelicula {
   private:   
         ControladorPelicula();
         static ControladorPelicula* instancia;
+        IDictionary* coleccionPeliculas;
+        Pelicula* peliculaRecordada;
+        Usuario* usuarioRecordada;
     
     public:
         static ControladorPelicula* getInstancia();
         
      void borrarPelicula();
-     void ingresarNuevoPuntaje();
-     void ingresarPuntaje();
-     string** listarPeliculas();
-     DtCine listarCines();
+     void ingresarNuevoPuntaje(int);
+     void ingresarPuntaje(int);
+     DtPelicula** listarPeliculas();
+     DtCine** listarCines();
      int mostrarPuntaje();
-     Pelicula* seleccionarPeliculas(string);
+     void seleccionarPeliculas(string);
      bool tienePuntaje();
      DtInfoPeli* verInfoPeli();
      DtComentario** listarComentarios();
@@ -40,7 +45,9 @@ class ControladorPelicula : public ICPelicula {
      Opinion* seleccionarComentarios(string);
      void crearRespuesta(string);
      Cine* seleccionarCines(int);
-     ICollection* listarFunciones(Cine*);
+     ICollection* listarFunciones(DtFecha*);
+     Pelicula* getPeliculaRecordada();
+
 };
 
 

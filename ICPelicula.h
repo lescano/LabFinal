@@ -19,6 +19,7 @@
 #include "Pelicula.h"
 #include "DtComentario.h"
 #include "DtFuncion.h"
+#include "DtPelicula.h"
 
 
 
@@ -27,12 +28,12 @@ using namespace std;
 class ICPelicula {
 public: 
     virtual void borrarPelicula()=0;
-    virtual void ingresarNuevoPuntaje()=0;
-    virtual void ingresarPuntaje()=0;
-    virtual string** listarPeliculas()=0;
-    virtual DtCine listarCines()=0;
+    virtual void ingresarNuevoPuntaje(int)=0;
+    virtual void ingresarPuntaje(int)=0;
+    virtual DtPelicula** listarPeliculas()=0;
+    virtual DtCine** listarCines()=0;
     virtual int mostrarPuntaje()=0;
-    virtual Pelicula* seleccionarPeliculas(string)=0;
+    virtual void seleccionarPeliculas(string)=0;
     virtual bool tienePuntaje()=0;
     virtual DtInfoPeli* verInfoPeli()=0;
     virtual DtComentario** listarComentarios()=0;
@@ -40,7 +41,7 @@ public:
     virtual Opinion* seleccionarComentarios(string)=0;
     virtual void crearRespuesta(string)=0;
     virtual Cine* seleccionarCines(int)=0;
-    virtual ICollection* listarFunciones(Cine*)=0;
+    virtual ICollection* listarFunciones(DtFecha*)=0;
 };
 
 #endif /* ICPELICULA_H */
