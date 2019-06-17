@@ -100,3 +100,7 @@ string ControladorUsuario::getNickname(){
 Usuario* ControladorUsuario::getUsuarioRecordado(){
     return this->usuarioRecordado;
 }
+
+void ControladorUsuario::cerrarSesion(){
+    this->usuarioRecordado=NULL;
+}

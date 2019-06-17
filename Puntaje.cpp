@@ -5,6 +5,7 @@
  */
 
 #include "Puntaje.h"
+#include "Pelicula.h"
 
 Puntaje::Puntaje(Pelicula* pelicula, int puntos){
     this->puntos = puntos;
@@ -14,6 +15,13 @@ Puntaje::Puntaje(Pelicula* pelicula, int puntos){
 
 Pelicula* Puntaje::getPeliculaPuntuada(){
     return peliculaPuntuada;
+}
+
+bool Puntaje::tienePuntaje(string titulo){
+    if(this->peliculaPuntuada->getTitulo().compare(titulo)==0)
+        return true;
+    else
+        return false;
 }
 
 Puntaje::~Puntaje(){

@@ -8,6 +8,8 @@ ControladorPelicula* ControladorPelicula::instancia = NULL;
 
 ControladorPelicula::ControladorPelicula() {
     this->coleccionPeliculas = new Lista();
+    usuarioRecordada=NULL;
+    peliculaRecordada=NULL;
 }
 
 ControladorPelicula* ControladorPelicula::getInstancia() {
@@ -38,26 +40,34 @@ DtComentario** ControladorPelicula::listarComentarios(){
     
 }
 ICollectible* ControladorPelicula::listarFunciones(DtFecha*){
-    
-    
-    
 }
-string** ControladorPelicula::listarPeliculas(){
-    cout<<"";
-    IIterator* itPeliculas = this->coleccionPeliculas->iterator();
-    string** listaPelicula=new string* [MAX_PELICULAS];
-    string* titulo;
 
-    int i=0;
-    while(itPeliculas->hasNext()){
-        Pelicula* p = (Pelicula*)itPeliculas->getCurrent();
-        titulo= new string(p->getTitulo());
-        listaPelicula [i]= titulo;
-        itPeliculas->next();
-        i++;
-    }
-    listaPelicula [i]=NULL;
-    return listaPelicula;
+string** ControladorPelicula::listarPeliculas() {
+    usuarioRecordada = getUsuarioRecordado();
+    if(usuarioRecordada){
+        if (usuarioRecordada->getTipoUsuario() != 1)
+            throw std::invalid_argument("No tiene los privilegios necesarios para puntuar peliculas.\n");
+        else {
+            IIterator* itPeliculas = this->coleccionPeliculas->iterator();
+            string** listaPelicula = new string* [MAX_PELICULAS];
+            string* titulo;
+
+            int i = 0;
+            while (itPeliculas->hasNext()) {
+                Pelicula* p = (Pelicula*) itPeliculas->getCurrent();
+                titulo = new string(p->getTitulo());
+                listaPelicula [i] = titulo;
+                itPeliculas->next();
+                i++;
+            }
+            if (i == 0)
+                throw std::invalid_argument("No hay peliculas en el sistema\n");
+
+            listaPelicula [i] = NULL;
+            return listaPelicula;
+        }
+    }else
+        throw std::invalid_argument("No tiene los privilegios necesarios para puntuar peliculas.\n");
 }
 
 int ControladorPelicula::mostrarPuntaje(){
@@ -80,6 +90,8 @@ void ControladorPelicula::seleccionarPeliculas(string titulo){
         }
         it->next();
     }
+    if(!peliculaRecordada)
+        throw std::invalid_argument("La pelicula seleccionada no esta en nuestra cartelera.\n");
 }
 
 Pelicula* ControladorPelicula::getPeliculaRecordada(){

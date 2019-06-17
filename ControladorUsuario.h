@@ -44,6 +44,7 @@ class ControladorUsuario : public ICUsuario {
         IDictionary* getUsuarios();
         ICollection* getPagos();
         Usuario* getUsuarioRecordado();
+        void cerrarSesion();
 };
 
 

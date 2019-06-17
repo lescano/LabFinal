@@ -73,13 +73,11 @@ void Usuario::setReserva(Reserva* reserva){
 }
 
 void Usuario::ingresarNuevoPuentaje(int puntos, Pelicula* pelicula) {
-    IIterator* it = this->puntajes->iterator();
-    while (it->hasNext()) {
-        Puntaje* puntaje = (Puntaje*) it->getCurrent();
-        if (! puntaje->getPeliculaPuntuada()->esPelicula(pelicula->getTitulo()))
-            this->puntajes->add(new Puntaje(pelicula, puntos));
-        it->next();
-    }
+    this->setPuntaje(new Puntaje(pelicula, puntos));
+}
+
+tipoUsuario Usuario::getTipoUsuario(){
+    return this->tipo;
 }
 
 Usuario::~Usuario(){

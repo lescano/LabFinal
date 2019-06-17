@@ -157,10 +157,10 @@ void menu() {
     cout<<"\th- Ver Comentarios y Puntaje de Película\n";   //danilo
     cout<<"\ti- Eliminar Película\n";
     cout<<"\tj- Ver reserva\n";                            //joaquin
-    cout<<"\tk- Cerrar sesion\n";
+    cout<<"\tk- Cerrar sesion\n";                           //danilo
     cout<<"\tl- Modificar fecha del sistema\n";            //danilo
     cout<<"\tm- Consultar fecha del sistema\n";            //danilo
-    cout<<"\tn- Cargar datos de prueba\n";
+    cout<<"\tn- Cargar datos de prueba\n";                  //TODOS
     cout<<"\tz- Salir\n\n";
     cout<<"Elija una opcion: ";
 }
@@ -266,15 +266,16 @@ void puntuarPelicula(){
         if(modificar.compare("si")==0){
             cout<<"Ingrese nuevo puntaje: ";
             cin>>nuevo;
-            controladorPelicula->ingresarPuntaje(nuevo);}
+            controladorPelicula->ingresarPuntaje(nuevo);
+            cout<<"\nPelicula puntuada.\n";
+        }
     }else{
         cout<<"Ingrese un puntaje: ";
         cin>>puntaje;
         controladorPelicula->ingresarNuevoPuntaje(puntaje);
         cout<<"\nPelicula puntuada.\n";
-        cout<<"Gracias por usuar TIPCinemas !!!\n";
     }
-    
+    cout<<"Gracias por usuar TIPCinemas !!!\n";
 }
 
 void comentarPelicula(){
@@ -286,12 +287,15 @@ void verInformacionPelicula(){
 }
 
 void verComentariosPuntajePelicula(){
+    cout<<"\t------------------------------"<<endl;
+    cout<<"\t--VER COMENTARIOS Y PUNTAJES--"<<endl;
+    cout<<"\t------------------------------"<<endl<<endl<<endl;
     string titulo;
     verYseleccionarPelicula();
     std::getline(std::cin, titulo);
     controladorPelicula->seleccionarPeliculas(titulo);
-    controladorPelicula->listarComentarios();
-    controladorPelicula->mostrarPuntaje();
+//    controladorPelicula->listarComentarios();
+//    controladorPelicula->mostrarPuntaje();
 }
 
 void eliminarPelicula(){
@@ -303,7 +307,11 @@ void verReserva(){
 }
 
 void cerrarSesion(){
-    cout<<"Se trabaja en esta funcion.\n\n";
+    cout<<"\t-----------------------------"<<endl;
+    cout<<"\t---------CERRAR SESION-------"<<endl;
+    cout<<"\t-----------------------------"<<endl<<endl<<endl;
+    controladorUsuario->cerrarSesion();
+    cout<<"Sesion cerrada exitosamente.\n";
 }
 
 
@@ -315,13 +323,14 @@ void cargarDatosPrueba(){
     cout<<"Datos de Prueba cargados Exitosamente!!!"<<endl;
 }
 
-void verYseleccionarPelicula(){
-    int i=0;
-    string** listaPeliculas=controladorPelicula->listarPeliculas();
-    cout<<"Peliculas"<<endl<<endl;
-    while(listaPeliculas[i]){
-        cout<<"\tTitulo: "<<listaPeliculas[i]->data()<<"\n";
+void verYseleccionarPelicula() {
+    int i = 0;
+    string** listaPeliculas = controladorPelicula->listarPeliculas();
+
+    cout << "Peliculas" << endl << endl;
+    while (listaPeliculas[i]) {
+        cout << "\tTitulo: " << listaPeliculas[i]->data() << "\n";
         i++;
     }
-    cout<<"\nSeleccione una pelicula: ";
+    cout << "\nSeleccione una pelicula: "
 }

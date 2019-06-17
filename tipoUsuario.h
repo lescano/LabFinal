@@ -14,7 +14,7 @@
 #ifndef TIPOUSUARIO_H
 #define TIPOUSUARIO_H
 
-enum tipoUsuario {administrador, invitado,usuario};
+enum tipoUsuario {administrador, usuario};
 
 #endif /* TIPOUSUARIO_H */
 
