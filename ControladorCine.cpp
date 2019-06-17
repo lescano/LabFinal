@@ -8,7 +8,12 @@ using namespace std;
 ControladorCine* ControladorCine::instancia = NULL;
 
 ControladorCine::ControladorCine() {
-	//seteo de atributos
+    this->coleccionCines=new ListDicc();
+    this->controladorPelicula=NULL;
+    this->controladorUsuario=NULL;
+    this->cineRecordado=NULL;
+    this->salaRecordada=NULL;
+    this->funcionRecordada=NULL;
 }
 
 ControladorCine* ControladorCine::getInstancia() {
@@ -64,4 +69,8 @@ bool* ControladorCine::fechaFuncion(DtFecha* fecha){
 
 void ControladorCine::altaFuncion(){
     
+}
+
+IDictionary* ControladorCine::getColeccionCines(){
+    return this->coleccionCines;
 }

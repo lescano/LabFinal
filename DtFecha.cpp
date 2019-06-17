@@ -7,6 +7,9 @@
 #include "DtFecha.h"
 
 DtFecha::DtFecha(int dia, int mes, int anio, int hora, int minutos, int segundos){
+    if(!validarFecha(dia,mes,anio,hora,minutos,segundos))
+        throw std::invalid_argument("Fecha no valida. No se guardaron los cambios\n");
+    
     this->dia = dia;
     this->mes = mes;
     this->anio = anio;
@@ -69,4 +72,47 @@ ostream &operator << (ostream &salida, DtFecha& fecha){
     salida << endl;
     
     return salida;
+}
+
+bool DtFecha::validarFecha(int dia, int mes, int anio, int hora, int minutos, int segundos){
+        if(anio>0 && hora >= 0 && hora <= 24 && minutos >= 0 && minutos <= 60 && segundos >= 0 && segundos <= 60){
+            switch (mes){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if(dia >= 1 && dia <= 31)
+                        return true;
+                    else
+                        return false;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if(dia >= 1 && dia <= 30)
+                        return true;
+                    else
+                        return false;
+                case 2:{
+                    if(anio%4 == 0 && anio%100 != 0 || anio%400 == 0)
+                        if(dia >= 1 && dia <= 29)
+                            return true;
+                        else
+                            return false;
+                    else
+                        if(dia >= 1 && dia <= 28)
+                            return true;
+                        else
+                            return false;
+                }
+                default: 
+                    return false;
+            }
+    }
+        else
+            return false;
 }

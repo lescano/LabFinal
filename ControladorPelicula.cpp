@@ -1,10 +1,13 @@
 #include "ControladorPelicula.h"
 #include "Usuario.h"
+#include "ListaDicc.h"
+#include "Lista.h"
+#include "Fabrica.h"
 
 ControladorPelicula* ControladorPelicula::instancia = NULL;
 
 ControladorPelicula::ControladorPelicula() {
-	//seteo de atributos
+    this->coleccionPeliculas = new Lista();
 }
 
 ControladorPelicula* ControladorPelicula::getInstancia() {
@@ -22,8 +25,8 @@ void ControladorPelicula::crearComentarios(string){
 void ControladorPelicula::crearRespuesta(string){
     
 }
-void ControladorPelicula::ingresarNuevoPuntaje(int){
-    
+void ControladorPelicula::ingresarNuevoPuntaje(int puntaje){
+    this->getUsuarioRecordado()->ingresarNuevoPuentaje(puntaje,peliculaRecordada);
 }
 void ControladorPelicula::ingresarPuntaje(int){
     
@@ -34,25 +37,29 @@ DtCine** ControladorPelicula::listarCines(){
 DtComentario** ControladorPelicula::listarComentarios(){
     
 }
-ICollection* ControladorPelicula::listarFunciones(DtFecha*){
+ICollectible* ControladorPelicula::listarFunciones(DtFecha*){
     
     
     
 }
-DtPelicula** ControladorPelicula::listarPeliculas(){
-    IIterator* itPeliculas = this->coleccionPeliculas->getIteratorObj();
-    DtPelicula** listaPeliculas;
+string** ControladorPelicula::listarPeliculas(){
+    cout<<"";
+    IIterator* itPeliculas = this->coleccionPeliculas->iterator();
+    string** listaPelicula=new string* [MAX_PELICULAS];
+    string* titulo;
+
+    int i=0;
     while(itPeliculas->hasNext()){
         Pelicula* p = (Pelicula*)itPeliculas->getCurrent();
-        for (int i=0; i < 3; i++){
-            DtPelicula* titulo = new DtPelicula(p->getTitulo());
-            listaPeliculas[i] = titulo;
-        }
+        titulo= new string(p->getTitulo());
+        listaPelicula [i]= titulo;
         itPeliculas->next();
+        i++;
     }
-    return listaPeliculas;
-    
+    listaPelicula [i]=NULL;
+    return listaPelicula;
 }
+
 int ControladorPelicula::mostrarPuntaje(){
     
 }
@@ -63,7 +70,7 @@ Opinion* ControladorPelicula::seleccionarComentarios(string){
     
 }
 void ControladorPelicula::seleccionarPeliculas(string titulo){
-    IIterator* it = this->coleccionPeliculas->getIteratorObj();
+    IIterator* it = this->coleccionPeliculas->iterator();
     bool es;
      while(it->hasNext()){
         Pelicula* p = (Pelicula*)it->getCurrent();
@@ -71,21 +78,24 @@ void ControladorPelicula::seleccionarPeliculas(string titulo){
         if(es){
             this->peliculaRecordada=p;
         }
+        it->next();
     }
-    
 }
 
 Pelicula* ControladorPelicula::getPeliculaRecordada(){
     return this->peliculaRecordada;
 }
 bool ControladorPelicula::tienePuntaje(){
-    return this->usuarioRecordada->tienePuntaje();
+    return this->getUsuarioRecordado()->tienePuntaje(peliculaRecordada->getTitulo());
 }
 DtInfoPeli* ControladorPelicula::verInfoPeli(){
     
 }
 
+ICollection* ControladorPelicula::getColeccionPeliculas(){
+    return this->coleccionPeliculas;
+}
 
-
-
-
+Usuario* ControladorPelicula::getUsuarioRecordado(){
+    Fabrica::getInstancia()->getInterfaceUsuario()->getUsuarioRecordado();
+}

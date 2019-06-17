@@ -5,6 +5,8 @@
  */
 
 #include "Pelicula.h"
+#include "KeyInteger.h"
+#include "ListaDicc.h"
 
 Pelicula::Pelicula(){}
 
@@ -13,6 +15,8 @@ Pelicula::Pelicula(string tit, string sinopsis, string poster){
     this->posterURL = poster;
     this->sinopsis = sinopsis;
     this->puntajeTotal = 0;
+    this->opinion=new ListDicc();
+    this->cines=new ListDicc();
 }
 string Pelicula::getTitulo(){
     return this->titulo;
@@ -35,12 +39,25 @@ void Pelicula::setSinopsis(string s){
 float Pelicula::getPuntaje_total(){
     return this->puntajeTotal;
 }
-void Pelicula::setPuntaje_total(float puntos){
+void Pelicula::setPuntaje_total(int puntos){
     this->puntajeTotal = puntos;
 }
 
 bool Pelicula::seleccionarPelicula(string titulo){
-    
+    if(this->titulo.compare(titulo)==0)
+        return true;
+    return false;
+}
+
+void Pelicula::setOpinion(Opinion* opinion){
+    this->opinion->add(opinion,new KeyInteger(opinion->generarId()));
+}
+
+bool Pelicula::esPelicula(string titulo){
+    if(this->titulo.compare(titulo)==0)
+        return true;
+    else
+        return false;
 }
 
 Pelicula::~Pelicula(){

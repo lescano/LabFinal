@@ -29,6 +29,7 @@ using namespace std;
 class Cine;
 class Funcion;
 
+
 class Pelicula : public ICollectible{
 private:
     string titulo;
@@ -47,9 +48,9 @@ public:
     string getSinopsis();
     void setSinopsis(string);
     float getPuntaje_total();
-    void setPuntaje_total(float);
+    void setPuntaje_total(int);
     IDictionary* getOpinion();
-    void setOpinion(IDictionary*);
+    void setOpinion(Opinion*);
     IDictionary* getCine();
     void setCine(IDictionary*);
     

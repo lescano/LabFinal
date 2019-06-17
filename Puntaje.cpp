@@ -6,10 +6,14 @@
 
 #include "Puntaje.h"
 
-Puntaje::Puntaje(Usuario* usuario, Pelicula* pelicula, int puntos){
+Puntaje::Puntaje(Pelicula* pelicula, int puntos){
     this->puntos = puntos;
     this->peliculaPuntuada = pelicula;
     //usuario->setPuntaje(this);
+}
+
+Pelicula* Puntaje::getPeliculaPuntuada(){
+    return peliculaPuntuada;
 }
 
 Puntaje::~Puntaje(){

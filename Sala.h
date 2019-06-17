@@ -29,14 +29,14 @@ private:
     int capacidad;
     IDictionary* funciones;
 public:
-    Sala(int capacidad, Cine*);
+    Sala(int capacidad);
     ~Sala();
     int getNro_sala();
     void setNro_sala(int);
     int getCapacidad();
     void setCapacidad(int);
     IDictionary* getFunciones();
-    void setFunciones(IDictionary*);
+    void setFunciones(Funcion*);
     int generarId();
     void borrarFunciones();
     DtFuncion** listarFunciones();      //preguntar

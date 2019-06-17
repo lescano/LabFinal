@@ -16,6 +16,9 @@
 
 #include <string>
 #include "DtFecha.h"
+#include "IDictionary.h"
+#include "ICollection.h"
+#include "Usuario.h"
 
 using namespace std;
 
@@ -26,6 +29,9 @@ class ICUsuario{
         virtual void iniciarSesion()=0;
         virtual void setHoraSistema(DtFecha*) = 0;
         virtual DtFecha* getHoraSistema() = 0;
+        virtual IDictionary* getUsuarios() = 0;
+        virtual ICollection* getPagos() = 0;
+        virtual Usuario* getUsuarioRecordado() = 0;
 };
 
 #endif /* ICUSUARIO_H */

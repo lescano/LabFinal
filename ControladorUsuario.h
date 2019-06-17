@@ -29,6 +29,7 @@ class ControladorUsuario : public ICUsuario {
         DtFecha* horaSistema;
         Usuario* usuarioRecordado;
         IDictionary* usuarios;
+        ICollection* pagos;
         string nickname, psw;
     
     public:
@@ -40,6 +41,9 @@ class ControladorUsuario : public ICUsuario {
         bool ingresarContrasenia(string);
         void iniciarSesion();
         string getNickname();
+        IDictionary* getUsuarios();
+        ICollection* getPagos();
+        Usuario* getUsuarioRecordado();
 };
 
 

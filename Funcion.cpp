@@ -11,20 +11,19 @@
 
 using namespace std;
 
-Funcion::Funcion(DtFecha* f, int dur, Pelicula* pelicula, Sala* sala){
+Funcion::Funcion(DtFecha* f, int dur, Pelicula* pelicula){
     this->idFuncion = generarId();
     this->cantAsientos = 0;
     this->costo = 0;
     this->fecha = f;
     this->duracion=dur;
+    this->pelicula=pelicula;
 }
 
 int Funcion::getIdFuncion(){
     return this->idFuncion;
 }
-void Funcion::setIdFuncion(int id){
-    this->idFuncion = id;
-}
+
 int Funcion::getCantAsientos(){
     return this->cantAsientos;
 }
@@ -52,9 +51,8 @@ void Funcion::setDuracion(int dur){
     this->duracion=dur;
 }
 
-
 int Funcion::generarId(){
-    return id+1;
+    return idFuncion+1;
 }
 
 Funcion::~Funcion(){

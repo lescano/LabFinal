@@ -29,7 +29,7 @@ private:
     int puntos;
     Pelicula* peliculaPuntuada;
 public:
-    Puntaje(Usuario*, Pelicula*, int puntos);
+    Puntaje(Pelicula*, int puntos);
     ~Puntaje();
     int getPuntos();
     void setPuntos(int);

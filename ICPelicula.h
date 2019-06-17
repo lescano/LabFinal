@@ -20,6 +20,7 @@
 #include "DtComentario.h"
 #include "DtFuncion.h"
 #include "DtPelicula.h"
+#include "IDictionary.h"
 
 
 
@@ -30,7 +31,7 @@ public:
     virtual void borrarPelicula()=0;
     virtual void ingresarNuevoPuntaje(int)=0;
     virtual void ingresarPuntaje(int)=0;
-    virtual DtPelicula** listarPeliculas()=0;
+    virtual string** listarPeliculas()=0;
     virtual DtCine** listarCines()=0;
     virtual int mostrarPuntaje()=0;
     virtual void seleccionarPeliculas(string)=0;
@@ -41,7 +42,9 @@ public:
     virtual Opinion* seleccionarComentarios(string)=0;
     virtual void crearRespuesta(string)=0;
     virtual Cine* seleccionarCines(int)=0;
-    virtual ICollection* listarFunciones(DtFecha*)=0;
+    virtual ICollectible* listarFunciones(DtFecha*)=0;
+    virtual ICollection* getColeccionPeliculas() = 0;
+    virtual Usuario* getUsuarioRecordado() = 0;
 };
 
 #endif /* ICPELICULA_H */

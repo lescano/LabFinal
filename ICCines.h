@@ -39,6 +39,7 @@ public:
     virtual Sala* seleccionarSala(int) = 0;
     virtual bool* fechaFuncion(DtFecha*) = 0;
     virtual void altaFuncion() = 0;
+    virtual IDictionary* getColeccionCines() = 0;
 };
 
 #endif /* ICCINES_H */

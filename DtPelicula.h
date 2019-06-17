@@ -14,7 +14,9 @@
 #ifndef DTPELICULA_H
 #define DTPELICULA_H
 #include <string>
+
 using namespace std;
+
 class DtPelicula {
 public:
     DtPelicula();

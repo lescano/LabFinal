@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=GNU-Linux
-CND_DLIB_EXT=so
+CND_PLATFORM=Cygwin-Windows
+CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -43,9 +43,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/Credito.o \
 	${OBJECTDIR}/Debito.o \
 	${OBJECTDIR}/DtCine.o \
+	${OBJECTDIR}/DtCom_Puntaje.o \
 	${OBJECTDIR}/DtCredito.o \
 	${OBJECTDIR}/DtFecha.o \
 	${OBJECTDIR}/DtPelicula.o \
+	${OBJECTDIR}/DtPuntaje.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
 	${OBJECTDIR}/ICollectible.o \
@@ -91,11 +93,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal-master ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/labfinal ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Cine.o: Cine.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -137,6 +139,11 @@ ${OBJECTDIR}/DtCine.o: DtCine.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCine.o DtCine.cpp
 
+${OBJECTDIR}/DtCom_Puntaje.o: DtCom_Puntaje.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCom_Puntaje.o DtCom_Puntaje.cpp
+
 ${OBJECTDIR}/DtCredito.o: DtCredito.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -151,6 +158,11 @@ ${OBJECTDIR}/DtPelicula.o: DtPelicula.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtPelicula.o DtPelicula.cpp
+
+${OBJECTDIR}/DtPuntaje.o: DtPuntaje.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtPuntaje.o DtPuntaje.cpp
 
 ${OBJECTDIR}/Fabrica.o: Fabrica.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -19,6 +19,7 @@
 #include "IDictionary.h"
 #include "ICollectible.h"
 #include "ICollection.h"
+#include "KeyInteger.h"
 
 using namespace std;
 
@@ -30,9 +31,9 @@ private:
     int nro_cine;
     string direccion;
     float costo;
-    IDictionary* sala;
+    IDictionary* sala;  //Coleccion de las salas del cine
     int id=0;
-    //Coleccion de las salas del cine
+    
 public:
     Cine(string, float);
     int getNro_cine();

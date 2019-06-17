@@ -5,18 +5,21 @@
  */
 
 #include "Usuario.h"
+#include "Lista.h"
+#include "ListaDicc.h"
+#include "Pelicula.h"
 #include <string>
 
 using namespace std;
 
-Usuario::Usuario(string nickname, string imagen, string contra, tipoUsuario tipo){
+Usuario::Usuario(string nickname, string contra, string imagen, tipoUsuario tipo){
     this->nickname = nickname;
     this->img_perfil = imagen;
     this->contrasenia = contra;
     this->tipo=tipo;
-    this->puntajes=NULL;
-    this->reservas=NULL;
-    this->tipoPago=NULL;
+    this->puntajes=new Lista();
+    this->reservas=new Lista();
+    this->tipoPago=new ListDicc();
 }
 
 string Usuario::getNickname(){
@@ -50,7 +53,33 @@ bool Usuario::esMiPWD(string psw){
       return false;
 }
 
-bool Usuario::tienePuntaje(){
+bool Usuario::tienePuntaje(string titulo) {
+    IIterator* it = this->puntajes->iterator();
+    while (it->hasNext()) {
+        Puntaje* puntos = (Puntaje*) it->getCurrent();
+        if (puntos->getPeliculaPuntuada()->esPelicula(titulo))
+            return true;
+        it->next();
+    }
+    return false;
+}
+
+void Usuario::setPuntaje(Puntaje* puntaje){
+    this->puntajes->add(puntaje);
+}
+
+void Usuario::setReserva(Reserva* reserva){
+    this->reservas->add(reserva);
+}
+
+void Usuario::ingresarNuevoPuentaje(int puntos, Pelicula* pelicula) {
+    IIterator* it = this->puntajes->iterator();
+    while (it->hasNext()) {
+        Puntaje* puntaje = (Puntaje*) it->getCurrent();
+        if (! puntaje->getPeliculaPuntuada()->esPelicula(pelicula->getTitulo()))
+            this->puntajes->add(new Puntaje(pelicula, puntos));
+        it->next();
+    }
 }
 
 Usuario::~Usuario(){

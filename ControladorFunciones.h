@@ -35,7 +35,6 @@ class ControladorFuncion : public ICFuncion {
         Usuario* usuarioRecordado;
         ICollection* coleccionReservas;
         
-        
         ControladorFuncion();
         static ControladorFuncion* instancia;
     

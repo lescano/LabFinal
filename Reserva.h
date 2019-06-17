@@ -32,7 +32,7 @@ private:
     Funcion* funcionReservada;
     ICollection* peliculas;
 public:
-    Reserva(Usuario*, Funcion*,string financiera, int);
+    Reserva(Funcion*,string financiera, int);
     int getCant_asientos();
     void setCant_asientos(int);
     float getCosto_total();

@@ -49,5 +49,3 @@ int ControladorFuncion::precioTotal(){
 void ControladorFuncion::crearReserva(){
     
 }
-
-

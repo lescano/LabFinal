@@ -23,6 +23,8 @@ private:
     int anio, mes, dia, hora, minutos, segundos;
 public:
     DtFecha(int dia, int mes, int anio, int hora, int minutos, int segundos);
+    
+    bool validarFecha(int dia, int mes, int anio, int hora, int minutos, int segundos);
     int getAnio();
     int getMes();
     int getDia();

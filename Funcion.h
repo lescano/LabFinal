@@ -34,8 +34,9 @@ private:
     int id=0;
     DtFecha* fecha; //preguntar si hay que hacer un DtHora
     int duracion;
+    Pelicula* pelicula;
 public:
-    Funcion(DtFecha* fecha, int duracion, Pelicula*, Sala*);
+    Funcion(DtFecha* fecha, int duracion, Pelicula*);
     int getIdFuncion();
     void setIdFuncion(int);
     int getCantAsientos();

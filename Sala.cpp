@@ -6,8 +6,10 @@
 
 #include "Sala.h"
 #include "ListaDicc.h"
+#include "KeyInteger.h"
+#include "Funcion.h"
 
-Sala::Sala(int cap, Cine* cine){
+Sala::Sala(int cap){
     this->nroSala = generarId();
     this->capacidad = cap;
     this->funciones = new ListDicc();
@@ -31,6 +33,10 @@ void Sala::setCapacidad(int cap) {
 
 int Sala::generarId(){
     return id+1;
+}
+
+void Sala::setFunciones(Funcion* funcion){
+    this->funciones->add(funcion, new KeyInteger(funcion->getIdFuncion()));
 }
 
 Sala::~Sala(){

@@ -35,10 +35,6 @@
 void menu();
 void Pausa();
 void Borrar();
-void datosDePrueba();
-void actualizarFecha();
-void verFecha();
-bool validarFecha(int,int,int,int,int,int);
 
 void iniciarSesion();
 void crearReserva();
@@ -55,18 +51,19 @@ void modificarFechaSistema();
 void consultarFechaSistema();
 void cargarDatosPrueba();
 
-using namespace std;
+void verYseleccionarPelicula();
 
 Fabrica* f = f->getInstancia();
 ICUsuario* controladorUsuario = f->getInterfaceUsuario();
 ICPelicula* controladorPelicula = f->getInterfacePelicula();
 
+using namespace std;
 
 int main(int argc, char** argv) {
     char op;
     bool salir=false;
     
-    actualizarFecha();
+  //  modificarFechaSistema();
     
     while(!salir){
         Pausa();
@@ -143,17 +140,17 @@ void Pausa() {
 
 void Borrar() {
     system("clear");
-    //    system("cls");
+    //system("cls");
 }
 
 void menu() {
-    cout << "\t\t --------------\n";
-    cout << "\t\t --TIPCinemas--\n";
-    cout << "\t\t --------------\n\n";
-    cout << "\ta- Iniciar Sesión\n"; //vanessa
-    cout << "\tb- Crear Reserva\n";
-    cout << "\tc- Alta Cine\n"; //vanessa
-    cout << "\td- Alta Función\n";
+    cout <<"\t\t --------------\n";
+    cout <<"\t\t --TIPCinemas--\n";
+    cout <<"\t\t --------------\n\n";
+    cout <<"\ta- Iniciar Sesión\n"; //vanessa
+    cout <<"\tb- Crear Reserva\n";
+    cout <<"\tc- Alta Cine\n"; //vanessa
+    cout <<"\td- Alta Función\n";
     cout<<"\te- Puntuar Película\n";                        //eve
     cout<<"\tf- Comentar Película\n";                       //joaquin
     cout<<"\tg- Ver Información de Película\n";             //eve
@@ -168,7 +165,7 @@ void menu() {
     cout<<"Elija una opcion: ";
 }
 
-void actualizarFecha(){
+void modificarFechaSistema(){
     DtFecha* hoy;
 
     int dia, mes, anio, hora, min, seg;
@@ -195,20 +192,12 @@ void actualizarFecha(){
     cin>>seg;
     fflush(stdin);
     
-    if(!validarFecha(dia,mes,anio,hora,min,seg))
-        throw std::invalid_argument("Fecha no valida.\n");
-    
     hoy=new DtFecha(dia,mes,anio,hora,min,seg);
     Fabrica::getInstancia()->getInterfaceUsuario()->setHoraSistema(hoy);
     cout<<endl<<"Se cargaron los datos correctamente."<<endl<<endl;
 }
 
-void datosDePrueba(){
-    Fabrica::cargarDatosPrueba();
-    cout<<"Datos de Prueba cargados Exitosamente!!!"<<endl;
-}
-
-void verFecha(){
+void consultarFechaSistema(){
     DtFecha* fecha;
     fecha=Fabrica::getInstancia()->getInterfaceUsuario()->getHoraSistema();
     
@@ -216,55 +205,16 @@ void verFecha(){
     cout<<"\t-------FECHA del SISTEMA-----"<<endl;
     cout<<"\t-----------------------------"<<endl<<endl<<endl;
     cout<<*fecha;
-};
-
-bool validarFecha(int dia, int mes, int anio, int hora, int minutos, int segundos){
-        if(anio>0 && hora > 0 && hora <= 24 && minutos > 0 && minutos <= 60 && segundos > 0 && segundos <= 60){
-            switch (mes){
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12:
-                    if(dia >= 1 && dia <= 31)
-                        return true;
-                    else
-                        return false;
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    if(dia >= 1 && dia <= 30)
-                        return true;
-                    else
-                        return false;
-                case 2:{
-                    if(anio%4 == 0 && anio%100 != 0 || anio%400 == 0)
-                        if(dia >= 1 && dia <= 29)
-                            return true;
-                        else
-                            return false;
-                    else
-                        if(dia >= 1 && dia <= 28)
-                            return true;
-                        else
-                            return false;
-                }
-                default: 
-                    return false;
-            }
-    }
-        else
-            return false;
 }
 
 void iniciarSesion(){
     string nickname, psw;
     char seguir = 's';
     bool existe = false;
+    
+    cout<<"\t-----------------------------"<<endl;
+    cout<<"\t--------INICIAR SESION-------"<<endl;
+    cout<<"\t-----------------------------"<<endl<<endl<<endl;
     
     cout<<"Nickname: ";
     cin>>nickname;
@@ -299,20 +249,17 @@ void altaFuncion(){
 }
 
 void puntuarPelicula(){
+    cout<<"\t-----------------------------"<<endl;
+    cout<<"\t-------PUNTUAR PELICULA------"<<endl;
+    cout<<"\t-----------------------------"<<endl<<endl<<endl;
     string titulo, modificar;
     int nuevo, puntaje;
-    DtPelicula** listaPeliculas= controladorPelicula->listarPeliculas();
-    cout<<"Peliculas"<<endl<<endl;
-    int i=0;
-    while(listaPeliculas){
-        cout<<"Titulo: "<<listaPeliculas[i]->getTitulo();
-        i++;
-    }
-    cout<<"Seleccione una pelicula"<<endl;
-    cin>>titulo;   //buscar
+    
+    verYseleccionarPelicula();
+    cin.ignore();
+    std::getline(std::cin, titulo);
     controladorPelicula->seleccionarPeliculas(titulo);
-    bool tienep=controladorPelicula->tienePuntaje();
-    if(tienep){
+    if(controladorPelicula->tienePuntaje()){
         controladorPelicula->mostrarPuntaje();
         cout<<"Desea modificar puntaje(si, no): ";
         cin>>modificar;
@@ -324,6 +271,8 @@ void puntuarPelicula(){
         cout<<"Ingrese un puntaje: ";
         cin>>puntaje;
         controladorPelicula->ingresarNuevoPuntaje(puntaje);
+        cout<<"\nPelicula puntuada.\n";
+        cout<<"Gracias por usuar TIPCinemas !!!\n";
     }
     
 }
@@ -337,7 +286,12 @@ void verInformacionPelicula(){
 }
 
 void verComentariosPuntajePelicula(){
-    cout<<"Se trabaja en esta funcion.\n\n";
+    string titulo;
+    verYseleccionarPelicula();
+    std::getline(std::cin, titulo);
+    controladorPelicula->seleccionarPeliculas(titulo);
+    controladorPelicula->listarComentarios();
+    controladorPelicula->mostrarPuntaje();
 }
 
 void eliminarPelicula(){
@@ -352,14 +306,22 @@ void cerrarSesion(){
     cout<<"Se trabaja en esta funcion.\n\n";
 }
 
-void modificarFechaSistema(){
-    cout<<"Se trabaja en esta funcion.\n\n";
-}
-
-void consultarFechaSistema(){
-    cout<<"Se trabaja en esta funcion.\n\n";
-}
 
 void cargarDatosPrueba(){
-    cout<<"Se trabaja en esta funcion.\n\n";
+    cout<<"\t-----------------------------"<<endl;
+    cout<<"\t----CARGAR DATOS DE PRUEBA---"<<endl;
+    cout<<"\t-----------------------------"<<endl<<endl<<endl;
+    Fabrica::cargarDatosPrueba();
+    cout<<"Datos de Prueba cargados Exitosamente!!!"<<endl;
+}
+
+void verYseleccionarPelicula(){
+    int i=0;
+    string** listaPeliculas=controladorPelicula->listarPeliculas();
+    cout<<"Peliculas"<<endl<<endl;
+    while(listaPeliculas[i]){
+        cout<<"\tTitulo: "<<listaPeliculas[i]->data()<<"\n";
+        i++;
+    }
+    cout<<"\nSeleccione una pelicula: ";
 }

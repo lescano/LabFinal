@@ -15,26 +15,27 @@
 
 #include <iostream>
 
-//#include "Usuario.h"
-//#include "Pelicula.h"
+#include "ICollectible.h"
+#include "IDictionary.h"
 
 using namespace std;
 
 class Usuario;
 class Pelicula;
 
-class Opinion {
+class Opinion : public ICollectible{
 private:
     string comentario;
-    int id;
+    int id=0;
+    Usuario* usuario;
+    IDictionary* coleccionComentarios;
 public:
-    Opinion(Usuario*, Pelicula*, string);
-    Opinion(Usuario*, Opinion*, string);
+    Opinion(Usuario*, string);
     ~Opinion();
     string getComentario();
-    void setComentario(string);
+    void setColComentario(Opinion*);
     int getId();
-    void setId(int);
+    int generarId();
 };
 
 #endif /* OPINION_H */

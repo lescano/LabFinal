@@ -7,7 +7,7 @@
 #include "Reserva.h"
 #include "Usuario.h"
 
-Reserva::Reserva(Usuario* usuario, Funcion* funcion,string financiera, int asientos){
+Reserva::Reserva(Funcion* funcion,string financiera, int asientos){
     this->cant_asientos = asientos;
     this->costo_total = 0;
 //    usuario->setPuntaje(this);

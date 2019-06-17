@@ -5,11 +5,14 @@
  */
 
 #include "Cine.h"
+#include "Sala.h"
+#include "ListaDicc.h"
 
 Cine::Cine(string dire, float costo){
-    //this->nro_cine = generarId();
+    this->nro_cine = generarId();
     this->direccion = dire;
     this->costo=costo;
+    this->sala=new ListDicc(); 
 }
 
 int Cine::getNro_cine(){
@@ -53,7 +56,7 @@ int Cine::generarId(){
 }
 
 void Cine::setSala(Sala* sala){
-//    this->sala->add(sala,)
+    this->sala->add(sala,new KeyInteger(sala->getNro_sala()));
 }
 
 Cine::~Cine(){

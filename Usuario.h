@@ -35,7 +35,7 @@ private:
     string contrasenia;
     tipoUsuario tipo;
     ICollection*  puntajes;
-    IDictionary* reservas;
+    ICollection* reservas;
     IDictionary* tipoPago;
 public:
     Usuario(string nick, string contrasenia, string foto, tipoUsuario tipo);
@@ -49,9 +49,9 @@ public:
     tipoUsuario getTipoUsuario();
     void setTipoUsuario(tipoUsuario);
     ICollection* getPuntaje();
-    void setPuntaje(ICollectible*);
-    IDictionary* getReserva();
-    void setReserva(ICollectible*);
+    void setPuntaje(Puntaje*);
+    ICollection* getReserva();
+    void setReserva(Reserva*);
     IDictionary* getTipoPago();
     void setTipoPago(ICollectible*);
     
@@ -63,7 +63,8 @@ public:
     ICollection* listarFunciones(Pelicula* , Cine*);     //preguntar
     int mostrarPuntaje(string);
     DtCredito* reservaCredito(string);
-    bool tienePuntaje();
+    bool tienePuntaje(string);
+    void ingresarNuevoPuentaje(int,Pelicula*);
 };
 
 #endif /* USUARIO_H */

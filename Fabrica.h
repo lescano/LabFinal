@@ -9,6 +9,7 @@
 #include "ControladorPelicula.h"
 #include "ICUsuario.h"
 #include "ControladorUsuario.h"
+#include "IDictionary.h"
 
 #include <string.h>
 

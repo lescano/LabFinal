@@ -4,3 +4,17 @@
  * and open the template in the editor.
  */
 
+#include "DtCom_Puntaje.h"
+
+
+DtCom_Puntaje::DtCom_Puntaje(float puntajePromedio, int cantPuntuaciones, DtComentario* comentarios, DtPuntaje* puntaje){
+    this->puntajePromedio=puntajePromedio;
+    this->cantPuntuaciones=cantPuntuaciones;
+    this->comentarios=comentarios;
+    this->puntaje=puntaje;
+}
+
+
+DtCom_Puntaje::~DtCom_Puntaje(){
+    
+}

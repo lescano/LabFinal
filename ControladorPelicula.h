@@ -20,33 +20,37 @@
 
 #include <string.h>
 
+#define MAX_PELICULAS 10
+
 class ControladorPelicula : public ICPelicula {
   private:   
         ControladorPelicula();
         static ControladorPelicula* instancia;
-        IDictionary* coleccionPeliculas;
+        ICollection* coleccionPeliculas;
         Pelicula* peliculaRecordada;
         Usuario* usuarioRecordada;
     
     public:
         static ControladorPelicula* getInstancia();
         
-     void borrarPelicula();
-     void ingresarNuevoPuntaje(int);
-     void ingresarPuntaje(int);
-     DtPelicula** listarPeliculas();
-     DtCine** listarCines();
-     int mostrarPuntaje();
-     void seleccionarPeliculas(string);
-     bool tienePuntaje();
-     DtInfoPeli* verInfoPeli();
-     DtComentario** listarComentarios();
-     void crearComentarios(string);
-     Opinion* seleccionarComentarios(string);
-     void crearRespuesta(string);
-     Cine* seleccionarCines(int);
-     ICollection* listarFunciones(DtFecha*);
-     Pelicula* getPeliculaRecordada();
+        void borrarPelicula();
+        void ingresarNuevoPuntaje(int);
+        void ingresarPuntaje(int);
+        string** listarPeliculas();
+        DtCine** listarCines();
+        int mostrarPuntaje();
+        void seleccionarPeliculas(string);
+        bool tienePuntaje();
+        DtInfoPeli* verInfoPeli();
+        DtComentario** listarComentarios();
+        void crearComentarios(string);
+        Opinion* seleccionarComentarios(string);
+        void crearRespuesta(string);
+        Cine* seleccionarCines(int);
+        ICollectible* listarFunciones(DtFecha*);
+        Pelicula* getPeliculaRecordada();
+        ICollection* getColeccionPeliculas();
+        Usuario* getUsuarioRecordado();
 
 };
 

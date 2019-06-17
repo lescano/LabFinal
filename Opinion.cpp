@@ -6,33 +6,33 @@
 #include <string>
 
 #include "Opinion.h"
+#include "KeyInteger.h"
+#include "ListaDicc.h"
 
 using namespace std;
 
-
-Opinion::Opinion(Usuario* usuario, Pelicula* pelicula, string comentario){
+Opinion::Opinion(Usuario* usuario, string comentario){
     this->comentario = comentario;
-//    this->id=id;
-}
-
-Opinion::Opinion(Usuario* usuario, Opinion* opinion, string comentario){
-    this->comentario = comentario;
-//    this->id=id;
+    this->id=generarId();
+    this->usuario=usuario;
+    this->coleccionComentarios=new ListDicc();
 }
 
 string Opinion::getComentario(){
     return this->comentario;
 }
-void Opinion::setComentario(string c){
-    this->comentario = c;
+void Opinion::setColComentario(Opinion* comentario){
+    this->coleccionComentarios->add(comentario, new KeyInteger(comentario->getId()));
 }
 
 int Opinion::getId(){
     return this->id;
 }
-void Opinion::setId(int id){
-    this->id=id;
+
+int Opinion::generarId(){
+    return id+1;
 }
+
 
 Opinion::~Opinion(){
     

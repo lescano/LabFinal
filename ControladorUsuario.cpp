@@ -1,26 +1,30 @@
 #include "ControladorUsuario.h"
 #include "Fabrica.h"
 #include "KeyString.h"
+#include "Lista.h"
 
 ControladorUsuario* ControladorUsuario::instancia = NULL;
 
 ControladorUsuario::ControladorUsuario() {
     //Se crea la lista donde se van a guardar los usuarios del sistema
-    IDictionary* usuariosSistema = new ListDicc();
+//    IDictionary* usuariosSistema = new ListDicc();
     
     this->horaSistema = NULL;
     this->nickname = "";
     this->usuarioRecordado = NULL;
-    this->usuarios = usuariosSistema;
+//    this->usuarios = usuariosSistema;
+    this->usuarios = new ListDicc();
+    this->pagos=new Lista();
+    this->usuarios=new ListDicc();
 
-    //Se crean unos usuarios que estan registrados en el sistema. 
-    Usuario* u1 = new Usuario("vanessa", "/home/imagen/img1", "1234", usuario);
-
-    //Se crean las claves de cada usuario. los usuarios se identifican por el nick
-    KeyString* clave1 = new KeyString("vanessa");
-    
-    //Esos usuarios creados se guardan en la coleccion de usuariosSistema
-    usuariosSistema->add(u1,clave1);
+//    //Se crean unos usuarios que estan registrados en el sistema. 
+//    Usuario* u1 = new Usuario("vanessa", "/home/imagen/img1", "1234", usuario);
+//
+//    //Se crean las claves de cada usuario. los usuarios se identifican por el nick
+//    KeyString* clave1 = new KeyString("vanessa");
+//    
+//    //Esos usuarios creados se guardan en la coleccion de usuariosSistema
+//    usuariosSistema->add(u1,clave1);
 }
 
 ControladorUsuario* ControladorUsuario::getInstancia() {
@@ -81,6 +85,18 @@ void ControladorUsuario::iniciarSesion(){
     this->psw = "";
 }
 
+IDictionary* ControladorUsuario::getUsuarios(){
+    return this->usuarios;
+}
+
+ICollection* ControladorUsuario::getPagos(){
+    return this->pagos;
+}
+
 string ControladorUsuario::getNickname(){
     return this->nickname;
+}
+
+Usuario* ControladorUsuario::getUsuarioRecordado(){
+    return this->usuarioRecordado;
 }

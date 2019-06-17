@@ -31,14 +31,15 @@ class ControladorCine :public ICCines {
     private:
         ControladorUsuario* controladorUsuario;
         ControladorPelicula* controladorPelicula;
+        IDictionary* coleccionCines;
         Cine* cineRecordado;
         Sala* salaRecordada;
         Funcion* funcionRecordada;
         string direccion;
         int capacidadSala;
+        
         ControladorCine();
         static ControladorCine* instancia;
-    
     public:
         static ControladorCine* getInstancia();
         
@@ -54,6 +55,8 @@ class ControladorCine :public ICCines {
         Sala* seleccionarSala(int);
         bool* fechaFuncion(DtFecha*);
         void altaFuncion();
+        IDictionary* getColeccionCines();
+        
 };
 
 #endif /* CONTROLADORCINE_H */

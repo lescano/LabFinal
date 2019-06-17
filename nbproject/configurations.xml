@@ -52,6 +52,10 @@
       <itemPath>DtFecha.h</itemPath>
       <itemPath>DtFuncion.h</itemPath>
       <itemPath>DtInfoPeli.h</itemPath>
+      <itemPath>DtPelicula.cpp</itemPath>
+      <itemPath>DtPelicula.h</itemPath>
+      <itemPath>DtPuntaje.cpp</itemPath>
+      <itemPath>DtPuntaje.h</itemPath>
       <itemPath>DtSala.h</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
@@ -60,7 +64,6 @@
       <itemPath>Cine.h</itemPath>
       <itemPath>Credito.h</itemPath>
       <itemPath>Debito.h</itemPath>
-      <itemPath>DtPelicula.h</itemPath>
       <itemPath>Funcion.h</itemPath>
       <itemPath>KeyInteger.h</itemPath>
       <itemPath>KeyString.h</itemPath>
@@ -91,7 +94,7 @@
       <itemPath>Cine.cpp</itemPath>
       <itemPath>Credito.cpp</itemPath>
       <itemPath>Debito.cpp</itemPath>
-      <itemPath>DtPelicula.cpp</itemPath>
+      <itemPath>DtCom_Puntaje.cpp</itemPath>
       <itemPath>Funcion.cpp</itemPath>
       <itemPath>KeyInteger.cpp</itemPath>
       <itemPath>KeyString.cpp</itemPath>
@@ -174,6 +177,8 @@
       </item>
       <item path="DtCine.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DtCom_Puntaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="DtCom_Puntaje.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtComentario.h" ex="false" tool="3" flavor2="0">
@@ -193,6 +198,10 @@
       <item path="DtPelicula.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtPelicula.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtPuntaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtPuntaje.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtSala.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -359,6 +368,8 @@
       </item>
       <item path="DtCine.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DtCom_Puntaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="DtCom_Puntaje.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtComentario.h" ex="false" tool="3" flavor2="0">
@@ -378,6 +389,10 @@
       <item path="DtPelicula.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DtPelicula.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DtPuntaje.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DtPuntaje.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtSala.h" ex="false" tool="3" flavor2="0">
       </item>

@@ -14,6 +14,7 @@
 #ifndef DTCOM_PUNTAJE_H
 #define DTCOM_PUNTAJE_H
 #include "DtComentario.h"
+#include "DtPuntaje.h"
 
 class DtCom_Puntaje{
 private:
@@ -22,7 +23,7 @@ private:
     DtComentario* comentarios;
     DtPuntaje* puntaje;
 public:
-    DtCom_Puntaje();
+    DtCom_Puntaje(float,int,DtComentario*,DtPuntaje*);
     ~DtCom_Puntaje();
     float getPuntajePromedio();
     int getCantPuntuaciones();
