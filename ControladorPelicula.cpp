@@ -90,7 +90,7 @@ void ControladorPelicula::seleccionarPeliculas(string titulo){
         }
         it->next();
     }
-    if(!peliculaRecordada)
+    if(!this->peliculaRecordada)
         throw std::invalid_argument("La pelicula seleccionada no esta en nuestra cartelera.\n");
 }
 
