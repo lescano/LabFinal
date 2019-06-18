@@ -332,5 +332,5 @@ void verYseleccionarPelicula() {
         cout << "\tTitulo: " << listaPeliculas[i]->data() << "\n";
         i++;
     }
-    cout << "\nSeleccione una pelicula: "
+    cout << "\nSeleccione una pelicula: ";
 }
