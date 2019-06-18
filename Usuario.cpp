@@ -72,6 +72,28 @@ void Usuario::setReserva(Reserva* reserva){
     this->reservas->add(reserva);
 }
 
+int Usuario::mostrarPuntaje(string titulo){
+    IIterator* it = this->puntajes->iterator();
+    while (it->hasNext()) {
+        Puntaje* puntos = (Puntaje*) it->getCurrent();
+        if (puntos->getPeliculaPuntuada()->esPelicula(titulo))
+            return puntos->getPuntos();
+        it->next();
+    }
+}
+
+
+
+void Usuario::ingresarPuntaje(string titulo, int puntos){
+    IIterator* it = this->puntajes->iterator();
+    while (it->hasNext()) {
+        Puntaje* puntaje = (Puntaje*) it->getCurrent();
+        if (puntaje->getPeliculaPuntuada()->esPelicula(titulo))
+            puntaje->setPuntos(puntos);
+        it->next();
+    }
+}
+
 void Usuario::ingresarNuevoPuentaje(int puntos, Pelicula* pelicula) {
     IIterator* it = this->puntajes->iterator();
     while (it->hasNext()) {

@@ -37,7 +37,7 @@ class ControladorPelicula : public ICPelicula {
         void ingresarNuevoPuntaje(int);
         void ingresarPuntaje(int);
         string** listarPeliculas();
-        DtCine** listarCines();
+        int** listarCines();
         int mostrarPuntaje();
         void seleccionarPeliculas(string);
         bool tienePuntaje();

@@ -32,7 +32,7 @@ public:
     virtual void ingresarNuevoPuntaje(int)=0;
     virtual void ingresarPuntaje(int)=0;
     virtual string** listarPeliculas()=0;
-    virtual DtCine** listarCines()=0;
+    virtual int** listarCines()=0;
     virtual int mostrarPuntaje()=0;
     virtual void seleccionarPeliculas(string)=0;
     virtual bool tienePuntaje()=0;

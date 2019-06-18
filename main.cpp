@@ -56,6 +56,7 @@ void verYseleccionarPelicula();
 Fabrica* f = f->getInstancia();
 ICUsuario* controladorUsuario = f->getInterfaceUsuario();
 ICPelicula* controladorPelicula = f->getInterfacePelicula();
+ICCines* controladorCine = f->getInterfaceCine();
 
 using namespace std;
 
@@ -139,8 +140,8 @@ void Pausa() {
 }
 
 void Borrar() {
-    system("clear");
-    //system("cls");
+    //system("clear");
+    system("cls");
 }
 
 void menu() {
@@ -282,7 +283,7 @@ void comentarPelicula(){
 }
 
 void verInformacionPelicula(){
-    cout<<"Se trabaja en esta funcion.\n\n";
+//    controladorPelicula->listarCines();
 }
 
 void verComentariosPuntajePelicula(){

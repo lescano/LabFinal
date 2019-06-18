@@ -52,12 +52,12 @@ public:
     IDictionary* getOpinion();
     void setOpinion(Opinion*);
     IDictionary* getCine();
-    void setCine(IDictionary*);
+    void setCine(Cine*);
     
     void borarSalaCineFunc();
     void borrarOpiniones();
     bool esPelicula(string);
-    DtCine** listarCine();      //pregunra
+    int** listarCine();      //pregunra
     ICollection* listarFunciones(Cine*);     //preguntar
     Funcion* seleccionarFuncion(int idFuncion, Cine*);
     Cine* seleccionarCine(int idCine);

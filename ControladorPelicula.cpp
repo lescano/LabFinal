@@ -28,11 +28,11 @@ void ControladorPelicula::crearRespuesta(string){
 void ControladorPelicula::ingresarNuevoPuntaje(int puntaje){
     this->getUsuarioRecordado()->ingresarNuevoPuentaje(puntaje,peliculaRecordada);
 }
-void ControladorPelicula::ingresarPuntaje(int){
-    
+void ControladorPelicula::ingresarPuntaje(int puntaje){
+    this->getUsuarioRecordado()->ingresarPuntaje(this->peliculaRecordada->getTitulo(),puntaje);
 }
-DtCine** ControladorPelicula::listarCines(){
-    
+int** ControladorPelicula::listarCines(){
+    return this->peliculaRecordada->listarCine();
 }
 DtComentario** ControladorPelicula::listarComentarios(){
     
@@ -62,6 +62,9 @@ string** ControladorPelicula::listarPeliculas(){
 
 int ControladorPelicula::mostrarPuntaje(){
     
+    ICUsuario* controladorUsuario = Fabrica::getInstancia()->getInterfaceUsuario();
+    Usuario* u=controladorUsuario->getUsuarioRecordado();
+    u->mostrarPuntaje(this->peliculaRecordada->getTitulo());
 }
 Cine* ControladorPelicula::seleccionarCines(int){
     
@@ -80,6 +83,7 @@ void ControladorPelicula::seleccionarPeliculas(string titulo){
         }
         it->next();
     }
+    
 }
 
 Pelicula* ControladorPelicula::getPeliculaRecordada(){
@@ -89,7 +93,7 @@ bool ControladorPelicula::tienePuntaje(){
     return this->getUsuarioRecordado()->tienePuntaje(peliculaRecordada->getTitulo());
 }
 DtInfoPeli* ControladorPelicula::verInfoPeli(){
-    
+    this->peliculaRecordada->verInfoPeli();
 }
 
 ICollection* ControladorPelicula::getColeccionPeliculas(){
