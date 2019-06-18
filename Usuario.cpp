@@ -80,6 +80,18 @@ tipoUsuario Usuario::getTipoUsuario(){
     return this->tipo;
 }
 
+int Usuario::verPuntaje(string titulo) {
+    IIterator* it = this->puntajes->iterator();
+
+    while (it->hasNext()) {
+        Puntaje* p = (Puntaje*) it->getCurrent();
+        if (p->esPelicula(titulo))
+            return p->getPuntos();
+        it->next();
+    }
+    return 0;
+}
+
 Usuario::~Usuario(){
     
 }

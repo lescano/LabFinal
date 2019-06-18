@@ -31,6 +31,8 @@
 #include "Usuario.h"
 #include "Fabrica.h"
 #include "DtPelicula.h"
+#include "DtCom_Puntaje.h"
+#include "IIterator.h"
 
 void menu();
 void Pausa();
@@ -56,6 +58,7 @@ void verYseleccionarPelicula();
 Fabrica* f = f->getInstancia();
 ICUsuario* controladorUsuario = f->getInterfaceUsuario();
 ICPelicula* controladorPelicula = f->getInterfacePelicula();
+ICCines* controladorCine = f->getInterfaceCine();
 
 using namespace std;
 
@@ -147,9 +150,9 @@ void menu() {
     cout <<"\t\t --------------\n";
     cout <<"\t\t --TIPCinemas--\n";
     cout <<"\t\t --------------\n\n";
-    cout <<"\ta- Iniciar Sesión\n"; //vanessa
+    cout <<"\ta- Iniciar Sesión\n";                         //vanessa
     cout <<"\tb- Crear Reserva\n";
-    cout <<"\tc- Alta Cine\n"; //vanessa
+    cout <<"\tc- Alta Cine\n";                              //vanessa
     cout <<"\td- Alta Función\n";
     cout<<"\te- Puntuar Película\n";                        //eve
     cout<<"\tf- Comentar Película\n";                       //joaquin
@@ -290,12 +293,31 @@ void verComentariosPuntajePelicula(){
     cout<<"\t------------------------------"<<endl;
     cout<<"\t--VER COMENTARIOS Y PUNTAJES--"<<endl;
     cout<<"\t------------------------------"<<endl<<endl<<endl;
+    
     string titulo;
+    DtCom_Puntaje* comentariosPuntajes = new DtCom_Puntaje();
     verYseleccionarPelicula();
+    cin.ignore();
     std::getline(std::cin, titulo);
     controladorPelicula->seleccionarPeliculas(titulo);
-//    controladorPelicula->listarComentarios();
-//    controladorPelicula->mostrarPuntaje();
+    comentariosPuntajes = controladorPelicula->verComentariosPuntaje();
+        
+    Borrar();
+    cout<<"\t------------------------------"<<endl;
+    cout<<"\t--VER COMENTARIOS Y PUNTAJES--"<<endl;
+    cout<<"\t------------------------------"<<endl<<endl<<endl;
+    
+    cout<<titulo<<":"<<endl;
+    cout<<"\tPuntaje promedio: "<<comentariosPuntajes->getPuntajePromedio()<<" ( "<<comentariosPuntajes->getCantPuntuaciones()<<" usuario puntuaron esta pelicula )"<<endl;
+    cout<<"\tCOMENTARIOS"<<endl;
+    
+    IIterator* it = comentariosPuntajes->getDtComentarios()->iterator();
+    while(it->hasNext()){
+        if(DtComentarios* dtComentario = (DtComentarios*)it->getCurrent())
+            cout<<"\t"<<dtComentario->getNickname()<<": "<<dtComentario->getComentario()<<endl;
+        it->next();
+    }
+    cout<<"BIEN"<<endl;
 }
 
 void eliminarPelicula(){

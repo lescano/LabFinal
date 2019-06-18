@@ -32,7 +32,9 @@ int Opinion::getId(){
 int Opinion::generarId(){
     return id+1;
 }
-
+Usuario* Opinion::getUsuario(){
+    return this->usuario;
+}
 
 Opinion::~Opinion(){
     

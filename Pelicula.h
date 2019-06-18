@@ -13,16 +13,17 @@
 
 #ifndef PELICULA_H
 #define PELICULA_H
-#include <string>
+
 #include "Opinion.h"
-//#include "Cine.h"
 #include "DtCine.h"
 #include "DtFuncion.h"
-//#include "Funcion.h"
 #include "DtInfoPeli.h"
 #include "IDictionary.h"
 #include "ICollectible.h"
 #include "ICollection.h"
+#include "DtComentarios.h"
+
+#include <string>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ private:
     string titulo;
     string posterURL;
     string sinopsis;
-    float puntajeTotal;
+    int puntajeTotal;
     IDictionary* opinion;
     IDictionary* cines;
 public:
@@ -47,8 +48,8 @@ public:
     void setPoster_url(string);
     string getSinopsis();
     void setSinopsis(string);
-    float getPuntaje_total();
-    void setPuntaje_total(int);
+    float getPuntajeTotal();
+    void setPuntajeTotal(int);
     IDictionary* getOpinion();
     void setOpinion(Opinion*);
     IDictionary* getCine();
@@ -63,6 +64,7 @@ public:
     Cine* seleccionarCine(int idCine);
     DtInfoPeli* verInfoPeli();
     bool seleccionarPelicula(string);
+    ICollection* getComentarios();
     ~Pelicula();
 };
 

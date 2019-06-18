@@ -3,9 +3,10 @@ build/Debug/Cygwin-Windows/ControladorCine.o: ControladorCine.cpp \
  IDictionary.h ICollectible.h IKey.h IIterator.h ICollection.h Usuario.h \
  tipoUsuario.h DtCredito.h Credito.h Pago.h DtFuncion.h Puntaje.h \
  Reserva.h ListaDicc.h NodoDicc.h Par.h ListDiccIterator.h \
- ListDiccIteratorObj.h ListDiccIteratorKey.h ControladorPelicula.h \
- ICPelicula.h DtCine.h DtInfoPeli.h Pelicula.h Opinion.h DtComentario.h \
- DtPelicula.h Cine.h KeyInteger.h Sala.h Funcion.h DtSala.h
+ ListDiccIteratorObj.h ListDiccIteratorKey.h DtPuntajeUsuario.h \
+ ControladorPelicula.h ICPelicula.h DtCine.h DtInfoPeli.h Pelicula.h \
+ Opinion.h DtComentarios.h DtPelicula.h DtCom_Puntaje.h Cine.h \
+ KeyInteger.h Sala.h Funcion.h DtSala.h
 
 ControladorCine.h:
 
@@ -55,6 +56,8 @@ ListDiccIteratorObj.h:
 
 ListDiccIteratorKey.h:
 
+DtPuntajeUsuario.h:
+
 ControladorPelicula.h:
 
 ICPelicula.h:
@@ -67,9 +70,11 @@ Pelicula.h:
 
 Opinion.h:
 
-DtComentario.h:
+DtComentarios.h:
 
 DtPelicula.h:
+
+DtCom_Puntaje.h:
 
 Cine.h:
 

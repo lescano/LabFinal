@@ -13,9 +13,9 @@
 
 #include "DtPuntaje.h"
 
-DtPuntaje::DtPuntaje(string texto, int idCom) {
-    this->texto=texto;
-    this->idCom=idCom;
+DtPuntaje::DtPuntaje(Pelicula* pelicula, int puntos) {
+    this->pelicula=pelicula;
+    this->puntos=puntos;
 }
 
 DtPuntaje::~DtPuntaje() {

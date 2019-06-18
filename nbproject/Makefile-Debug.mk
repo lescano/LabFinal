@@ -44,10 +44,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/Debito.o \
 	${OBJECTDIR}/DtCine.o \
 	${OBJECTDIR}/DtCom_Puntaje.o \
+	${OBJECTDIR}/DtComentarios.o \
 	${OBJECTDIR}/DtCredito.o \
 	${OBJECTDIR}/DtFecha.o \
 	${OBJECTDIR}/DtPelicula.o \
 	${OBJECTDIR}/DtPuntaje.o \
+	${OBJECTDIR}/DtPuntajeUsuario.o \
 	${OBJECTDIR}/Fabrica.o \
 	${OBJECTDIR}/Funcion.o \
 	${OBJECTDIR}/ICollectible.o \
@@ -144,6 +146,11 @@ ${OBJECTDIR}/DtCom_Puntaje.o: DtCom_Puntaje.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtCom_Puntaje.o DtCom_Puntaje.cpp
 
+${OBJECTDIR}/DtComentarios.o: DtComentarios.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtComentarios.o DtComentarios.cpp
+
 ${OBJECTDIR}/DtCredito.o: DtCredito.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -163,6 +170,11 @@ ${OBJECTDIR}/DtPuntaje.o: DtPuntaje.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtPuntaje.o DtPuntaje.cpp
+
+${OBJECTDIR}/DtPuntajeUsuario.o: DtPuntajeUsuario.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtPuntajeUsuario.o DtPuntajeUsuario.cpp
 
 ${OBJECTDIR}/Fabrica.o: Fabrica.cpp
 	${MKDIR} -p ${OBJECTDIR}

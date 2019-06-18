@@ -8,8 +8,8 @@ ControladorPelicula* ControladorPelicula::instancia = NULL;
 
 ControladorPelicula::ControladorPelicula() {
     this->coleccionPeliculas = new Lista();
-    usuarioRecordada=NULL;
-    peliculaRecordada=NULL;
+    this->usuarioRecordada=NULL;
+    this->peliculaRecordada=NULL;
 }
 
 ControladorPelicula* ControladorPelicula::getInstancia() {
@@ -28,7 +28,7 @@ void ControladorPelicula::crearRespuesta(string){
     
 }
 void ControladorPelicula::ingresarNuevoPuntaje(int puntaje){
-    this->getUsuarioRecordado()->ingresarNuevoPuentaje(puntaje,peliculaRecordada);
+    this->getUsuarioRecordado()->ingresarNuevoPuentaje(puntaje,this->peliculaRecordada);
 }
 void ControladorPelicula::ingresarPuntaje(int){
     
@@ -36,16 +36,16 @@ void ControladorPelicula::ingresarPuntaje(int){
 DtCine** ControladorPelicula::listarCines(){
     
 }
-DtComentario** ControladorPelicula::listarComentarios(){
+DtComentarios** ControladorPelicula::listarComentarios(){
     
 }
 ICollectible* ControladorPelicula::listarFunciones(DtFecha*){
 }
 
 string** ControladorPelicula::listarPeliculas() {
-    usuarioRecordada = getUsuarioRecordado();
-    if(usuarioRecordada){
-        if (usuarioRecordada->getTipoUsuario() != 1)
+    this->usuarioRecordada = getUsuarioRecordado();
+    if(this->usuarioRecordada){
+        if (this->usuarioRecordada->getTipoUsuario() != 1)
             throw std::invalid_argument("No tiene los privilegios necesarios para puntuar peliculas.\n");
         else {
             IIterator* itPeliculas = this->coleccionPeliculas->iterator();
@@ -98,7 +98,7 @@ Pelicula* ControladorPelicula::getPeliculaRecordada(){
     return this->peliculaRecordada;
 }
 bool ControladorPelicula::tienePuntaje(){
-    return this->getUsuarioRecordado()->tienePuntaje(peliculaRecordada->getTitulo());
+    return this->getUsuarioRecordado()->tienePuntaje(this->peliculaRecordada->getTitulo());
 }
 DtInfoPeli* ControladorPelicula::verInfoPeli(){
     
@@ -110,4 +110,30 @@ ICollection* ControladorPelicula::getColeccionPeliculas(){
 
 Usuario* ControladorPelicula::getUsuarioRecordado(){
     Fabrica::getInstancia()->getInterfaceUsuario()->getUsuarioRecordado();
+}
+
+DtCom_Puntaje* ControladorPelicula::verComentariosPuntaje() {
+    ICollection* comentarios;
+    ICollection* puntajes;
+    int total = 0, cantPuntuaciones = 0;
+    float promedio = 0;
+    DtCom_Puntaje* dtCom_Puntaje = new DtCom_Puntaje();
+
+    puntajes = Fabrica::getInstancia()->getInterfaceUsuario()->verPuntajes(this->peliculaRecordada->getTitulo());
+    comentarios = this->peliculaRecordada->getComentarios();
+    total = this->peliculaRecordada->getPuntajeTotal();
+
+    IIterator * it = puntajes->iterator();
+    while (it->hasNext()) {
+        cantPuntuaciones++;
+        it->next();
+    }
+    promedio = (float) total / cantPuntuaciones;
+    
+    dtCom_Puntaje->setCantPuntuaciones(cantPuntuaciones);
+    dtCom_Puntaje->setPuntajePromedio(promedio);
+    dtCom_Puntaje->setDtComentarios(comentarios);
+    dtCom_Puntaje->setDtPuntaje(puntajes);
+    
+    return dtCom_Puntaje;
 }

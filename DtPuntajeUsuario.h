@@ -5,30 +5,28 @@
  */
 
 /* 
- * File:   DtPuntaje.h
+ * File:   DtPuntajeUsuario.h
  * Author: Danilo
  *
- * Created on 15 de junio de 2019, 17:40
+ * Created on 17 de junio de 2019, 18:22
  */
 
-#ifndef DTPUNTAJE_H
-#define DTPUNTAJE_H
+#ifndef DTPUNTAJEUSUARIO_H
+#define DTPUNTAJEUSUARIO_H
 #include "ICollectible.h"
-#include "Pelicula.h"
-
 #include <iostream>
 
 using namespace std;
 
-class DtPuntaje : public ICollectible {
+class DtPuntajeUsuario : public ICollectible{
 public:
-    DtPuntaje(Pelicula*, int);
-    virtual ~DtPuntaje();
+    DtPuntajeUsuario(string,int);
+    virtual ~DtPuntajeUsuario();
 private:
-    Pelicula* pelicula;
-    int puntos;
+    string nickName;
+    int puntaje;
 
 };
 
-#endif /* DTPUNTAJE_H */
+#endif /* DTPUNTAJEUSUARIO_H */
 
