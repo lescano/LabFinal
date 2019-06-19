@@ -29,7 +29,7 @@ class ICCines {
 public:
     virtual void setDireccion(string) = 0;
     virtual void setCapacidadSalas(int) = 0;
-    virtual ICollection* listarCines() = 0;
+    virtual string** listarCines() = 0;
     virtual string** listarPeliculas() = 0;
     virtual Cine* seleccionarCine(int) = 0;
     virtual Pelicula* seleccionarPelicula(string) = 0;

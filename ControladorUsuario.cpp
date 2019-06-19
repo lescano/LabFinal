@@ -2,6 +2,7 @@
 #include "Fabrica.h"
 #include "KeyString.h"
 #include "Lista.h"
+#include "DtPuntaje.h"
 
 ControladorUsuario* ControladorUsuario::instancia = NULL;
 
@@ -99,4 +100,20 @@ string ControladorUsuario::getNickname(){
 
 Usuario* ControladorUsuario::getUsuarioRecordado(){
     return this->usuarioRecordado;
+}
+
+void ControladorUsuario::cerrarSesion(){
+    this->usuarioRecordado=NULL;
+}
+
+ICollection* ControladorUsuario::verPuntajes(string titulo) {
+    ICollection* puntajes = new Lista();
+    IIterator* it = this->usuarios->getIteratorObj();
+    while (it->hasNext()) {
+        Usuario* u = (Usuario*) it->getCurrent();
+        if(u->tienePuntaje(titulo))
+            puntajes->add(new DtPuntajeUsuario(u->getNickname(),u->verPuntaje(titulo)));
+        it->next();
+    }
+    return puntajes;
 }

@@ -32,6 +32,8 @@ class ICUsuario{
         virtual IDictionary* getUsuarios() = 0;
         virtual ICollection* getPagos() = 0;
         virtual Usuario* getUsuarioRecordado() = 0;
+        virtual void cerrarSesion() = 0;
+        virtual ICollection* verPuntajes(string) = 0;
 };
 
 #endif /* ICUSUARIO_H */

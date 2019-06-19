@@ -31,7 +31,7 @@ void ControladorCine::setCapacidadSalas(int capacidad){
     this->capacidadSala=capacidad;
 }
 
-ICollection* ControladorCine::listarCines(){
+string** ControladorCine::listarCines(){
     
 }
 

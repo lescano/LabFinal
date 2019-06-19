@@ -17,6 +17,8 @@
 #include "ICPelicula.h"
 #include "IIterator.h"
 #include "DtPelicula.h"
+#include "ControladorUsuario.h"
+#include "DtCom_Puntaje.h"
 
 #include <string.h>
 
@@ -29,6 +31,7 @@ class ControladorPelicula : public ICPelicula {
         ICollection* coleccionPeliculas;
         Pelicula* peliculaRecordada;
         Usuario* usuarioRecordada;
+        ControladorUsuario* controladorUsuario;
     
     public:
         static ControladorPelicula* getInstancia();
@@ -42,7 +45,7 @@ class ControladorPelicula : public ICPelicula {
         void seleccionarPeliculas(string);
         bool tienePuntaje();
         DtInfoPeli* verInfoPeli();
-        DtComentario** listarComentarios();
+        DtComentarios** listarComentarios();
         void crearComentarios(string);
         Opinion* seleccionarComentarios(string);
         void crearRespuesta(string);
@@ -51,7 +54,7 @@ class ControladorPelicula : public ICPelicula {
         Pelicula* getPeliculaRecordada();
         ICollection* getColeccionPeliculas();
         Usuario* getUsuarioRecordado();
-
+        DtCom_Puntaje* verComentariosPuntaje();
 };
 
 

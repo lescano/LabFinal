@@ -95,13 +95,23 @@ void Usuario::ingresarPuntaje(string titulo, int puntos){
 }
 
 void Usuario::ingresarNuevoPuentaje(int puntos, Pelicula* pelicula) {
+    this->setPuntaje(new Puntaje(pelicula, puntos));
+}
+
+tipoUsuario Usuario::getTipoUsuario(){
+    return this->tipo;
+}
+
+int Usuario::verPuntaje(string titulo) {
     IIterator* it = this->puntajes->iterator();
+
     while (it->hasNext()) {
-        Puntaje* puntaje = (Puntaje*) it->getCurrent();
-        if (! puntaje->getPeliculaPuntuada()->esPelicula(pelicula->getTitulo()))
-            this->puntajes->add(new Puntaje(pelicula, puntos));
+        Puntaje* p = (Puntaje*) it->getCurrent();
+        if (p->esPelicula(titulo))
+            return p->getPuntos();
         it->next();
     }
+    return 0;
 }
 
 Usuario::~Usuario(){

@@ -10,19 +10,11 @@
 Puntaje::Puntaje(Pelicula* pelicula, int puntos){
     this->puntos = puntos;
     this->peliculaPuntuada = pelicula;
-    //usuario->setPuntaje(this);
+    this->peliculaPuntuada->setPuntajeTotal(puntos);
 }
 
 Pelicula* Puntaje::getPeliculaPuntuada(){
     return peliculaPuntuada;
-}
-
-int Puntaje::getPuntos(){
-    return this->puntos;
-}
-
-void Puntaje::setPuntos(int puntos){
-    this->puntos=puntos;
 }
 
 bool Puntaje::tienePuntaje(string titulo){
@@ -32,6 +24,22 @@ bool Puntaje::tienePuntaje(string titulo){
         return false;
 }
 
+bool Puntaje::esPelicula(string titulo){
+    if(this->peliculaPuntuada->getTitulo().compare(titulo)==0)
+        return true;
+    else
+        return false;
+}
+
+int Puntaje::getPuntos(){
+    return this->puntos;    
+}
+
+void Puntaje::setPuntos(int puntos){
+    this->puntos=puntos;
+}
+
 Puntaje::~Puntaje(){
     
 }
+    

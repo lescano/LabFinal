@@ -45,7 +45,7 @@ class ControladorCine :public ICCines {
         
         void setDireccion(string);
         void setCapacidadSalas(int);
-        ICollection* listarCines();
+        string** listarCines();
         string** listarPeliculas();
         Cine* seleccionarCine(int);
         Pelicula* seleccionarPelicula(string);

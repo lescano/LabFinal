@@ -36,7 +36,7 @@ public:
     Pelicula* getPeliculaPuntuada();
     void setPeliculaPuntuada(Pelicula*);
     
-    bool esPelicula(string titulo);
+    bool esPelicula(string);
     bool tienePuntaje(string titulo);
 };
 

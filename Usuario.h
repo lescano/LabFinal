@@ -65,6 +65,7 @@ public:
     DtCredito* reservaCredito(string);
     bool tienePuntaje(string);
     void ingresarNuevoPuentaje(int,Pelicula*);
+    int verPuntaje(string);
 };
 
 #endif /* USUARIO_H */

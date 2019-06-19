@@ -36,6 +36,7 @@ public:
     void setColComentario(Opinion*);
     int getId();
     int generarId();
+    Usuario* getUsuario();
 };
 
 #endif /* OPINION_H */

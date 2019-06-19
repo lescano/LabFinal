@@ -19,6 +19,7 @@
 #include "Usuario.h"
 #include "IDictionary.h"
 #include "ListaDicc.h"
+#include "DtPuntajeUsuario.h"
 
 #include <string.h>
 using namespace std;
@@ -44,6 +45,8 @@ class ControladorUsuario : public ICUsuario {
         IDictionary* getUsuarios();
         ICollection* getPagos();
         Usuario* getUsuarioRecordado();
+        void cerrarSesion();
+        ICollection* verPuntajes(string);
 };
 
 

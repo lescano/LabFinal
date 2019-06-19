@@ -7,7 +7,8 @@
 #include "Pelicula.h"
 #include "KeyInteger.h"
 #include "ListaDicc.h"
-#include "Cine.h"
+#include "Usuario.h"
+#include "Lista.h"
 
 Pelicula::Pelicula(){}
 
@@ -37,11 +38,11 @@ string Pelicula::getSinopsis(){
 void Pelicula::setSinopsis(string s){
     this->sinopsis = s;
 }
-float Pelicula::getPuntaje_total(){
+float Pelicula::getPuntajeTotal(){
     return this->puntajeTotal;
 }
-void Pelicula::setPuntaje_total(int puntos){
-    this->puntajeTotal = puntos;
+void Pelicula::setPuntajeTotal(int puntos){
+    this->puntajeTotal += puntos;
 }
 
 bool Pelicula::seleccionarPelicula(string titulo){
@@ -64,6 +65,7 @@ bool Pelicula::esPelicula(string titulo){
     else
         return false;
 }
+
 
 DtInfoPeli* Pelicula::verInfoPeli(){
 //    DtInfoPeli* info = new DtInfoPeli(this->posterURL,this->sinopsis);
@@ -88,6 +90,18 @@ int** Pelicula::listarCine(){
     
     
 }
+
+ICollection* Pelicula::getComentarios() {
+    IIterator* it = this->opinion->getIteratorObj();
+    ICollection* comentarios = new Lista();
+    while (it->hasNext()) {
+        Opinion* o = (Opinion*) it->getCurrent();
+        comentarios->add(new DtComentarios(o->getComentario(), o->getUsuario()->getNickname()));
+        it->next();
+    }
+    return comentarios;
+}
+
 Pelicula::~Pelicula(){
     
 }
