@@ -3,6 +3,7 @@
 #include "ListaDicc.h"
 #include "Lista.h"
 #include "Fabrica.h"
+#include "DtInfoPeli.h"
 
 ControladorPelicula* ControladorPelicula::instancia = NULL;
 
@@ -33,7 +34,7 @@ void ControladorPelicula::ingresarNuevoPuntaje(int puntaje){
 void ControladorPelicula::ingresarPuntaje(int puntaje){
     this->getUsuarioRecordado()->ingresarPuntaje(this->peliculaRecordada->getTitulo(),puntaje);
 }
-int** ControladorPelicula::listarCines(){
+ICollection* ControladorPelicula::listarCines(){
     return this->peliculaRecordada->listarCine();
 }
 DtComentarios** ControladorPelicula::listarComentarios(){
@@ -104,7 +105,7 @@ bool ControladorPelicula::tienePuntaje(){
     return this->getUsuarioRecordado()->tienePuntaje(this->peliculaRecordada->getTitulo());
 }
 DtInfoPeli* ControladorPelicula::verInfoPeli(){
-    this->peliculaRecordada->verInfoPeli();
+    return this->peliculaRecordada->verInfoPeli();
 }
 
 ICollection* ControladorPelicula::getColeccionPeliculas(){

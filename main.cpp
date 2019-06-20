@@ -33,6 +33,8 @@
 #include "DtPelicula.h"
 #include "DtCom_Puntaje.h"
 #include "IIterator.h"
+#include "DtInfoPeli.h"
+#include "ICollection.h"
 
 void menu();
 void Pausa();
@@ -286,8 +288,47 @@ void comentarPelicula(){
 }
 
 void verInformacionPelicula(){
-//    controladorPelicula->listarCines();
-}
+    cout<<"\t----------------------------------------"<<endl;
+    cout<<"\t-------VER INFORMACION DE PELICULA------"<<endl;
+    cout<<"\t----------------------------------------"<<endl<<endl<<endl;
+    string titulo, sel;
+    int i = 0;
+    string** listaPeliculas = controladorPelicula->listarPeliculas();
+
+    cout << "Peliculas" << endl << endl;
+    while (listaPeliculas[i]) {
+        cout << "\tTitulo: " << listaPeliculas[i]->data() << "\n";
+        i++;
+    }
+    cout<<"Desea Seleccionar una pelicula? (si, no): ";
+    cin>>sel;
+    if(sel.compare("si")==0){
+        cout<<"Elija Pelicula: ";
+        cin.ignore();
+    std::getline(std::cin, titulo);
+    controladorPelicula->seleccionarPeliculas(titulo);
+    
+    DtInfoPeli* dtInP = controladorPelicula->verInfoPeli();
+    cout<<"Poster: "<<dtInP->getPoster_url() ;
+    cout<<endl<<"Sinopsis: "<<dtInP->getSinopsis();
+    }
+    cout<<"Desea ver informacion adicional? (si, no): ";
+    cin>>sel;
+    if(sel.compare("si")==0){
+        ICollection* cines = controladorPelicula->listarCines();
+        
+        cout<<"Cines: "<<endl;
+        while (listaCines->){
+            cout<<"Numero"
+        }
+        controladorPelicula->listarCines();
+        
+        cout<<"Desea seleccionar cine? (si, no): ";
+        cin>>sel;
+        if(sel.compare("si")==0){
+            controladorPelicula->seleccionarCines()
+    }
+    }
 
 void verComentariosPuntajePelicula(){
     cout<<"\t------------------------------"<<endl;

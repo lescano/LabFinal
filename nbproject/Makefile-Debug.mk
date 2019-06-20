@@ -47,6 +47,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/DtComentarios.o \
 	${OBJECTDIR}/DtCredito.o \
 	${OBJECTDIR}/DtFecha.o \
+	${OBJECTDIR}/DtInfoPeli.o \
 	${OBJECTDIR}/DtPelicula.o \
 	${OBJECTDIR}/DtPuntaje.o \
 	${OBJECTDIR}/DtPuntajeUsuario.o \
@@ -160,6 +161,11 @@ ${OBJECTDIR}/DtFecha.o: DtFecha.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtFecha.o DtFecha.cpp
+
+${OBJECTDIR}/DtInfoPeli.o: DtInfoPeli.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DtInfoPeli.o DtInfoPeli.cpp
 
 ${OBJECTDIR}/DtPelicula.o: DtPelicula.cpp
 	${MKDIR} -p ${OBJECTDIR}

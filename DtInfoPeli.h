@@ -6,25 +6,27 @@
 
 /* 
  * File:   DtInfoPeli.h
- * Author: vanessa
+ * Author: eveek
  *
- * Created on 8 de mayo de 2019, 04:19 PM
+ * Created on 19 de junio de 2019, 09:26 PM
  */
 
 #ifndef DTINFOPELI_H
 #define DTINFOPELI_H
 #include <string>
+
 using namespace std;
 
 class DtInfoPeli {
-private:
-    string poster_url;
-    string sinopsis;
 public:
     DtInfoPeli(string, string);
     string getPoster_url();
     string getSinopsis();
-    ~DtInfoPeli();
+    virtual ~DtInfoPeli();
+private:
+    string poster_url;
+    string sinopsis;
+
 };
 
 #endif /* DTINFOPELI_H */

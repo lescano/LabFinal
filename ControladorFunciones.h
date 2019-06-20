@@ -31,6 +31,7 @@ class ControladorFuncion : public ICFuncion {
     private:
         ControladorUsuario* controladorUsuario;
         ControladorPelicula* controladorPelicula;
+        Cine* cineRecordado;
         Pelicula* peliculaRecordada;
         Usuario* usuarioRecordado;
         ICollection* coleccionReservas;
@@ -47,7 +48,7 @@ class ControladorFuncion : public ICFuncion {
         string** listarPeliculas();
         DtInfoPeli* VerInfoPeli();
         DtCine* listarCine();
-        DtFuncion* listarFunciones();
+        ICollection* listarFunciones();
         Funcion* seleccionarFunciones(int);
         void cantAsientos(int);
         float reservaCredito(int);

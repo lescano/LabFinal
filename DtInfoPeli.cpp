@@ -1,6 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+#include "DtInfoPeli.h"
+
+
+
+DtInfoPeli::DtInfoPeli(string poster, string sinopsis) {
+    this->poster_url=poster;
+    this->sinopsis=sinopsis;
+}
+
+string DtInfoPeli::getPoster_url(){
+    return this->poster_url;
+}
+
+string DtInfoPeli::getSinopsis(){
+    return this->sinopsis;
+}
+
+DtInfoPeli::~DtInfoPeli() {
+}
 

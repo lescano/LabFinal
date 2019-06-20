@@ -19,6 +19,7 @@
 #include "DtPelicula.h"
 #include "ControladorUsuario.h"
 #include "DtCom_Puntaje.h"
+#include "DtInfoPeli.h"
 
 #include <string.h>
 
@@ -40,7 +41,7 @@ class ControladorPelicula : public ICPelicula {
         void ingresarNuevoPuntaje(int);
         void ingresarPuntaje(int);
         string** listarPeliculas();
-        int** listarCines();
+        ICollection* listarCines();
         int mostrarPuntaje();
         void seleccionarPeliculas(string);
         bool tienePuntaje();

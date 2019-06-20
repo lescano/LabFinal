@@ -9,6 +9,7 @@
 #include "ListaDicc.h"
 #include "Usuario.h"
 #include "Lista.h"
+#include "DtInfoPeli.h"
 
 Pelicula::Pelicula(){}
 
@@ -68,25 +69,11 @@ bool Pelicula::esPelicula(string titulo){
 
 
 DtInfoPeli* Pelicula::verInfoPeli(){
-//    DtInfoPeli* info = new DtInfoPeli(this->posterURL,this->sinopsis);
-//    return info;
+    DtInfoPeli* info = new DtInfoPeli(this->posterURL,this->sinopsis);  
+    return info;
 }
 
-int** Pelicula::listarCine(){
-    IIterator* itCines = this->cines->getIteratorObj();
-    int** listaCines = new int* [10];
-    int* cine;
-
-    int i=0;
-    while(itCines->hasNext()){
-        Cine* c = (Cine* )itCines->getCurrent();
-        cine= new int(c->getNro_cine());
-        listaCines [i]= cine;
-        itCines->next();
-        i++;
-    }
-    listaCines [i]=NULL;
-    return listaCines;
+ICollection* Pelicula::listarCine(){
     
     
 }

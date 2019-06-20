@@ -1,5 +1,6 @@
 
 #include "ControladorFunciones.h"
+#include "Lista.h"
 
 ControladorFuncion* ControladorFuncion::instancia = NULL;
 
@@ -28,8 +29,9 @@ DtInfoPeli* ControladorFuncion::VerInfoPeli(){
 DtCine* ControladorFuncion::listarCine(){
     
 }
-DtFuncion* ControladorFuncion::listarFunciones(){
-    
+ICollection* ControladorFuncion::listarFunciones(){
+//    ICollection* dtFun=new Lista();
+//    this->peliculaRecordada->listarFunciones(this->cineRecordado);
 }
 Funcion* ControladorFuncion::seleccionarFunciones(int){
     

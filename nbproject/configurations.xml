@@ -76,6 +76,7 @@
       <itemPath>Reserva.h</itemPath>
       <itemPath>Sala.h</itemPath>
       <itemPath>Usuario.h</itemPath>
+      <itemPath>newfile.h</itemPath>
       <itemPath>tipoUsuario.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f1" displayName="Interfaces" projectFiles="true">
@@ -102,6 +103,7 @@
       <itemPath>Cine.cpp</itemPath>
       <itemPath>Credito.cpp</itemPath>
       <itemPath>Debito.cpp</itemPath>
+      <itemPath>DtInfoPeli.cpp</itemPath>
       <itemPath>Funcion.cpp</itemPath>
       <itemPath>Opinion.cpp</itemPath>
       <itemPath>Pago.cpp</itemPath>
@@ -200,6 +202,8 @@
       </item>
       <item path="DtFuncion.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DtInfoPeli.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="DtInfoPeli.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtPelicula.cpp" ex="false" tool="1" flavor2="0">
@@ -321,6 +325,8 @@
       <item path="Usuario.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="newfile.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -397,6 +403,8 @@
       </item>
       <item path="DtFuncion.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="DtInfoPeli.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="DtInfoPeli.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DtPelicula.cpp" ex="false" tool="1" flavor2="0">
@@ -518,6 +526,8 @@
       <item path="Usuario.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="newfile.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="sistema.cpp" ex="false" tool="1" flavor2="0">
       </item>

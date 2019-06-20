@@ -33,7 +33,7 @@ public:
         virtual string** listarPeliculas()=0;
         virtual DtInfoPeli* VerInfoPeli()=0;
         virtual DtCine* listarCine()=0;
-        virtual DtFuncion* listarFunciones()=0;
+        virtual ICollection* listarFunciones()=0;
         virtual Funcion* seleccionarFunciones(int)=0;
         virtual void cantAsientos(int)=0;
         virtual float reservaCredito(int)=0;
